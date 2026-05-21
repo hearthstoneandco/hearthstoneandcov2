@@ -1,1 +1,0 @@
-# hearthstoneandcov2
