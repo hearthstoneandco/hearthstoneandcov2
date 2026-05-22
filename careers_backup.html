@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — Hearthstone &amp; Co. Workforce Solutions</title>
+  <meta name="description" content="Contact Hearthstone & Co. Workforce Solutions for healthcare staffing requests, clinician inquiries, and general information. Serving Greater Houston.">
+  <meta name="keywords" content="Houston healthcare staffing, nurse staffing Houston, CNA staffing Houston, per diem nurses Houston, travel nurse staffing Houston">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+/* ================================================
+   HEARTHSTONE & CO. WORKFORCE SOLUTIONS
+   Premium Healthcare Staffing — v2
+   ================================================ */
+
+/* --- RESET & BASE --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'DM Sans', system-ui, sans-serif; color: #1e1e1e; background: #fff; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; transition: all .22s ease; }
+ul { list-style: none; }
+
+/* --- TOKENS --- */
+:root {
+  --em: #1a3d2e;
+  --em-md: #2a5c45;
+  --em-lt: #3a7a5c;
+  --em-pale: #eaf2ee;
+  --ch: #1e1e1e;
+  --ch-md: #2e2e2e;
+  --ch-lt: #4a4a4a;
+  --gold: #c9a84c;
+  --gold-lt: #e2c87a;
+  --white: #ffffff;
+  --off-white: #f9f9f7;
+  --gray-lt: #f3f3f0;
+  --gray-md: #e5e5e1;
+  --gray-bd: #d0d0cc;
+  --text-1: #1e1e1e;
+  --text-2: #4a4a4a;
+  --text-3: #787876;
+  --sh-sm: 0 1px 6px rgba(0,0,0,.07);
+  --sh-md: 0 4px 20px rgba(0,0,0,.10);
+  --sh-lg: 0 8px 40px rgba(0,0,0,.13);
+  --rad: 5px;
+  --rad-sm: 4px;
+  --rad-md: 10px;
+  --rad-lg: 16px;
+  --t: all .22s ease;
+}
+
+/* --- TYPE --- */
+h1,h2,h3,h4 { font-family: 'Cormorant Garamond', Georgia, serif; line-height: 1.2; font-weight: 600; color: var(--ch); }
+h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+h4 { font-size: 1.1rem; }
+p { color: var(--text-2); line-height: 1.8; }
+.eyebrow { font-size: .7rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: .75rem; }
+.lead { font-size: 1.1rem; color: var(--text-2); line-height: 1.85; max-width: 680px; }
+.divider { width: 44px; height: 3px; background: var(--gold); margin: 1.2rem 0; }
+.divider.c { margin: 1.2rem auto; }
+
+/* --- LAYOUT --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.75rem; }
+.container-sm { max-width: 820px; margin: 0 auto; padding: 0 1.75rem; }
+.s { padding: 5rem 0; }
+.s-lg { padding: 7rem 0; }
+.s-sm { padding: 3rem 0; }
+.s-bg { background: var(--off-white); }
+.s-dark { background: var(--ch); }
+.s-em { background: var(--em); }
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.g3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
+.g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+.g2-rev { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.ai-c { align-items: center; }
+.gap-lg { gap: 4rem; }
+.flex { display: flex; }
+.flex-c { display: flex; align-items: center; }
+.flex-b { display: flex; align-items: center; justify-content: space-between; }
+.sh-header { margin-bottom: 3.5rem; }
+.sh-header.c { text-align: center; }
+.sh-header.c .lead { margin: .75rem auto 0; }
+.sh-header .lead { margin-top: .75rem; }
+
+/* --- BUTTONS --- */
+.btn { display: inline-flex; align-items: center; gap: .45rem; padding: .8rem 1.85rem; border-radius: var(--rad); font-family: 'DM Sans', sans-serif; font-size: .85rem; font-weight: 600; letter-spacing: .03em; cursor: pointer; transition: var(--t); border: 2px solid transparent; white-space: nowrap; }
+.btn-primary { background: var(--em); color: #fff; border-color: var(--em); }
+.btn-primary:hover { background: var(--em-md); border-color: var(--em-md); color: #fff; transform: translateY(-1px); box-shadow: var(--sh-md); }
+.btn-gold { background: var(--gold); color: #fff; border-color: var(--gold); }
+.btn-gold:hover { background: #b8963f; border-color: #b8963f; color: #fff; transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--em); border-color: var(--em); }
+.btn-outline:hover { background: var(--em); color: #fff; }
+.btn-outline-w { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+.btn-outline-w:hover { background: rgba(255,255,255,.12); border-color: #fff; color: #fff; }
+.btn-ghost-nav { background: transparent; color: var(--text-2); border-color: var(--gray-md); font-size: .82rem; padding: .6rem 1.2rem; }
+.btn-ghost-nav:hover { color: var(--em); border-color: var(--em); }
+.btn-sm { padding: .6rem 1.4rem; font-size: .82rem; }
+.btn-lg { padding: 1rem 2.25rem; font-size: .95rem; }
+.btn-block { width: 100%; justify-content: center; }
+.btn-group { display: flex; flex-wrap: wrap; gap: .85rem; }
+
+/* --- NAV --- */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 999; background: rgba(255,255,255,.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--gray-md); transition: var(--t); }
+.nav.scrolled { box-shadow: var(--sh-md); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; max-width: 1280px; margin: 0 auto; padding: 0 1.75rem; gap: 1.5rem; }
+.nav-logo { display: flex; flex-direction: column; line-height: 1.1; color: inherit; }
+.nav-logo-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: var(--em); }
+.nav-logo-sub { font-size: .58rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--text-3); }
+.nav-links { display: flex; align-items: center; gap: .15rem; flex: 1; padding: 0 1rem; }
+.nav-links > li { position: relative; }
+.nav-links a { font-size: .82rem; font-weight: 500; color: var(--text-2); padding: .45rem .7rem; border-radius: var(--rad); display: flex; align-items: center; gap: .3rem; }
+.nav-links a:hover { color: var(--em); background: var(--em-pale); }
+.nav-links a.active { color: var(--em); }
+.chevron { font-size: .65rem; opacity: .6; }
+.dropdown-menu { position: absolute; top: calc(100% + 6px); left: 0; background: #fff; border: 1px solid var(--gray-md); border-radius: var(--rad-md); box-shadow: var(--sh-lg); min-width: 210px; padding: .4rem; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: var(--t); z-index: 100; }
+.nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a { display: flex; align-items: center; gap: .5rem; padding: .6rem .9rem; font-size: .82rem; color: var(--text-2); border-radius: var(--rad); }
+.dropdown-menu a:hover { background: var(--em-pale); color: var(--em); }
+.nav-actions { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+.nav-mobile-btn { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: .5rem; }
+.nav-mobile-btn span { width: 22px; height: 2px; background: var(--ch); border-radius: 2px; transition: var(--t); display: block; }
+
+/* --- HERO (Homepage) --- */
+.hero { background: var(--em); min-height: calc(100vh - 70px); display: flex; align-items: center; margin-top: 70px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 75% 50%, rgba(58,122,92,.35) 0%, transparent 65%); pointer-events: none; }
+.hero::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z' fill='%23fff' fill-opacity='.018'/%3E%3C/svg%3E"); pointer-events: none; }
+.hero-content { position: relative; z-index: 1; max-width: 760px; padding: 5rem 0; }
+.hero-tag { display: inline-flex; align-items: center; gap: .6rem; font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+.hero-tag::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+.hero h1 { color: #fff; margin-bottom: 1.5rem; }
+.hero h1 em { font-style: normal; color: var(--gold); }
+.hero-sub { font-size: 1.08rem; color: rgba(255,255,255,.82); line-height: 1.85; margin-bottom: 2.5rem; max-width: 600px; }
+.hero-service-note { font-size: .78rem; color: rgba(255,255,255,.45); margin-top: 1.5rem; line-height: 1.7; }
+
+/* --- PAGE HERO --- */
+.page-hero { background: var(--em); background-image: linear-gradient(135deg,var(--em) 0%,#0d1f16 100%); padding: 4.5rem 0 3.5rem; margin-top: 70px; }
+.page-hero h1 { color: #fff; margin-bottom: 1rem; }
+.page-hero p { color: rgba(255,255,255,.8); font-size: 1.05rem; max-width: 600px; }
+.breadcrumb { display: flex; align-items: center; gap: .5rem; font-size: .75rem; color: rgba(255,255,255,.45); margin-bottom: 1.25rem; }
+.breadcrumb a { color: rgba(255,255,255,.55); }
+.breadcrumb a:hover { color: #fff; }
+.bc-sep { opacity: .4; }
+
+/* --- TRUST STRIP --- */
+.trust-strip { background: #fff; border-bottom: 1px solid var(--gray-md); padding: 2.25rem 0; }
+.trust-label { font-size: .68rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--text-3); text-align: center; margin-bottom: 1.5rem; }
+.logo-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2rem; }
+.logo-ph { background: var(--gray-lt); border: 1px dashed var(--gray-bd); border-radius: var(--rad); padding: .65rem 1.6rem; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); }
+
+/* --- METRICS --- */
+.metrics { background: var(--em); padding: 0; }
+.metrics-inner { display: grid; grid-template-columns: repeat(4,1fr); }
+.metric { padding: 2.75rem 1.5rem; text-align: center; border-right: 1px solid rgba(255,255,255,.1); }
+.metric:last-child { border-right: none; }
+.metric-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: var(--gold); line-height: 1; display: block; }
+.metric-lbl { font-size: .8rem; color: rgba(255,255,255,.72); margin-top: .4rem; line-height: 1.4; }
+
+/* --- CARDS --- */
+.card { background: #fff; border: 1px solid var(--gray-md); border-radius: var(--rad-md); padding: 1.85rem; transition: var(--t); }
+.card:hover { border-color: var(--em-lt); box-shadow: var(--sh-md); transform: translateY(-2px); }
+.card-icon { width: 46px; height: 46px; background: var(--em-pale); border-radius: var(--rad); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1.15rem; flex-shrink: 0; }
+.svc-card { border-top: 3px solid var(--em); }
+.svc-card:hover { border-top-color: var(--gold); }
+
+/* --- STEPS --- */
+.steps { counter-reset: step; }
+.step { display: flex; gap: 1.75rem; align-items: flex-start; padding: 2rem 0; border-bottom: 1px solid var(--gray-md); }
+.step:last-child { border-bottom: none; }
+.step-n { width: 50px; height: 50px; min-width: 50px; background: var(--em); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; }
+.step-body h3 { margin-bottom: .4rem; font-size: 1.25rem; }
+
+/* --- COMPLIANCE BADGES --- */
+.badge-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.cbadge { display: flex; align-items: center; gap: .55rem; background: #fff; border: 1px solid var(--gray-md); border-radius: 100px; padding: .55rem 1.15rem; font-size: .78rem; font-weight: 600; color: var(--text-2); box-shadow: var(--sh-sm); }
+.cbadge .dot { width: 8px; height: 8px; background: var(--em); border-radius: 50%; flex-shrink: 0; }
+
+/* --- PROCESS STEPS (vertical) --- */
+.process-list { display: flex; flex-direction: column; border-radius: var(--rad-md); overflow: hidden; }
+.pstep { display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,.1); }
+.pstep:last-child { border-bottom: none; }
+.pstep-num { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 700; color: var(--gold); min-width: 36px; }
+.pstep-title { font-weight: 600; font-size: .95rem; color: #fff; margin-bottom: .15rem; }
+.pstep-sub { font-size: .78rem; color: rgba(255,255,255,.65); }
+
+/* --- TESTIMONIALS --- */
+.tcard { background: var(--off-white); border-radius: var(--rad-md); padding: 2rem; position: relative; }
+.tcard::before { content: '"'; font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: var(--em-pale); position: absolute; top: .5rem; left: 1.5rem; line-height: 1; }
+.tcard-text { font-size: .94rem; color: var(--text-2); line-height: 1.85; margin-bottom: 1.25rem; padding-top: .25rem; }
+.tcard-name { font-weight: 600; font-size: .85rem; color: var(--text-1); }
+.tcard-role { font-size: .78rem; color: var(--text-3); margin-top: .15rem; }
+
+/* --- CTA SECTIONS --- */
+.cta-s { background: var(--em); padding: 5rem 0; text-align: center; }
+.cta-s h2 { color: #fff; margin-bottom: .85rem; }
+.cta-s p { color: rgba(255,255,255,.78); max-width: 540px; margin: 0 auto 2rem; }
+.cta-band { background: linear-gradient(135deg, var(--em) 0%, var(--em-md) 100%); border-radius: var(--rad-md); padding: 2.75rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.cta-band-text h3 { color: #fff; margin-bottom: .4rem; }
+.cta-band-text p { color: rgba(255,255,255,.75); margin: 0; max-width: 460px; }
+
+/* --- COMPARISON TABLE --- */
+.comp-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: .88rem; }
+.comp-table th { padding: 1rem 1.25rem; text-align: left; font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.comp-table th:nth-child(2) { background: var(--em); color: #fff; border-radius: var(--rad) var(--rad) 0 0; }
+.comp-table th:not(:nth-child(2)) { color: var(--text-3); }
+.comp-table td { padding: .9rem 1.25rem; border-bottom: 1px solid var(--gray-md); }
+.comp-table td:nth-child(2) { background: var(--em-pale); font-weight: 600; color: var(--em); }
+.chk { color: var(--em); font-weight: 700; }
+.exm { color: #c0392b; }
+
+/* --- FORMS --- */
+.form-page { background: var(--off-white); padding: 5rem 0; }
+.form-layout { display: grid; grid-template-columns: 1fr 340px; gap: 2.5rem; align-items: start; }
+.form-card { background: #fff; border-radius: var(--rad-md); padding: 2.5rem; box-shadow: var(--sh-md); }
+.form-ttl { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; margin-bottom: .35rem; }
+.form-sub { font-size: .88rem; color: var(--text-3); margin-bottom: 2rem; }
+.fsect { font-size: .68rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--em); padding: 1.25rem 0 .75rem; border-top: 1px solid var(--gray-md); margin-top: 1.25rem; }
+.fsect:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.fg { margin-bottom: 1rem; }
+.fg label { display: block; font-size: .78rem; font-weight: 600; color: var(--text-1); margin-bottom: .35rem; }
+.fg .req { color: var(--em); }
+.fg input,.fg select,.fg textarea { width: 100%; padding: .7rem .9rem; border: 1.5px solid var(--gray-bd); border-radius: var(--rad); font-family: 'DM Sans', sans-serif; font-size: .87rem; color: var(--text-1); background: #fff; transition: var(--t); }
+.fg input:focus,.fg select:focus,.fg textarea:focus { outline: none; border-color: var(--em); box-shadow: 0 0 0 3px rgba(26,61,46,.08); }
+.fg textarea { resize: vertical; min-height: 100px; }
+.cbx-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .45rem; }
+.cbx { display: flex; align-items: center; gap: .45rem; font-size: .83rem; color: var(--text-2); cursor: pointer; }
+.cbx input { width: 15px; height: 15px; accent-color: var(--em); }
+.form-sidebar { position: sticky; top: 5.5rem; }
+.sidebar-card { background: var(--em); border-radius: var(--rad-md); padding: 1.75rem; margin-bottom: 1.25rem; }
+.sidebar-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: #fff; margin-bottom: 1.25rem; }
+.trust-pt { display: flex; gap: .7rem; align-items: flex-start; margin-bottom: .9rem; }
+.trust-pt:last-child { margin-bottom: 0; }
+.trust-ico { color: var(--gold); font-size: 1rem; flex-shrink: 0; margin-top: .1rem; }
+.trust-pt p { color: rgba(255,255,255,.82); font-size: .85rem; margin: 0; line-height: 1.55; }
+.success-msg { text-align: center; padding: 3rem 1.5rem; display: none; }
+.success-ico { width: 60px; height: 60px; background: var(--em-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-size: 1.6rem; color: var(--em); }
+
+/* --- JOB BOARD --- */
+.jb-layout { display: grid; grid-template-columns: 240px 1fr; gap: 2rem; align-items: start; }
+.jb-filters { background: #fff; border: 1px solid var(--gray-md); border-radius: var(--rad-md); padding: 1.5rem; position: sticky; top: 5.5rem; }
+.fltr-grp { margin-bottom: 1.5rem; }
+.fltr-grp:last-child { margin-bottom: 0; }
+.fltr-lbl { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); margin-bottom: .65rem; display: block; }
+.fltr-opt { display: flex; align-items: center; gap: .45rem; font-size: .83rem; color: var(--text-2); padding: .25rem 0; cursor: pointer; }
+.jcard { background: #fff; border: 1.5px solid var(--gray-md); border-radius: var(--rad-md); padding: 1.65rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; transition: var(--t); margin-bottom: .85rem; }
+.jcard:hover { border-color: var(--em); box-shadow: var(--sh-md); }
+.jbadge { display: inline-flex; padding: .2rem .65rem; border-radius: 100px; font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.jb-pd { background: #e8f4ec; color: var(--em); }
+.jb-ct { background: #fef3e2; color: #b8700a; }
+.jb-tr { background: #e8f0fe; color: #1a56cc; }
+
+/* --- RECRUITER DASH --- */
+.dash-wrap { display: flex; min-height: calc(100vh - 70px); }
+.dash-side { width: 230px; background: var(--ch-md); flex-shrink: 0; }
+.dash-side-inner { padding: 1.5rem 0; }
+.dash-nav-item { display: flex; align-items: center; gap: .7rem; padding: .72rem 1.5rem; font-size: .83rem; color: rgba(255,255,255,.65); cursor: pointer; transition: var(--t); border-left: 3px solid transparent; }
+.dash-nav-item:hover,.dash-nav-item.active { background: rgba(255,255,255,.07); color: #fff; border-left-color: var(--gold); }
+.dash-main { flex: 1; background: var(--off-white); padding: 2rem; }
+.stat-card { background: #fff; border-radius: var(--rad-md); padding: 1.5rem; border-top: 3px solid var(--em); box-shadow: var(--sh-sm); }
+.stat-card.gold { border-top-color: var(--gold); }
+.stat-card.warn { border-top-color: #e67e22; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.75rem; font-weight: 700; line-height: 1; }
+.stat-lbl { font-size: .78rem; color: var(--text-3); margin-top: .3rem; }
+.dtable { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.dtable th { padding: .7rem 1rem; text-align: left; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); background: var(--gray-lt); }
+.dtable td { padding: .75rem 1rem; border-bottom: 1px solid var(--gray-md); }
+.status-pill { display: inline-flex; padding: .18rem .6rem; border-radius: 100px; font-size: .7rem; font-weight: 700; }
+.sp-new { background: #fef3e2; color: #b8700a; }
+.sp-cred { background: #e8f0fe; color: #1a56cc; }
+.sp-active { background: #e8f4ec; color: var(--em); }
+.sp-placed { background: var(--em); color: #fff; }
+
+/* --- BLOG / RESOURCES --- */
+.article-card { background: #fff; border-radius: var(--rad-md); border: 1px solid var(--gray-md); overflow: hidden; transition: var(--t); }
+.article-card:hover { box-shadow: var(--sh-md); transform: translateY(-2px); }
+.art-img { background: var(--em-pale); height: 170px; display: flex; align-items: center; justify-content: center; font-size: .75rem; color: var(--text-3); font-style: italic; }
+.art-body { padding: 1.4rem; }
+.art-cat { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--gold); display: block; margin-bottom: .45rem; }
+.art-ttl { font-size: .97rem; font-weight: 600; color: var(--text-1); line-height: 1.4; margin-bottom: .45rem; }
+.art-exc { font-size: .82rem; color: var(--text-3); line-height: 1.65; }
+
+/* --- INDUSTRIES --- */
+.ind-card { background: #fff; border: 1px solid var(--gray-md); border-left: 4px solid var(--em); border-radius: var(--rad-md); padding: 2rem; transition: var(--t); }
+.ind-card:hover { box-shadow: var(--sh-md); transform: translateY(-2px); }
+.ind-card .ind-tag { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--em); background: var(--em-pale); padding: .2rem .65rem; border-radius: 100px; display: inline-block; margin-bottom: .75rem; }
+
+/* --- FOOTER --- */
+.footer { background: var(--ch); }
+.footer-top { padding: 4rem 0 2.5rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 3rem; }
+.footer-logo { display: flex; flex-direction: column; margin-bottom: 1rem; }
+.footer-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: #fff; }
+.footer-logo-sub { font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-top: .1rem; }
+.footer-brand-col p { font-size: .83rem; color: rgba(255,255,255,.55); line-height: 1.75; margin-bottom: .5rem; }
+.footer-parent { font-size: .72rem !important; color: rgba(255,255,255,.3) !important; }
+.footer-contact-info { margin-top: 1.25rem; display: flex; flex-direction: column; gap: .35rem; }
+.footer-contact-info a,.footer-contact-info span { font-size: .8rem; color: rgba(255,255,255,.5); }
+.footer-contact-info a:hover { color: rgba(255,255,255,.85); }
+.footer-col h5 { font-family: 'DM Sans', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,.85); margin-bottom: .85rem; }
+.footer-col ul li { margin-bottom: .4rem; }
+.footer-col ul a { font-size: .82rem; color: rgba(255,255,255,.5); }
+.footer-col ul a:hover { color: rgba(255,255,255,.85); }
+.footer-cta-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: var(--rad-md); padding: 1.5rem; }
+.footer-cta-card h4 { font-family: 'DM Sans', sans-serif; font-size: .9rem; color: #fff; margin-bottom: .4rem; font-weight: 600; }
+.footer-cta-card p { font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.6; }
+.footer-cta-card--light .btn-outline { color: rgba(255,255,255,.7); border-color: rgba(255,255,255,.25); }
+.footer-cta-card--light .btn-outline:hover { background: rgba(255,255,255,.1); color: #fff; border-color: rgba(255,255,255,.5); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 1.5rem 0; }
+.footer-bottom .container { display: flex; justify-content: space-between; align-items: center; }
+.footer-bottom span { font-size: .75rem; color: rgba(255,255,255,.3); }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .75rem; color: rgba(255,255,255,.3); }
+.footer-legal a:hover { color: rgba(255,255,255,.6); }
+
+/* --- UTILS --- */
+.img-ph { background: var(--gray-md); border-radius: var(--rad-md); display: flex; align-items: center; justify-content: center; font-size: .75rem; color: var(--text-3); font-style: italic; text-align: center; }
+.tag { font-size: .7rem; font-weight: 600; background: var(--em-pale); color: var(--em); padding: .2rem .65rem; border-radius: 100px; display: inline-block; }
+.tag-row { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .75rem; }
+.fw-600 { font-weight: 600; }
+.mt-2 { margin-top: 2rem; }
+.mt-1 { margin-top: 1rem; }
+
+/* === MOBILE === */
+@media (max-width: 960px) {
+  .nav-links,.nav-actions .btn-ghost-nav { display: none; }
+  .nav-mobile-btn { display: flex; }
+  .nav.mobile-open .nav-links { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--gray-md); padding: 1.25rem 1.75rem 1.75rem; gap: .25rem; box-shadow: var(--sh-lg); z-index: 998; }
+  .nav.mobile-open .nav-links > li { width: 100%; }
+  .nav.mobile-open .nav-links a { padding: .65rem .75rem; font-size: .9rem; }
+  .nav.mobile-open .dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; background: var(--gray-lt); padding: .25rem .25rem .25rem 1rem; margin-top: .25rem; }
+  .nav.mobile-open .nav-actions { display: none; }
+  .nav-actions .btn-primary { font-size: .8rem; padding: .55rem 1.1rem; }
+  .g2,.g3,.g4,.g2-rev { grid-template-columns: 1fr; }
+  .metrics-inner { grid-template-columns: 1fr 1fr; }
+  .metric { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .metric:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.1); }
+  .metric:nth-last-child(-n+2) { border-bottom: none; }
+  .form-layout { grid-template-columns: 1fr; }
+  .form-sidebar { position: static; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom .container { flex-direction: column; gap: .75rem; text-align: center; }
+  .cta-band { flex-direction: column; text-align: center; }
+  .jb-layout { grid-template-columns: 1fr; }
+  .jb-filters { position: static; }
+  .hero-content { padding: 3rem 0; }
+  .comp-table { font-size: .8rem; }
+  .frow { grid-template-columns: 1fr; }
+  .cbx-grid { grid-template-columns: 1fr 1fr; }
+  .dash-wrap { flex-direction: column; }
+  .dash-side { width: 100%; }
+}
+@media (max-width: 600px) {
+  .container,.container-sm { padding: 0 1.25rem; }
+  .s { padding: 3.5rem 0; }
+  .btn-group { flex-direction: column; }
+  .btn-group .btn { width: 100%; justify-content: center; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .cbx-grid { grid-template-columns: 1fr; }
+  .logo-row { gap: 1rem; }
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+.fade-up { animation: fadeUp .55s ease forwards; }
+.delay-1 { animation-delay: .1s; }
+.delay-2 { animation-delay: .2s; }
+.delay-3 { animation-delay: .3s; }
+
+  </style>
+
+  <!-- Pinterest Tag -->
+  <script>
+  !function(e){if(!window.pintrk){window.pintrk = function () {
+  window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+    n=window.pintrk;n.queue=[],n.version="3.0";var
+    t=document.createElement("script");t.async=!0,t.src=e;var
+    r=document.getElementsByTagName("script")[0];
+    r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+  pintrk('load', '2614359806885', {em: 'renaye@hearthstoneandco.com'});
+  pintrk('page');
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://ct.pinterest.com/v3/?event=init&tid=2614359806885&pd[em]=renaye@hearthstoneandco.com&noscript=1" />
+  </noscript>
+  <!-- end Pinterest Tag -->
+
+  <!-- LinkedIn Insight Tag -->
+  <script type="text/javascript">
+  _linkedin_partner_id = "9107604";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+  (function(l) {
+  if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+  window.lintrk.q=[]}
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";b.async = true;
+  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+  s.parentNode.insertBefore(b, s);})(window.lintrk);
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9107604&fmt=gif" />
+  </noscript>
+  <!-- end LinkedIn Insight Tag -->
+</head>
+<body>
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-logo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUyIDUyIj4KICA8cmVjdCB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIGZpbGw9IiMwRjNEMkEiLz4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8cmVjdCB4PSI3IiB5PSI3IiB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMDEsMTY4LDc2LDAuMykiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjI2IiB5PSIzMyIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iI0M5QTg0QyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SDwvdGV4dD4KPC9zdmc+" alt="Hearthstone &amp; Co. Workforce Solutions" style="height:52px;width:52px;object-fit:contain;border-radius:6px;display:block;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-dropdown"><a href="./healthcare-staffing.html">Services <span class="chevron">&#8964;</span></a><div class="dropdown-menu"><a href="./healthcare-staffing.html">&#9632; Healthcare Staffing</a><a href="./healthcare-staffing-houston.html">&#9632; Staffing in Houston</a><a href="./travel-nurse-staffing.html">&#9632; Travel Nurse Staffing</a><a href="./per-diem-nurse-staffing.html">&#9632; Per Diem Nurse Staffing</a><a href="./for-healthcare-facilities.html">&#9632; For Facilities</a><a href="./compliance-credentialing.html">&#9632; Compliance &amp; Credentialing</a><a href="./industries-served.html">&#9632; Industries Served</a></div></li>
+      <li class="nav-dropdown"><a href="./clinician-jobs.html">Clinicians <span class="chevron">&#8964;</span></a><div class="dropdown-menu"><a href="./clinician-jobs.html">&#9632; Clinician Jobs</a><a href="./join-our-network.html">&#9632; Join Our Network</a></div></li>
+      <li><a href="./why-hearthstone.html">Why Hearthstone</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./careers.html">Careers</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions"><a href="./join-our-network.html" class="btn btn-ghost-nav">Join Network</a><a href="./request-staffing.html" class="btn btn-primary btn-sm">Request Staffing</a></div>
+    <button class="nav-mobile-btn" id="mobileBtn" aria-label="Toggle menu" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<main>
+<section style="background:var(--em-dark,#0d1c14);padding:5rem 0 4rem;position:relative;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,var(--em) 0%,#0d1c14 100%);opacity:.85;pointer-events:none;z-index:0"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <h1 style="color:#fff;margin:.5rem 0 1rem;max-width:600px">Build Something That Matters.<br>Join Hearthstone &amp; Co.</h1>
+    <p style="color:rgba(255,255,255,.75);font-size:1.05rem;max-width:560px;line-height:1.8">We are a growing healthcare staffing firm serving Greater Houston facilities. We are looking for driven, detail-oriented professionals who want to grow with us — and help us grow the standard of care in this region.</p>
+  </div>
+</section>
+
+<!-- Why Work Here -->
+<section class="s" style="background:#fff">
+  <div class="container">
+    <div class="sh-header c">
+      <span class="eyebrow">Why Hearthstone</span>
+      <h2>More Than a Job. A Company Worth Building.</h2>
+      <div class="divider c"></div>
+    </div>
+    <div class="g3" style="margin-top:3rem">
+      <div style="text-align:center;padding:2rem 1.5rem">
+        <div style="width:56px;height:56px;background:var(--em-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.4rem">&#127807;</div>
+        <h4 style="margin-bottom:.5rem;color:var(--em)">Mission-Driven Work</h4>
+        <p style="font-size:.9rem;color:var(--text-2);line-height:1.75">You are directly contributing to staffing Houston healthcare facilities with credentialed, qualified clinicians — work that affects patient outcomes daily.</p>
+      </div>
+      <div style="text-align:center;padding:2rem 1.5rem">
+        <div style="width:56px;height:56px;background:var(--em-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.4rem">&#128200;</div>
+        <h4 style="margin-bottom:.5rem;color:var(--em)">Growth Opportunity</h4>
+        <p style="font-size:.9rem;color:var(--text-2);line-height:1.75">We are early-stage and intentional. Team members who join now shape how this company operates, scales, and serves the market for years to come.</p>
+      </div>
+      <div style="text-align:center;padding:2rem 1.5rem">
+        <div style="width:56px;height:56px;background:var(--em-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.4rem">&#127919;</div>
+        <h4 style="margin-bottom:.5rem;color:var(--em)">Performance Culture</h4>
+        <p style="font-size:.9rem;color:var(--text-2);line-height:1.75">We reward results. Compensation structures, advancement paths, and recognition are all tied to the impact you create — not just tenure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Open Roles -->
+<section id="open-roles" class="s s-bg">
+  <div class="container">
+    <div class="sh-header c">
+      <span class="eyebrow">Open Positions</span>
+      <h2>Current Openings at Hearthstone &amp; Co.</h2>
+      <div class="divider c"></div>
+      <p class="lead" style="margin:.75rem auto 0">All roles are based in Greater Houston, TX. Remote-hybrid options noted per role.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1.25rem;margin-top:3rem">
+
+      <!-- Healthcare Recruiter -->
+      <div style="background:#fff;border:1px solid var(--gray-md);border-left:4px solid var(--em);border-radius:var(--rad-md);padding:1.75rem 2rem;position:relative;z-index:1">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h3 style="margin-bottom:.25rem;color:var(--em);font-size:1.1rem">Healthcare Recruiter</h3>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem">
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--em-pale);color:var(--em);padding:.2rem .65rem;border-radius:20px">Full-Time</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#f0f4f8;color:var(--text-2);padding:.2rem .65rem;border-radius:20px">Remote</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#fff8e6;color:#7a5200;padding:.2rem .65rem;border-radius:20px">Operations</span>
+            </div>
+            <p style="font-size:.9rem;color:var(--text-2);line-height:1.75;max-width:680px">Source, screen, and place per diem and contract clinicians across Houston-area facilities. You will own your pipeline — building relationships with nurses, CNAs, and allied health professionals from first contact through placement and retention. Healthcare recruiting or staffing experience strongly preferred.</p>
+            <p style="font-size:.82rem;color:var(--text-3);margin-top:.6rem"><strong>Key Skills:</strong> Sourcing, phone screening, ATS/CRM tools, credentialing familiarity, relationship management</p>
+          </div>
+          <a href="./apply.html?role=healthcare-recruiter" style="flex-shrink:0;white-space:nowrap;background:var(--em);color:#fff;padding:.65rem 1.4rem;border-radius:var(--rad-sm);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;display:inline-block;position:relative;z-index:2;cursor:pointer">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Business Development Representative (SDR) -->
+      <div style="background:#fff;border:1px solid var(--gray-md);border-left:4px solid var(--em);border-radius:var(--rad-md);padding:1.75rem 2rem;position:relative;z-index:1">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h3 style="margin-bottom:.25rem;color:var(--em);font-size:1.1rem">Business Development Representative (SDR)</h3>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem">
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--em-pale);color:var(--em);padding:.2rem .65rem;border-radius:20px">Full-Time</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#f0f4f8;color:var(--text-2);padding:.2rem .65rem;border-radius:20px">Remote</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#fff8e6;color:#7a5200;padding:.2rem .65rem;border-radius:20px">Sales</span>
+            </div>
+            <p style="font-size:.9rem;color:var(--text-2);line-height:1.75;max-width:680px">Prospect and qualify healthcare facility contacts — DONs, administrators, and practice managers — and convert cold and warm outreach into booked discovery calls for our solutions team. You are the first touchpoint between Hearthstone and the facilities we serve. Staffing industry or B2B healthcare sales background a plus.</p>
+            <p style="font-size:.82rem;color:var(--text-3);margin-top:.6rem"><strong>Key Skills:</strong> Cold outreach, CRM discipline, objection handling, LinkedIn prospecting, healthcare facility familiarity</p>
+          </div>
+          <a href="./apply.html?role=bdr-sdr" style="flex-shrink:0;white-space:nowrap;background:var(--em);color:#fff;padding:.65rem 1.4rem;border-radius:var(--rad-sm);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;display:inline-block;position:relative;z-index:2;cursor:pointer">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Clinician Coordinator -->
+      <div style="background:#fff;border:1px solid var(--gray-md);border-left:4px solid var(--em);border-radius:var(--rad-md);padding:1.75rem 2rem;position:relative;z-index:1">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h3 style="margin-bottom:.25rem;color:var(--em);font-size:1.1rem">Clinician Coordinator</h3>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem">
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--em-pale);color:var(--em);padding:.2rem .65rem;border-radius:20px">Full-Time</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#f0f4f8;color:var(--text-2);padding:.2rem .65rem;border-radius:20px">Remote</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#fff8e6;color:#7a5200;padding:.2rem .65rem;border-radius:20px">Operations</span>
+            </div>
+            <p style="font-size:.9rem;color:var(--text-2);line-height:1.75;max-width:680px">Manage day-to-day scheduling and communication between placed clinicians and client facilities. Confirm shifts, resolve coverage gaps, handle last-minute changes, and serve as the point of contact for both sides of every placement. Strong organization, communication, and grace under pressure are essential.</p>
+            <p style="font-size:.82rem;color:var(--text-3);margin-top:.6rem"><strong>Key Skills:</strong> Scheduling systems, multi-party coordination, healthcare environment familiarity, conflict resolution</p>
+          </div>
+          <a href="./apply.html?role=clinician-coordinator" style="flex-shrink:0;white-space:nowrap;background:var(--em);color:#fff;padding:.65rem 1.4rem;border-radius:var(--rad-sm);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;display:inline-block;position:relative;z-index:2;cursor:pointer">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Payroll & Compliance Specialist -->
+      <div style="background:#fff;border:1px solid var(--gray-md);border-left:4px solid var(--em);border-radius:var(--rad-md);padding:1.75rem 2rem;position:relative;z-index:1">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h3 style="margin-bottom:.25rem;color:var(--em);font-size:1.1rem">Payroll &amp; Compliance Specialist</h3>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem">
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--em-pale);color:var(--em);padding:.2rem .65rem;border-radius:20px">Full-Time</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#f0f4f8;color:var(--text-2);padding:.2rem .65rem;border-radius:20px">Remote</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#fff8e6;color:#7a5200;padding:.2rem .65rem;border-radius:20px">Finance &amp; Compliance</span>
+            </div>
+            <p style="font-size:.9rem;color:var(--text-2);line-height:1.75;max-width:680px">Process weekly payroll for our active clinician network, ensuring accurate time entry, differential pay, and on-time disbursement. You will also support credentialing compliance — tracking license expirations, background check renewals, and OIG/SAM exclusion monitoring. Payroll software experience required; healthcare staffing payroll a strong plus.</p>
+            <p style="font-size:.82rem;color:var(--text-3);margin-top:.6rem"><strong>Key Skills:</strong> Payroll processing (Gusto, ADP, or similar), compliance tracking, Excel/Google Sheets, attention to detail</p>
+          </div>
+          <a href="./apply.html?role=payroll-compliance" style="flex-shrink:0;white-space:nowrap;background:var(--em);color:#fff;padding:.65rem 1.4rem;border-radius:var(--rad-sm);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;display:inline-block;position:relative;z-index:2;cursor:pointer">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Credentialing Coordinator -->
+      <div style="background:#fff;border:1px solid var(--gray-md);border-left:4px solid var(--em);border-radius:var(--rad-md);padding:1.75rem 2rem;position:relative;z-index:1">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h3 style="margin-bottom:.25rem;color:var(--em);font-size:1.1rem">Credentialing Coordinator</h3>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem">
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--em-pale);color:var(--em);padding:.2rem .65rem;border-radius:20px">Full-Time</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#f0f4f8;color:var(--text-2);padding:.2rem .65rem;border-radius:20px">Remote</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#fff8e6;color:#7a5200;padding:.2rem .65rem;border-radius:20px">Compliance</span>
+            </div>
+            <p style="font-size:.9rem;color:var(--text-2);line-height:1.75;max-width:680px">Collect, verify, and maintain all clinician credentialing documentation — state licensure, CPR/BLS, immunization records, I-9, background checks, and facility-specific requirements. You ensure every clinician who goes on assignment is 100% compliant before their first shift. Healthcare credentialing or medical staffing background required.</p>
+            <p style="font-size:.82rem;color:var(--text-3);margin-top:.6rem"><strong>Key Skills:</strong> Document management, regulatory knowledge (JCAHO, CMS), credentialing software, follow-through</p>
+          </div>
+          <a href="./apply.html?role=credentialing-coordinator" style="flex-shrink:0;white-space:nowrap;background:var(--em);color:#fff;padding:.65rem 1.4rem;border-radius:var(--rad-sm);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;display:inline-block;position:relative;z-index:2;cursor:pointer">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Client Success Manager -->
+      <div style="background:#fff;border:1px solid var(--gray-md);border-left:4px solid var(--gold);border-radius:var(--rad-md);padding:1.75rem 2rem;position:relative;z-index:1">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h3 style="margin-bottom:.25rem;color:var(--em);font-size:1.1rem">Client Success Manager</h3>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem">
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--em-pale);color:var(--em);padding:.2rem .65rem;border-radius:20px">Full-Time</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#f0f4f8;color:var(--text-2);padding:.2rem .65rem;border-radius:20px">Remote</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#fff8e6;color:#7a5200;padding:.2rem .65rem;border-radius:20px">Client Relations</span>
+            </div>
+            <p style="font-size:.9rem;color:var(--text-2);line-height:1.75;max-width:680px">Own the post-placement relationship with our facility clients. You will conduct regular check-ins, handle service escalations, surface upsell opportunities, and ensure that every facility account renews and expands. The ideal candidate has account management or client success experience in healthcare services, staffing, or a related field.</p>
+            <p style="font-size:.82rem;color:var(--text-3);margin-top:.6rem"><strong>Key Skills:</strong> Account management, relationship building, healthcare operations awareness, CRM tracking, retention strategy</p>
+          </div>
+          <a href="./apply.html?role=client-success" style="flex-shrink:0;white-space:nowrap;background:var(--em);color:#fff;padding:.65rem 1.4rem;border-radius:var(--rad-sm);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;display:inline-block;position:relative;z-index:2;cursor:pointer">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- Marketing & Content Coordinator -->
+      <div style="background:#fff;border:1px solid var(--gray-md);border-left:4px solid var(--em);border-radius:var(--rad-md);padding:1.75rem 2rem;position:relative;z-index:1">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <div>
+            <h3 style="margin-bottom:.25rem;color:var(--em);font-size:1.1rem">Marketing &amp; Content Coordinator</h3>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem">
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--em-pale);color:var(--em);padding:.2rem .65rem;border-radius:20px">Part-Time / Contract</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#f0f4f8;color:var(--text-2);padding:.2rem .65rem;border-radius:20px">Remote</span>
+              <span style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#fff8e6;color:#7a5200;padding:.2rem .65rem;border-radius:20px">Marketing</span>
+            </div>
+            <p style="font-size:.9rem;color:var(--text-2);line-height:1.75;max-width:680px">Create and schedule content for LinkedIn, manage our email sequences, and support lead generation campaigns targeting Houston-area healthcare facilities and clinicians. You understand the B2B and B2C staffing audience and can write compellingly for both. Healthcare or professional services content background preferred.</p>
+            <p style="font-size:.82rem;color:var(--text-3);margin-top:.6rem"><strong>Key Skills:</strong> LinkedIn content, email marketing, Canva or Adobe, copywriting, CRM/automation tools</p>
+          </div>
+          <a href="./apply.html?role=marketing-content" style="flex-shrink:0;white-space:nowrap;background:var(--em);color:#fff;padding:.65rem 1.4rem;border-radius:var(--rad-sm);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;display:inline-block;position:relative;z-index:2;cursor:pointer">Apply Now</a>
+        </div>
+      </div>
+
+    </div><!-- end roles list -->
+  </div>
+</section>
+
+<!-- General Application CTA -->
+<section class="s" style="background:var(--em);color:#fff">
+  <div class="container" style="text-align:center">
+    <span class="eyebrow" style="color:var(--gold)">Don&rsquo;t See Your Role?</span>
+    <h2 style="color:#fff;margin:.5rem 0 1rem">Send Us Your Resume Anyway</h2>
+    <p style="color:rgba(255,255,255,.8);max-width:540px;margin:0 auto 2rem;line-height:1.8">We are always looking for talented people who want to work in healthcare staffing. If you have relevant experience and are based in Greater Houston, reach out — we will keep your profile on file.</p>
+    <a href="./apply.html" class="btn btn-gold">careers@hearthstoneandco.com</a>
+  </div>
+</section>
+
+</main>
+<footer class="footer"><div class="footer-top"><div class="container"><div class="footer-grid">
+  <div class="footer-col footer-brand-col"><div class="footer-logo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj4KICA8cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIGZpbGw9IiMwRjNEMkEiLz4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMDEsMTY4LDc2LDAuMykiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjMwIiB5PSIzOSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iI0M5QTg0QyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SDwvdGV4dD4KPC9zdmc+" alt="Hearthstone &amp; Co." style="height:60px;width:60px;object-fit:contain;border-radius:8px;display:block;margin-bottom:0.75rem;"></div><p>Credentialed healthcare professionals. Reliable placements. Greater Houston.</p><p class="footer-parent">A subsidiary of The Shiylohe Collective — Veteran-Owned</p>
+          <p class="footer-parent" style="margin-top:.3rem">Sister brand: <span style="color:rgba(201,168,76,.6);font-style:italic"><a href="https://getnourié.com" target="_blank" rel="noopener noreferrer" style="color:rgba(226,200,122,.85);text-decoration:none">NOURI&Eacute;</a></span> &mdash; Workplace Amenities &amp; Vending</p><div class="footer-contact-info"><a href="mailto:hello@hearthstoneandco.com">hello@hearthstoneandco.com</a><a href="tel:+17133645058">(713) 364-5058</a><span>Greater Houston, TX</span></div></div>
+  <div class="footer-col"><h5>Services</h5><ul><li><a href="./healthcare-staffing.html">Healthcare Staffing</a></li><li><a href="./healthcare-staffing-houston.html">Staffing in Houston</a></li><li><a href="./travel-nurse-staffing.html">Travel Nurse Staffing</a></li><li><a href="./per-diem-nurse-staffing.html">Per Diem Nurse Staffing</a></li><li><a href="./for-healthcare-facilities.html">For Facilities</a></li><li><a href="./request-staffing.html">Request Staffing</a></li><li><a href="./compliance-credentialing.html">Compliance</a></li><li><a href="./industries-served.html">Industries Served</a></li></ul></div>
+  <div class="footer-col"><h5>Clinicians</h5><ul><li><a href="./clinician-jobs.html">Clinician Jobs</a></li><li><a href="./join-our-network.html">Join Network</a></li><li><a href="./why-hearthstone.html">Why Hearthstone</a></li></ul><h5 style="margin-top:1.5rem">Company</h5><ul><li><a href="./about.html">About</a></li><li><a href="./careers.html">Careers</a></li><li><a href="./contact.html">Contact</a></li><li><a href="./resources.html">Resources</a></li></ul></div>
+  <div class="footer-col footer-cta-col"><div class="footer-cta-card"><h4>Need Staffing Now?</h4><p>Qualified clinicians within 48 hours.</p><a href="./request-staffing.html" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:.75rem">Request Staffing</a></div><div class="footer-cta-card footer-cta-card--light" style="margin-top:1rem"><h4>Healthcare Professionals</h4><p>Flexible work, weekly pay, recruiter support.</p><a href="./join-our-network.html" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:.75rem;font-size:.82rem">Join Our Network</a></div></div>
+</div></div></div><div class="footer-bottom"><div class="container"><span>&copy; 2025 Hearthstone &amp; Co. Workforce Solutions. All rights reserved.</span><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></div></div></div></footer>
+<script>
+/* Hearthstone & Co. — Main JS */
+
+// Nav scroll
+const nav = document.getElementById('mainNav');
+if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10));
+
+// Mobile nav
+function toggleNav() {
+  nav && nav.classList.toggle('mobile-open');
+}
+
+// Close mobile nav on outside click
+document.addEventListener('click', e => {
+  if (nav && nav.classList.contains('mobile-open') && !nav.contains(e.target)) {
+    nav.classList.remove('mobile-open');
+  }
+});
+
+// Active nav link
+document.addEventListener('DOMContentLoaded', () => {
+  const p = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    if (a.getAttribute('href') === '/' + p || a.getAttribute('href') === p) a.classList.add('active');
+  });
+});
+
+// Counter animation
+function animateCounters() {
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const raw = el.getAttribute('data-count');
+    const num = parseFloat(raw);
+    if (isNaN(num)) return;
+    const suffix = raw.replace(/[\d.]/g, '');
+    const dur = 1600;
+    const start = performance.now();
+    const tick = t => {
+      const p = Math.min((t - start) / dur, 1);
+      const val = Math.floor((1 - Math.pow(1 - p, 3)) * num);
+      el.textContent = val + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = raw;
+    };
+    requestAnimationFrame(tick);
+  });
+}
+
+const metricsEl = document.querySelector('.metrics');
+if (metricsEl) {
+  new IntersectionObserver(([e]) => { if (e.isIntersecting) { animateCounters(); } }, { threshold: .4 }).observe(metricsEl);
+}
+
+// Netlify form handler
+function bindForm(formId, successId) {
+  const form = document.getElementById(formId);
+  const suc  = document.getElementById(successId);
+  if (!form || !suc) return;
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('[type=submit]');
+    const orig = btn.textContent;
+    btn.textContent = 'Submitting…';
+    btn.disabled = true;
+    try {
+      const r = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+      if (r.ok) { form.style.display = 'none'; suc.style.display = 'block'; }
+      else throw new Error();
+    } catch {
+      alert('Something went wrong — please try again or contact us directly.');
+      btn.textContent = orig;
+      btn.disabled = false;
+    }
+  });
+}
+
+// Bind all forms
+document.addEventListener('DOMContentLoaded', () => {
+  bindForm('staffingForm',  'staffingSuccess');
+  bindForm('clinicianForm', 'clinicianSuccess');
+  bindForm('contactForm',   'contactSuccess');
+});
+
+</script>
+</body>
+</html>
