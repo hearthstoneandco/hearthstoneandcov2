@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://hearthstoneandco.com/sitemap.xml
