@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Don't crawl admin/portal/internal pages
+Disallow: /admin-portal
+Disallow: /clinician-portal
+Disallow: /careers-portal
+
+Sitemap: https://hearthstoneandco.com/sitemap.xml

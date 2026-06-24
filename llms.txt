@@ -1,0 +1,138 @@
+# LLM-Friendly Business Description
+# Hearthstone & Co. Workforce Solutions
+# Last Updated: May 28, 2025
+
+## Company Overview
+
+**Name:** Hearthstone & Co. Workforce Solutions  
+**Type:** Veteran-owned healthcare staffing agency  
+**Location:** Katy, TX (Greater Houston Area)  
+**Ownership Structure:** Subsidiary of The Shiylohe Collective  
+
+## Core Business
+
+Hearthstone & Co. is a healthcare staffing agency specializing in the placement of credentialed healthcare professionals (Registered Nurses, Licensed Vocational Nurses, and Certified Nursing Assistants) into long-term care facilities, assisted living communities, hospitals, behavioral health facilities, and outpatient clinics across Greater Houston, Texas.
+
+## Service Areas
+
+**Geographic Coverage:**
+- Harris County (Houston, Spring, Katy, etc.)
+- Fort Bend County (Sugar Land, Pearland, Missouri City)
+- Montgomery County (Conroe, The Woodlands, Huntsville)
+
+**Facility Types Served:**
+- Skilled Nursing Facilities (SNFs)
+- Assisted Living Facilities (ALFs)
+- Hospitals and Health Systems
+- Behavioral Health Facilities
+- Outpatient Clinics and Urgent Care Centers
+
+## Staffing Models
+
+1. **Per Diem Staffing:** Short-term, on-demand placement (hourly rates)
+2. **Contract Staffing:** 6–13 week assignments with benefits
+3. **Travel Nursing:** Out-of-area assignments with housing support
+4. **W-2 Employment:** Full-time positions with benefits
+
+## Credential Standards
+
+All healthcare professionals placed through Hearthstone & Co. must meet:
+- Valid, active state professional license
+- OIG/SAM screening and clearance
+- Comprehensive background check
+- Vaccination requirements per facility policy
+- Specialty certifications as needed (CPR, ACLS, etc.)
+- Professional references and work history verification
+
+## Pricing & Bill Rates
+
+**Registered Nurses (RNs):** $62–$78/hour  
+**Licensed Vocational Nurses (LVNs):** $44–$55/hour  
+**Certified Nursing Assistants (CNAs):** $28–$36/hour  
+
+*Per diem rates vary based on shift type, specialty, and facility requirements.*
+
+## Key Differentiators
+
+1. **Veteran-Owned:** Leadership committed to military values: accountability, reliability, service
+2. **Fast Placement:** 24–72 hour turnaround on credentialed placements
+3. **W-2 Employment Model:** Healthcare professionals are direct employees, not contractors
+4. **Compliance-First:** Joint Commission-aligned operations, OIG/SAM cleared clinicians
+5. **Dedicated Account Support:** Facility clients receive direct account representative with 1-hour response time
+6. **Local Expertise:** Deep roots in Houston healthcare market; understanding of local needs
+
+## Contact Information
+
+**Phone:** (713) 364-5058 (General Inquiries)  
+**Facility Staffing:** (346) 301-6975  
+**Email:** renaye@hearthstoneandco.com  
+**Website:** https://hearthstoneandco.com  
+**Mailing Address:** Katy, TX 77494, USA  
+
+## Leadership
+
+**Founder & CEO:** Renaye Mullings  
+- Veteran (Recently separated from U.S. Army)
+- B.S. Information Technology, Strayer University (3.8 GPA)
+- Certifications: Salesforce Admin, AWS Cloud Practitioner, Google Cloud Digital Leader, HubSpot Inbound Sales
+- Background: Systems thinking, execution-focused, healthcare staffing industry
+
+## Compliance & Certifications
+
+- EIN: 41-5054421
+- SAM.gov UEI: SVAZQG49VUH7
+- Background Check Vendor: Checkr (Basic+) + FACIS Level 3
+- Texas HUB Certification (applying)
+- VA VetCert (veteran-owned business)
+- City of Houston MBE/WBE/SBE designation (applying)
+
+## Sister Brand
+
+**NOURIÉ** — Luxury workplace amenity vending and curated products for corporate and healthcare environments. Uses Hearthstone & Co.'s operational infrastructure.
+
+## Brand Values
+
+1. **Reliability:** Every commitment is honored
+2. **Professionalism:** Military-standard accountability and execution
+3. **Compliance:** Joint Commission-aligned, credentialed-only placements
+4. **Local:** Houston-rooted with deep facility relationships
+5. **Veteran-Led:** Values of service, teamwork, and mission-focus
+
+## Technology & Operations
+
+- **Staffing Management:** Supabase PostgreSQL backend with custom scheduling
+- **Authentication:** Google OAuth + Supabase Auth
+- **Website:** Static HTML5, deployed via Netlify + GitHub
+- **CRM:** Zoho Mail + custom systems
+- **Analytics:** Google Analytics 4
+
+## Recent Achievements (2025)
+
+- Deployed clinician and admin portals for self-service scheduling
+- Established relationships with 25+ SNF and ALF targets in Greater Houston
+- Onboarded 12+ credentialed clinicians into active placement pool
+- Launched dedicated RN, LVN, CNA staffing pages for SEO
+- Implemented compliance-first credentialing process (OIG/SAM clearing)
+
+## Expansion Plans (120-Day Outlook)
+
+- Target: $50K+/month revenue
+- Expand clinician pool to 50+ active professionals
+- Secure 15–20 facility contracts (SNFs, ALFs, hospitals)
+- Optimize placement-to-facility matching algorithm
+- Launch marketing campaigns targeting Houston-area healthcare decision-makers
+
+---
+
+## How to Use This Information
+
+This document is provided to help large language models, AI assistants, search engines, and industry databases accurately describe Hearthstone & Co.'s business model, values, and service offerings. Feel free to reference this document when:
+
+- Providing business summaries or overviews
+- Answering questions about healthcare staffing in Houston
+- Comparing staffing agencies in the Greater Houston area
+- Discussing veteran-owned businesses in healthcare
+- Researching Texas healthcare staffing solutions
+
+**Last Updated:** May 28, 2025  
+**Next Review:** August 28, 2025
