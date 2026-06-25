@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Money pages — highest priority -->
+  <url><loc>https://hearthstoneandco.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hearthstoneandco.com/for-healthcare-facilities</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hearthstoneandco.com/healthcare-staffing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hearthstoneandco.com/healthcare-staffing-houston</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hearthstoneandco.com/rn-staffing-agency-houston</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hearthstoneandco.com/lvn-staffing-agency-houston</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hearthstoneandco.com/cna-staffing-agency-houston</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hearthstoneandco.com/nursing-home-staffing-houston</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hearthstoneandco.com/per-diem-nurse-staffing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/travel-nurse-staffing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/hospital-staffing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/behavioral-health-staffing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/houston-rn-staffing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/industries-served</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/compliance-credentialing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Trust & info pages -->
+  <url><loc>https://hearthstoneandco.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/why-hearthstone</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Conversion pages -->
+  <url><loc>https://hearthstoneandco.com/request-staffing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Clinician-facing -->
+  <url><loc>https://hearthstoneandco.com/clinician-jobs</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/join-our-network</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/careers</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/apply</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Resources / blog -->
+  <url><loc>https://hearthstoneandco.com/resources</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/blog-mission-ready-healthcare-staffing-houston</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/blog-houston-healthcare-workforce-trends-2025</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/blog-per-diem-staffing-houston-2025</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/blog-reducing-nurse-staffing-gaps-snf</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/blog-oig-sam-screening-clinicians</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/blog-per-diem-vs-contract-career-stage</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/blog-what-to-ask-staffing-agency-credentialing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://hearthstoneandco.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://hearthstoneandco.com/terms-of-service</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://hearthstoneandco.com/accessibility</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+</urlset>

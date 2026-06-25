@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinician Portal | Hearthstone & Co Workforce Solutions</title>
+  <meta name="description" content="Manage your shifts, track onboarding status, and connect with your dedicated recruiter in the Hearthstone clinician portal.">
+  <link rel="canonical" href="https://hearthstoneandco.com/clinician-portal.html">
+  
+  <!-- GA4 Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQY02V8F13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PQY02V8F13');
+    function trackEvent(category, action, label) {
+      gtag('event', action, {
+        'event_category': category,
+        'event_label': label
+      });
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+  
+  <style>
+    :root {
+      --em: #0f3d2a;
+      --em-md: #1a5c45;
+      --em-lt: #2a7a5c;
+      --em-pale: #eaf2ee;
+      --em-xpale: #f4f9f6;
+      --gold: #c9a84c;
+      --gold-lt: #fdf6e3;
+      --charcoal: #1c1c1c;
+      --text2: #4a5a52;
+      --text3: #7a8a83;
+      --gray-lt: #f4f6f5;
+      --gray-md: #dde5e0;
+      --white: #ffffff;
+      --off-wh: #f9faf8;
+      --rad: 8px;
+      --rad-md: 12px;
+      --rad-lg: 18px;
+      --sh: 0 2px 16px rgba(15, 61, 42, 0.08);
+      --sh-lg: 0 8px 40px rgba(15, 61, 42, 0.13);
+      --t: 0.18s ease;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--gray-lt);
+      color: var(--charcoal);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ──── NAVIGATION ──── */
+    .nav {
+      background: var(--em);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-user {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--em);
+    }
+
+    .nav-user-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-user-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .nav-user-role {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .nav-btn {
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      padding: 8px 16px;
+      border-radius: var(--rad);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--t);
+    }
+
+    .nav-btn:hover {
+      border-color: white;
+      color: white;
+    }
+
+    /* ──── MAIN LAYOUT ──── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .portal-header {
+      background: var(--em);
+      color: white;
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    .portal-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .portal-header p {
+      font-size: 16px;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .portal-content {
+      padding: 48px 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    /* ──── CARDS ──── */
+    .card {
+      background: white;
+      border: 1.5px solid var(--gray-md);
+      border-radius: var(--rad-lg);
+      padding: 28px;
+      box-shadow: var(--sh);
+      transition: all var(--t);
+    }
+
+    .card:hover {
+      border-color: var(--em-md);
+      box-shadow: var(--sh-lg);
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--em);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-icon {
+      font-size: 28px;
+    }
+
+    /* ──── ONBOARDING STATUS ──── */
+    .status-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px;
+      background: var(--gray-lt);
+      border-radius: var(--rad);
+      font-size: 13px;
+    }
+
+    .status-label {
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    .status-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .status-complete {
+      background: rgba(34, 134, 58, 0.15);
+      color: #228a3a;
+    }
+
+    .status-pending {
+      background: rgba(201, 168, 76, 0.15);
+      color: #8a7000;
+    }
+
+    .status-progress {
+      background: rgba(100, 150, 200, 0.15);
+      color: #0066cc;
+    }
+
+    /* ──── SHIFTS SECTION ──── */
+    .shifts-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .shift-card {
+      background: var(--em-xpale);
+      border: 1.5px solid var(--em-pale);
+      border-radius: var(--rad);
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all var(--t);
+    }
+
+    .shift-card:hover {
+      border-color: var(--em-md);
+      background: var(--em-pale);
+    }
+
+    .shift-details {
+      flex: 1;
+    }
+
+    .shift-facility {
+      font-weight: 600;
+      color: var(--em);
+      margin-bottom: 4px;
+    }
+
+    .shift-info {
+      font-size: 13px;
+      color: var(--text2);
+      margin-bottom: 8px;
+    }
+
+    .shift-rate {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--em);
+    }
+
+    .shift-action {
+      margin-left: 16px;
+    }
+
+    /* ──── RECRUITER CARD ──── */
+    .recruiter-content {
+      text-align: center;
+    }
+
+    .recruiter-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--em) 0%, var(--em-lt) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      margin: 0 auto 16px;
+    }
+
+    .recruiter-name {
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .recruiter-title {
+      font-size: 12px;
+      color: var(--text3);
+      margin-bottom: 16px;
+    }
+
+    .recruiter-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* ──── BUTTONS ──── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: var(--rad);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--t);
+      text-decoration: none;
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: var(--em);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--em-md);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--em);
+      border: 1.5px solid var(--em-pale);
+    }
+
+    .btn-secondary:hover {
+      background: var(--em-pale);
+      border-color: var(--em-md);
+    }
+
+    /* ──── EMPTY STATE ──── */
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text3);
+    }
+
+    .empty-state-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    /* ──── RESPONSIVE ──── */
+    @media (max-width: 768px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .portal-header h1 {
+        font-size: 28px;
+      }
+
+      .nav-inner {
+        padding: 0 16px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .shift-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .shift-action {
+        margin-left: 0;
+        margin-top: 12px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">H ⊟ Hearthstone</a>
+      <div class="nav-right">
+        <div class="nav-user">
+          <div class="nav-avatar">JS</div>
+          <div class="nav-user-info">
+            <div class="nav-user-name">Jordan Smith</div>
+            <div class="nav-user-role">RN — ICU Specialist</div>
+          </div>
+        </div>
+        <button class="nav-btn" onclick="trackEvent('navigation', 'logout_click', 'clinician_portal'); alert('Logout feature to be connected to auth system');">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <div class="portal-header">
+    <div class="container">
+      <h1>Welcome to Your Dashboard</h1>
+      <p>Manage shifts, track your onboarding progress, and connect with your dedicated recruiter</p>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="portal-content">
+    <div class="container">
+      <!-- ROW 1: Onboarding, Shifts, Recruiter -->
+      <div class="grid-3">
+        <!-- ONBOARDING STATUS -->
+        <div class="card">
+          <div class="card-title">
+            <span class="card-icon">📋</span>
+            Onboarding Status
+          </div>
+          <div class="status-list">
+            <div class="status-item">
+              <span class="status-label">Application Review</span>
+              <span class="status-badge status-complete">✓ Complete</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Background Check</span>
+              <span class="status-badge status-complete">✓ Complete</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">License Verification</span>
+              <span class="status-badge status-progress">In Progress</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Training Orientation</span>
+              <span class="status-badge status-pending">Pending</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AVAILABLE SHIFTS -->
+        <div class="card">
+          <div class="card-title">
+            <span class="card-icon">📅</span>
+            Available Shifts
+          </div>
+          <div class="shifts-grid">
+            <div class="shift-card">
+              <div class="shift-details">
+                <div class="shift-facility">Memorial Hospital — ICU</div>
+                <div class="shift-info">🌙 Night Shift • May 24</div>
+                <div class="shift-rate">$52/hr</div>
+              </div>
+              <div class="shift-action">
+                <button class="btn btn-primary" onclick="trackEvent('engagement', 'shift_accept', 'memorial_icn_night');" style="width: auto;">Accept</button>
+              </div>
+            </div>
+            <div class="shift-card">
+              <div class="shift-details">
+                <div class="shift-facility">Green Oaks ALF — Med-Surg</div>
+                <div class="shift-info">☀️ Day Shift • May 25</div>
+                <div class="shift-rate">$48/hr</div>
+              </div>
+              <div class="shift-action">
+                <button class="btn btn-primary" onclick="trackEvent('engagement', 'shift_accept', 'green_oaks_day');" style="width: auto;">Accept</button>
+              </div>
+            </div>
+          </div>
+          <div class="empty-state" style="padding: 20px; border-top: 1px solid var(--gray-md); margin-top: 12px;">
+            <p style="font-size: 12px; margin: 0;">More shifts posting daily based on your specialties</p>
+          </div>
+        </div>
+
+        <!-- RECRUITER -->
+        <div class="card">
+          <div class="card-title">
+            <span class="card-icon">👤</span>
+            Your Recruiter
+          </div>
+          <div class="recruiter-content">
+            <div class="recruiter-avatar">JM</div>
+            <div class="recruiter-name">Janet Martinez</div>
+            <div class="recruiter-title">Dedicated Staffing Specialist</div>
+            <div class="recruiter-contact">
+              <button class="btn btn-primary" onclick="trackEvent('engagement', 'contact_recruiter', 'call_janet');">📞 Call Janet</button>
+              <button class="btn btn-secondary" onclick="trackEvent('engagement', 'contact_recruiter', 'email_janet');">✉️ Email Janet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2: Documents, Recent Activity, Resources -->
+      <div class="grid-3">
+        <!-- DOCUMENTS -->
+        <div class="card">
+          <div class="card-title">
+            <span class="card-icon">📄</span>
+            My Documents
+          </div>
+          <div class="status-list">
+            <div class="status-item">
+              <span class="status-label">License Copy</span>
+              <span class="status-badge status-complete">✓ Uploaded</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">CPR Certification</span>
+              <span class="status-badge status-complete">✓ Uploaded</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">TB Test</span>
+              <span class="status-badge status-pending">Upload Needed</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Background Check</span>
+              <span class="status-badge status-complete">✓ Verified</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="margin-top: 16px;" onclick="trackEvent('engagement', 'document_upload', 'clinician_portal');">+ Upload Document</button>
+        </div>
+
+        <!-- RECENT SHIFTS -->
+        <div class="card">
+          <div class="card-title">
+            <span class="card-icon">⏰</span>
+            Recent Shifts
+          </div>
+          <div class="shifts-grid">
+            <div class="shift-card" style="background: rgba(34, 134, 58, 0.05); border-color: rgba(34, 134, 58, 0.2);">
+              <div class="shift-details">
+                <div class="shift-facility" style="color: #228a3a;">Green Oaks ALF — Completed</div>
+                <div class="shift-info">May 20 • 7am - 7pm</div>
+                <div class="shift-rate">8 hours worked</div>
+              </div>
+            </div>
+            <div class="shift-card" style="background: rgba(34, 134, 58, 0.05); border-color: rgba(34, 134, 58, 0.2);">
+              <div class="shift-details">
+                <div class="shift-facility" style="color: #228a3a;">Memorial Hospital — Completed</div>
+                <div class="shift-info">May 18 • 7pm - 7am</div>
+                <div class="shift-rate">12 hours worked</div>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-md);">
+            <a href="#" style="font-size: 12px; color: var(--em); text-decoration: none; font-weight: 600;">View Full Shift History →</a>
+          </div>
+        </div>
+
+        <!-- RESOURCES & SUPPORT -->
+        <div class="card">
+          <div class="card-title">
+            <span class="card-icon">📚</span>
+            Resources & Support
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#" onclick="trackEvent('engagement', 'resource_click', 'onboarding_guide'); return false;" style="padding: 12px; background: var(--em-xpale); border-radius: var(--rad); text-decoration: none; font-size: 13px; font-weight: 600; color: var(--em);">📘 Onboarding Guide</a>
+            <a href="#" onclick="trackEvent('engagement', 'resource_click', 'facility_info'); return false;" style="padding: 12px; background: var(--em-xpale); border-radius: var(--rad); text-decoration: none; font-size: 13px; font-weight: 600; color: var(--em);">🏥 Facility Information</a>
+            <a href="#" onclick="trackEvent('engagement', 'resource_click', 'faq'); return false;" style="padding: 12px; background: var(--em-xpale); border-radius: var(--rad); text-decoration: none; font-size: 13px; font-weight: 600; color: var(--em);">❓ FAQ</a>
+            <a href="#" onclick="trackEvent('engagement', 'contact_support', 'help_center'); return false;" style="padding: 12px; background: var(--em-xpale); border-radius: var(--rad); text-decoration: none; font-size: 13px; font-weight: 600; color: var(--em);">💬 Contact Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add scroll animation for cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      card.style.transitionDelay = `${index * 0.1}s`;
+      
+      setTimeout(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 50);
+    });
+  </script>
+</body>
+</html>

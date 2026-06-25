@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://hearthstoneandco.com/admin-portal">
+  <title>Admin Dashboard | Hearthstone & Co</title>
+  <meta name="robots" content="noindex">
+  
+  <!-- GA4 Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQY02V8F13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PQY02V8F13');
+    function trackEvent(category, action, label) {
+      gtag('event', action, {
+        'event_category': category,
+        'event_label': label
+      });
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+  
+  <style>
+    :root {
+      --em: #0f3d2a;
+      --em-md: #1a5c45;
+      --em-lt: #2a7a5c;
+      --em-pale: #eaf2ee;
+      --gold: #c9a84c;
+      --charcoal: #1c1c1c;
+      --text2: #4a5a52;
+      --text3: #7a8a83;
+      --gray-lt: #f4f6f5;
+      --gray-md: #dde5e0;
+      --white: #ffffff;
+      --sh: 0 2px 16px rgba(15, 61, 42, 0.08);
+      --sh-lg: 0 8px 40px rgba(15, 61, 42, 0.13);
+      --t: 0.18s ease;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--gray-lt);
+      color: var(--charcoal);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ──── NAVIGATION ──── */
+    .nav {
+      background: var(--em);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-user {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--em);
+    }
+
+    .nav-user-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .nav-btn {
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--t);
+    }
+
+    .nav-btn:hover {
+      border-color: white;
+      color: white;
+    }
+
+    /* ──── LAYOUT ──── */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .admin-header {
+      background: var(--em);
+      color: white;
+      padding: 36px 0;
+    }
+
+    .admin-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .admin-content {
+      padding: 36px 0;
+    }
+
+    /* ──── STATS GRID ──── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .stat-card {
+      background: white;
+      border: 1.5px solid var(--gray-md);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: var(--sh);
+    }
+
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--em);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text3);
+    }
+
+    /* ──── SECTION TITLE ──── */
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--em);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    /* ──── MAIN GRID ──── */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    /* ──── CARD ──── */
+    .card {
+      background: white;
+      border: 1.5px solid var(--gray-md);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: var(--sh);
+    }
+
+    .card:hover {
+      border-color: var(--em-md);
+      box-shadow: var(--sh-lg);
+    }
+
+    /* ──── APPLICANT LIST ──── */
+    .applicant-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .applicant-item {
+      padding: 16px;
+      background: var(--gray-lt);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all var(--t);
+    }
+
+    .applicant-item:hover {
+      background: var(--em-pale);
+    }
+
+    .applicant-info {
+      flex: 1;
+    }
+
+    .applicant-name {
+      font-weight: 600;
+      color: var(--em);
+      margin-bottom: 4px;
+    }
+
+    .applicant-role {
+      font-size: 12px;
+      color: var(--text2);
+      margin-bottom: 6px;
+    }
+
+    .applicant-date {
+      font-size: 11px;
+      color: var(--text3);
+    }
+
+    .applicant-action {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-small {
+      padding: 6px 12px;
+      background: var(--em);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--t);
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-small:hover {
+      background: var(--em-md);
+    }
+
+    /* ──── ALERTS ──── */
+    .alert {
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      border-left: 4px solid;
+    }
+
+    .alert-warning {
+      background: rgba(201, 168, 76, 0.08);
+      border-color: var(--gold);
+    }
+
+    .alert-warning-text {
+      color: #8a7000;
+      font-size: 13px;
+      flex: 1;
+    }
+
+    .alert-title {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .alert-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    /* ──── SHIFT GRID ──── */
+    .shift-item {
+      padding: 12px;
+      background: var(--gray-lt);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .shift-facility {
+      font-weight: 600;
+      color: var(--em);
+      margin-bottom: 4px;
+    }
+
+    .shift-info {
+      color: var(--text2);
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+
+    .shift-status {
+      display: inline-block;
+      padding: 4px 8px;
+      background: rgba(34, 134, 58, 0.15);
+      color: #228a3a;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    /* ──── RESPONSIVE ──── */
+    @media (max-width: 1024px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .admin-header h1 {
+        font-size: 28px;
+      }
+
+      .nav-inner {
+        padding: 0 16px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">H ⊟ Admin Dashboard</a>
+      <div class="nav-right">
+        <div class="nav-user">
+          <div class="nav-avatar">RN</div>
+          <div class="nav-user-name">Renaye Mullings</div>
+        </div>
+        <button class="nav-btn" onclick="trackEvent('navigation', 'logout_click', 'admin_portal'); alert('Logout feature to be connected to auth system');">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <div class="admin-header">
+    <div class="container">
+      <h1>Operations Dashboard</h1>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="admin-content">
+    <div class="container">
+      <!-- STATS -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">127</div>
+          <div class="stat-label">Active Clinicians</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">23</div>
+          <div class="stat-label">Partner Facilities</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">45</div>
+          <div class="stat-label">Pending Applications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Compliance Alerts</div>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div class="main-grid">
+        <!-- LEFT: Recent Applications -->
+        <div>
+          <h2 class="section-title">Recent Applications</h2>
+          <div class="card">
+            <div class="applicant-list">
+              <div class="applicant-item">
+                <div class="applicant-info">
+                  <div class="applicant-name">Sarah Johnson</div>
+                  <div class="applicant-role">RN • ICU Specialization</div>
+                  <div class="applicant-date">Applied May 18, 2025</div>
+                </div>
+                <div class="applicant-action">
+                  <button class="btn-small" onclick="trackEvent('engagement', 'review_application', 'sarah_johnson');">Review</button>
+                </div>
+              </div>
+
+              <div class="applicant-item">
+                <div class="applicant-info">
+                  <div class="applicant-name">Marcus Rivera</div>
+                  <div class="applicant-role">LVN • Med-Surg</div>
+                  <div class="applicant-date">Applied May 17, 2025</div>
+                </div>
+                <div class="applicant-action">
+                  <button class="btn-small" onclick="trackEvent('engagement', 'review_application', 'marcus_rivera');">Review</button>
+                </div>
+              </div>
+
+              <div class="applicant-item">
+                <div class="applicant-info">
+                  <div class="applicant-name">Jennifer Chen</div>
+                  <div class="applicant-role">CNA • Long-term Care</div>
+                  <div class="applicant-date">Applied May 16, 2025</div>
+                </div>
+                <div class="applicant-action">
+                  <button class="btn-small" onclick="trackEvent('engagement', 'review_application', 'jennifer_chen');">Review</button>
+                </div>
+              </div>
+
+              <div class="applicant-item">
+                <div class="applicant-info">
+                  <div class="applicant-name">David Kim</div>
+                  <div class="applicant-role">RN • ER/Trauma</div>
+                  <div class="applicant-date">Applied May 15, 2025</div>
+                </div>
+                <div class="applicant-action">
+                  <button class="btn-small" onclick="trackEvent('engagement', 'review_application', 'david_kim');">Review</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Alerts & Quick Actions -->
+        <div>
+          <h2 class="section-title">Alerts & Compliance</h2>
+          <div class="card">
+            <div class="alert alert-warning">
+              <span class="alert-icon">⚠️</span>
+              <div class="alert-warning-text">
+                <div class="alert-title">License Expiring</div>
+                <div>David Kim's RN license expires in 15 days</div>
+              </div>
+            </div>
+
+            <div class="alert alert-warning">
+              <span class="alert-icon">⚠️</span>
+              <div class="alert-warning-text">
+                <div class="alert-title">Background Check Pending</div>
+                <div>2 clinicians waiting on verification (5+ days)</div>
+              </div>
+            </div>
+
+            <div class="alert alert-warning">
+              <span class="alert-icon">⚠️</span>
+              <div class="alert-warning-text">
+                <div class="alert-title">OIG SAM Update</div>
+                <div>Monthly SAM.gov check needed by end of month</div>
+              </div>
+            </div>
+
+            <button class="btn-small" style="width: 100%; margin-top: 16px;" onclick="trackEvent('navigation', 'view_full_alerts', 'admin_dashboard');">View All Alerts</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHIFTS & ACTIVITY -->
+      <h2 class="section-title">Active Shifts</h2>
+      <div class="card">
+        <div>
+          <div class="shift-item">
+            <div class="shift-facility">Memorial Hospital — ICU</div>
+            <div class="shift-info">🌙 Night Shift • May 22 • 7pm - 7am</div>
+            <div class="shift-status">✓ Assigned: Sarah K</div>
+          </div>
+
+          <div class="shift-item">
+            <div class="shift-facility">Green Oaks ALF — Med-Surg</div>
+            <div class="shift-info">☀️ Day Shift • May 23 • 7am - 7pm</div>
+            <div class="shift-status">✓ Assigned: James P</div>
+          </div>
+
+          <div class="shift-item">
+            <div class="shift-facility">Houston Behavioral Health — Psych Ward</div>
+            <div class="shift-info">☀️ Day Shift • May 24 • 8am - 4pm</div>
+            <div class="shift-status">⏳ Pending Match</div>
+          </div>
+
+          <div class="shift-item">
+            <div class="shift-facility">St. Mary's Hospital — Emergency</div>
+            <div class="shift-info">🌙 Night Shift • May 25 • 8pm - 8am</div>
+            <div class="shift-status">⏳ Pending Match</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fade in cards on load
+    document.querySelectorAll('.stat-card, .card').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      el.style.transitionDelay = `${i * 0.1}s`;
+      
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 50);
+    });
+  </script>
+</body>
+</html>
