@@ -224,7 +224,7 @@ p{color:var(--text-2);line-height:1.8}
   .stat-row{grid-template-columns:repeat(2,1fr)}
   .link-strip-inner{flex-direction:column;gap:.75rem}
 }
-@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{transform:translateY(18px)}to{transform:translateY(0)}}
 .fade-up{animation:fadeUp .55s ease forwards}
 .delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}
 .faq { margin: 3rem 0; }
@@ -244,6 +244,8 @@ p{color:var(--text-2);line-height:1.8}
 .faq-details summary { font-weight: 600; cursor: pointer; color: var(--em, #1a3d2e); font-size: 1.05rem; }
 .faq-details p { margin-top: 0.75rem; color: var(--mid, #4a5568); line-height: 1.6; }
 .faq-stack { display: flex; flex-direction: column; gap: 1rem; }
+  
+    @media (prefers-reduced-motion:reduce){.fade-up,.fade-up-2,.fade-up-3{animation:none;transform:none}}
   </style>
 
   

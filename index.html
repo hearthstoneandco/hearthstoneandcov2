@@ -1110,12 +1110,12 @@
 
     /* animation */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { transform: translateY(24px); }
+      to { transform: translateY(0); }
     }
     .fade-up { animation: fadeUp 0.7s ease forwards; }
-    .fade-up-2 { animation: fadeUp 0.7s 0.15s ease forwards; opacity: 0; }
-    .fade-up-3 { animation: fadeUp 0.7s 0.3s ease forwards; opacity: 0; }
+    .fade-up-2 { animation: fadeUp 0.7s 0.15s ease forwards; }
+    .fade-up-3 { animation: fadeUp 0.7s 0.3s ease forwards; }
 
     /* success msg */
     .form-success {
@@ -1132,9 +1132,14 @@
       font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;
     }
     .form-success p { font-size: 0.9rem; color: var(--mid); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up, .fade-up-2, .fade-up-3 { animation: none; transform: none; }
+    }
   </style>
 
   
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" fetchpriority="high">
   <link rel="preload" as="image" href="./hero-founder.avif" imagesrcset="./hero-founder-mobile.avif 480w, ./hero-founder.avif 763w" imagesizes="(max-width: 960px) 100vw, 50vw" fetchpriority="high">
 <!-- LinkedIn + Meta Pixel (deferred after load — no render-blocking) -->
 <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9107604&fmt=gif" /></noscript>

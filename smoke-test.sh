@@ -1,56 +1,49 @@
 #!/bin/bash
 # Post-deploy smoke test for hearthstoneandco.com
-# Run after every deploy. All checks must pass.
+# Walks the live sitemap — every URL it advertises must return 200.
+# Also checks critical root files and the healthcare-staffing redirect.
 # Usage: bash smoke-test.sh
-# In CI: set SITE_URL env var if needed
+# In CI: exits nonzero on any failure.
 
 SITE="${SITE_URL:-https://hearthstoneandco.com}"
 FAIL=0
 
-check_200() {
-  local url="$SITE/$1"
-  local code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
-  if [ "$code" != "200" ]; then
-    echo "FAIL $code  /$1"
-    FAIL=1
-  else
-    echo "OK   200   /$1"
-  fi
-}
-
-check_301() {
-  local url="$SITE/$1"
-  local code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
-  if [ "$code" != "301" ]; then
-    echo "FAIL $code  /$1 (expected 301)"
-    FAIL=1
-  else
-    echo "OK   301   /$1"
-  fi
-}
-
 echo "=== Smoke test: $SITE ==="
 echo ""
 
-# Root files that must always exist
-check_200 "robots.txt"
-check_200 "sitemap.xml"
-check_200 "favicon.ico"
-check_200 "llms.txt"
-check_200 "hero-founder.jpg"
-check_200 "hero-founder.avif"
-check_200 "hero-founder.webp"
-check_200 "hero-founder-mobile.avif"
-check_200 "hero-founder-mobile.webp"
+# Walk the sitemap — every advertised URL must return 200
+echo "-- Sitemap URLs --"
+for u in $(curl -s "$SITE/sitemap.xml" | grep -o '<loc>[^<]*' | sed 's/<loc>//'); do
+  code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "$u")
+  if [ "$code" != "200" ]; then
+    echo "FAIL $code  $u"
+    FAIL=1
+  else
+    echo "OK   200   $u"
+  fi
+done
 
-# Key pages
-check_200 ""
-check_200 "healthcare-staffing-houston"
-check_200 "about"
-check_200 "contact"
+echo ""
+echo "-- Root files --"
+for f in robots.txt sitemap.xml favicon.ico llms.txt hero-founder.jpg hero-founder.avif hero-founder.webp hero-founder-mobile.avif hero-founder-mobile.webp; do
+  code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$SITE/$f")
+  if [ "$code" != "200" ]; then
+    echo "FAIL $code  /$f"
+    FAIL=1
+  else
+    echo "OK   200   /$f"
+  fi
+done
 
-# The redirect that must never become a 200
-check_301 "healthcare-staffing"
+echo ""
+echo "-- Redirect check --"
+code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$SITE/healthcare-staffing")
+if [ "$code" != "301" ]; then
+  echo "FAIL $code  /healthcare-staffing (expected 301)"
+  FAIL=1
+else
+  echo "OK   301   /healthcare-staffing → /healthcare-staffing-houston"
+fi
 
 echo ""
 if [ "$FAIL" -eq 0 ]; then
