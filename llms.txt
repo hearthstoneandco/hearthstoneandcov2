@@ -30,9 +30,9 @@ Hearthstone & Co. is a healthcare staffing agency specializing in the placement 
 ## Staffing Models
 
 1. **Per Diem Staffing:** Short-term, on-demand placement (hourly rates)
-2. **Contract Staffing:** 6–13 week assignments with benefits
-3. **Travel Nursing:** Out-of-area assignments with housing support
-4. **W-2 Employment:** Full-time positions with benefits
+2. **Contract Staffing:** 6–13 week assignments
+3. **Travel Nursing:** Out-of-area assignments
+4. **W-2 Employment:** Full-time positions
 
 ## Credential Standards
 
@@ -64,7 +64,7 @@ All healthcare professionals placed through Hearthstone & Co. must meet:
 ## Contact Information
 
 **Phone:** (713) 364-5058  
-**Email:** renaye@hearthstoneandco.com  
+**Email:** hello@hearthstoneandco.com  
 **Website:** https://hearthstoneandco.com  
 **Mailing Address:** Katy, TX 77494, USA  
 
