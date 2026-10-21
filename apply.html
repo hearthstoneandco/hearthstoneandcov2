@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clinician Portal & Careers — Hearthstone & Co.</title>
 <meta name="description" content="Apply for flexible RN, LVN, CNA, and allied health opportunities with Hearthstone & Co.. Built for Greater Houston clinicians who want clear pay, organized support, and fast placement.">
+<meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://hearthstoneandco.com/apply">
 <meta property="og:title" content="Clinician Portal & Careers — Hearthstone & Co. Workforce Solutions">
 <meta property="og:description" content="Apply for flexible healthcare work with organized support and fast placement across Greater Houston.">
@@ -225,10 +226,6 @@ window.addEventListener('load', function () {
 </head>
 <body data-page="apply">
 <div id="toast-wrap"></div>
-
-<div class="setup-banner" id="setup-banner">
-  <strong>Demo mode</strong> — all screens work fully. To go live, replace <code>YOUR_SUPABASE_URL</code> and <code>YOUR_SUPABASE_ANON_KEY</code> in the script below with your Supabase project values.
-</div>
 
 <nav class="nav">
   <div class="nav-inner">
@@ -812,7 +809,6 @@ function init(){
     }).catch(function(){});
     sb.auth.onAuthStateChange(function(_e,session){CU=session?session.user:null;updateNav();});
   }
-  document.getElementById('setup-banner').style.display=DEMO_MODE?'block':'none';
   var roleFromQuery=getRoleFromQuery();
   if(roleFromQuery){
     if(CU){startApp(roleFromQuery);}else{PR=roleFromQuery;showAuth('signup');}
