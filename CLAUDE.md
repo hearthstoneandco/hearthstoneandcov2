@@ -13,7 +13,8 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
 ## Hard rules (never break)
 - NEVER invent testimonials, reviews, ratings, awards, client names, placement
   stats, fill rates, response times, bench size, past performance, insurance,
-  or certifications. Verified claims only: SBA-Certified VOSB & WOSB; SAM.gov
+  or certifications. Verified claims only: SBA-Certified VOSB & WOSB; NaVOBA-certified
+  Veteran's Business Enterprise (VBE), certificate 202600352V, valid Oct 20, 2026 to Oct 20, 2029; SAM.gov
   UEI SVAZQG49VUH7; CAGE 1ZPE9; NAICS 561320/561311; RN/LVN/CNA staffing;
   W-2 employment model; Katy TX / Greater Houston; founder Renaye Mullings,
   U.S. Army veteran.
