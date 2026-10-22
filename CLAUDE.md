@@ -18,6 +18,11 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   UEI SVAZQG49VUH7; CAGE 1ZPE9; NAICS 561320/561311; RN/LVN/CNA staffing;
   W-2 employment model; Katy TX / Greater Houston; founder Renaye Mullings,
   U.S. Army veteran.
+  Also founder-verified (Oct 21, 2026): "Texas Women Veterans Registry | City of Houston" listing; Texas HUB
+  Certification (applying); "A subsidiary of The Shiylohe Collective".
+  Pay cycle: clinicians weekly, internal roles biweekly. Hours of operation follow the Google Business Profile.
+  Emails: hello@ general; careers@ internal careers; clinicians@ clinicians; facilities@ facility staffing requests.
+  One phone number only: (713) 364-5058. Say "placement target", not "guarantee".
 - Anything unverifiable → mark "FOUNDER VERIFICATION REQUIRED" and leave out.
 - No keyword stuffing, hidden text, doorway pages, fake schema (especially
   AggregateRating/Review), fake locations, or bought links.
