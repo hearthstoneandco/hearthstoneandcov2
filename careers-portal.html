@@ -697,8 +697,10 @@ function buildForm(id, r) {
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(location.search);
   const role = params.get('role');
-  if (role && ROLES[role]) buildForm(role, ROLES[role]);
-  else buildPicker();
+  /* Only the BDR role is open for applications right now. Other roles are kept in ROLES for when hiring resumes. */
+  const OPEN_ROLES = ['bdr-sdr'];
+  if (role && OPEN_ROLES.includes(role) && ROLES[role]) buildForm(role, ROLES[role]);
+  else buildForm(OPEN_ROLES[0], ROLES[OPEN_ROLES[0]]);
 });
 </script>
 </body>
