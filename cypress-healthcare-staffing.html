@@ -140,6 +140,28 @@ window.addEventListener('load', function () {
 }
 </style>
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="LaxLH70iQm5kj1qKQwgCeg" async></script>
+
+  <style>
+    .hero-panel{position:relative;overflow:hidden;border-radius:20px;padding:2rem 2rem 1.75rem;color:#fff;background:linear-gradient(145deg,#0f3d2a 0%,#1a5c45 55%,#2a7a5c 100%);box-shadow:0 12px 40px rgba(15,61,42,.25);display:flex;flex-direction:column;gap:1.25rem;min-height:500px}
+    .hero-panel::before{content:"";position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.35),rgba(201,168,76,0) 70%);pointer-events:none}
+    .hp-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#e2c87a}
+    .hp-stat{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+    .hp-num{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,4.4rem);font-weight:700;line-height:1;color:#fff}
+    .hp-num small{font-size:.45em;font-weight:600;margin-left:.2rem;color:#e2c87a}
+    .hp-cap{font-size:.92rem;line-height:1.35;color:rgba(255,255,255,.82);max-width:15rem}
+    .hp-steps{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+    .hp-steps li{display:flex;gap:.8rem;align-items:flex-start;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:.7rem .9rem;font-size:.92rem;line-height:1.4}
+    .hp-steps b{flex:0 0 1.6rem;height:1.6rem;border-radius:50%;background:#c9a84c;color:#0f3d2a;font-size:.85rem;display:inline-flex;align-items:center;justify-content:center}
+    .hp-steps span strong{display:block;color:#fff}
+    .hp-steps span{color:rgba(255,255,255,.82)}
+    .hp-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+    .hp-chips span{font-size:.78rem;font-weight:600;padding:.3rem .7rem;border-radius:100px;background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.5);color:#f3e6bd}
+    .hp-foot{margin-top:auto;display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+    .hp-btn{display:inline-block;padding:.7rem 1.2rem;border-radius:10px;font-weight:700;font-size:.92rem;text-decoration:none}
+    .hp-btn.gold{background:#c9a84c;color:#0f3d2a}
+    .hp-btn.ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+    @media (max-width:768px){.hero-panel{min-height:0;padding:1.5rem 1.25rem}}
+  </style>
 </head>
 
 <body>
@@ -168,7 +190,13 @@ window.addEventListener('load', function () {
         <a href="/join-our-network" class="btn-primary-lg" style="border-color: var(--gold); color: var(--em); background: var(--gold-lt);">Apply as Clinician →</a>
       </div>
     </div>
-    <div style="background: linear-gradient(135deg, var(--em) 0%, var(--em-lt) 100%); border-radius: 20px; height: 500px;" role="presentation"></div>
+    <aside class="hero-panel" aria-label="Coverage snapshot &middot; Northwest Houston">
+      <div class="hp-eyebrow">Coverage snapshot &middot; Northwest Houston</div>
+      <div class="hp-stat"><div class="hp-num">36&ndash;72<small>hrs</small></div><div class="hp-cap">placement target after your request is confirmed. Many roles fill sooner.</div></div>
+      <ol class="hp-steps"><li><b>1</b><span><strong>Send your request</strong>Tell us the role, shift and facility.</span></li><li><b>2</b><span><strong>We confirm the timeline</strong>A realistic fill time, up front.</span></li><li><b>3</b><span><strong>A credentialed clinician arrives</strong>W-2, OIG/SAM-screened, ready for the shift.</span></li></ol>
+      <div class="hp-chips"><span>RN</span><span>LVN</span><span>CNA</span><span>Cypress</span><span>Tomball</span><span>Jersey Village</span><span>US-290</span><span>SBA-Certified VOSB &amp; WOSB</span></div>
+      <div class="hp-foot"><a class="hp-btn gold" href="/request-staffing">Request Staffing</a><a class="hp-btn ghost" href="tel:+17133645058">Call (713) 364-5058</a></div>
+    </aside>
   </section>
 
   <section class="section">
