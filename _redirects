@@ -55,3 +55,5 @@ https://hearthstoneandco.sintra.site/* https://hearthstoneandco.com/:splat 301!
 /job-account-executive.html       /job-account-executive                 301!
 /job-payroll-compliance-specialist.html /job-payroll-compliance-specialist     301!
 /job-marketing-content-coordinator.html /job-marketing-content-coordinator     301!
+/blog                              /resources                     301!
+/blog/                             /resources                     301!
