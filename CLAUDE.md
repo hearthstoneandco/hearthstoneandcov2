@@ -22,7 +22,7 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   Certification (applying); "A subsidiary of The Shiylohe Collective".
   Pay cycle: clinicians weekly, internal roles biweekly. Hours of operation follow the Google Business Profile.
   Emails: hello@ general; careers@ internal careers; clinicians@ clinicians; facilities@ facility staffing requests.
-  One phone number only: (713) 364-5058. Say "placement target", not "guarantee".
+  One phone number only: (713) 938-3989. Say "placement target", not "guarantee".
 - Anything unverifiable → mark "FOUNDER VERIFICATION REQUIRED" and leave out.
 - No keyword stuffing, hidden text, doorway pages, fake schema (especially
   AggregateRating/Review), fake locations, or bought links.
