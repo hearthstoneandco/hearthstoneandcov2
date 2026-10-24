@@ -32,8 +32,12 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   shift" (still a target, never a guarantee); EEO line "Hearthstone & Co. is an equal opportunity employer." (counsel to
   confirm wording); do NOT use "pre-credentialed", "active bench" or "rapid response" on the site
   (banned by the agent charter, issue #51). Use instead: "credentialing managed by Hearthstone" and "36-72 hour placement target".
-  PAY RULE (founder, Oct 24, 2026, permanent): never publish dollar pay rates, bill rates or salary figures on the site;
-  say "competitive rates". Third-party market data in blogs must cite a fetched primary source, and must contain no dollar pay or bill rates.
+  PAY RULE (founder, Oct 24, 2026, permanent; applies to ALL AI agents and every website, ad, post, email and job listing):
+  (1) CLINICIAN roles (RN, LVN, CNA, allied and any other clinician/staffed role): NEVER publish dollar pay rates, bill rates or
+  salary figures; say "competitive rates". (2) INTERNAL roles (people who work for Hearthstone's own internal team, e.g. BDR,
+  recruiter, credentialing, admin): DISPLAY the pay rate for every available role; if the founder has not supplied the figure, mark it
+  "FOUNDER VERIFICATION REQUIRED" and never invent one. Third-party market data in blogs must cite a fetched primary source, and must
+  contain no dollar pay or bill rates.
   Pay cycle: clinicians weekly, internal roles biweekly. Hours of operation follow the Google Business Profile.
   Emails: hello@ general; careers@ internal careers; clinicians@ clinicians; facilities@ facility staffing requests.
   One phone number only: (713) 938-3989. Say "placement target", not "guarantee".
