@@ -23,6 +23,17 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   U.S. Army veteran.
   Also founder-verified (Oct 21, 2026): "Texas Women Veterans Registry | City of Houston" listing; Texas HUB
   Certification (applying); "A subsidiary of The Shiylohe Collective".
+  Also founder-verified (Oct 24, 2026): benefits after 90 days (PTO, paid holidays, group medical/dental/vision with company
+  contribution, 401(k)); W-2 clinicians covered by Hearthstone workers' comp ("Zero Employment Risk" wording on
+  assisted-living-staffing-houston is verified); background screening via Checkr and FACIS Level 3, Quest drug screening,
+  five-step credentialing, monthly OIG/SAM exclusion checks; "competitive rates" and dedicated recruiter support; available
+  contracts: 13-week standard, 1-2 week activation, full credentialing managed by Hearthstone, 48h emergency response SLA,
+  100% credential verified (travel-nurse-staffing); "we aim to fill any role within 36-72 hours after a facility requests a
+  shift" (still a target, never a guarantee); EEO line "Hearthstone & Co. is an equal opportunity employer." (counsel to
+  confirm wording); LinkedIn About claims (pre-credentialed, active bench, rapid response) are founder-confirmed true, but
+  any site use needs the exact wording approved first.
+  PAY RULE (founder, Oct 24, 2026, permanent): never publish dollar pay rates, bill rates or salary figures on the site;
+  say "competitive rates". Third-party market data in blogs must cite a fetched primary source.
   Pay cycle: clinicians weekly, internal roles biweekly. Hours of operation follow the Google Business Profile.
   Emails: hello@ general; careers@ internal careers; clinicians@ clinicians; facilities@ facility staffing requests.
   One phone number only: (713) 938-3989. Say "placement target", not "guarantee".
