@@ -33,7 +33,7 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   confirm wording); do NOT use "pre-credentialed", "active bench" or "rapid response" on the site
   (banned by the agent charter, issue #51). Use instead: "credentialing managed by Hearthstone" and "36-72 hour placement target".
   PAY RULE (founder, Oct 24, 2026, permanent): never publish dollar pay rates, bill rates or salary figures on the site;
-  say "competitive rates". Third-party market data in blogs must cite a fetched primary source, and must contain no dollar pay or bill rates.
+  say "competitive rates". EXCEPTION (founder, Oct 24, 2026): internal roles (job-*.html corporate postings) MAY display pay, using only founder-supplied figures; JobPosting JSON-LD baseSalary must mirror the visible text. Clinician (RN/LVN/CNA) pages and blogs stay "competitive rates". Third-party market data in blogs must cite a fetched primary source, and must contain no dollar pay or bill rates.
   Pay cycle: clinicians weekly, internal roles biweekly. Hours of operation follow the Google Business Profile.
   Emails: hello@ general; careers@ internal careers; clinicians@ clinicians; facilities@ facility staffing requests.
   One phone number only: (713) 938-3989. Say "placement target", not "guarantee".
