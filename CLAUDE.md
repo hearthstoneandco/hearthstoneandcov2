@@ -30,10 +30,10 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   contracts: 13-week standard, 1-2 week activation, full credentialing managed by Hearthstone, 48h emergency response SLA,
   100% credential verified (travel-nurse-staffing); "we aim to fill any role within 36-72 hours after a facility requests a
   shift" (still a target, never a guarantee); EEO line "Hearthstone & Co. is an equal opportunity employer." (counsel to
-  confirm wording); LinkedIn About claims (pre-credentialed, active bench, rapid response) are founder-confirmed true, but
-  any site use needs the exact wording approved first.
+  confirm wording); do NOT use "pre-credentialed", "active bench" or "rapid response" on the site
+  (banned by the agent charter, issue #51). Use instead: "credentialing managed by Hearthstone" and "36-72 hour placement target".
   PAY RULE (founder, Oct 24, 2026, permanent): never publish dollar pay rates, bill rates or salary figures on the site;
-  say "competitive rates". Third-party market data in blogs must cite a fetched primary source.
+  say "competitive rates". Third-party market data in blogs must cite a fetched primary source, and must contain no dollar pay or bill rates.
   Pay cycle: clinicians weekly, internal roles biweekly. Hours of operation follow the Google Business Profile.
   Emails: hello@ general; careers@ internal careers; clinicians@ clinicians; facilities@ facility staffing requests.
   One phone number only: (713) 938-3989. Say "placement target", not "guarantee".
