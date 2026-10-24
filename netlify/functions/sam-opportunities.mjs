@@ -21,7 +21,10 @@ const headers = {
 export default async () => {
   const key = process.env.SAM_GOV_API_KEY;
   if (!key) {
-    return new Response(JSON.stringify({ ok: false, error: "not_configured" }), { status: 503, headers });
+    return new Response(JSON.stringify({ ok: false, error: "not_configured" }), {
+      status: 503,
+      headers: { ...headers, "Cache-Control": "no-store", "Netlify-CDN-Cache-Control": "no-store" },
+    });
   }
   const to = new Date();
   const from = new Date(to.getTime() - 30 * 24 * 3600 * 1000);
@@ -66,6 +69,7 @@ export default async () => {
     }
   }
 
+  const failed = errors.length >= NAICS.length;
   const opportunities = [...seen.values()].sort((a, b) => (b.postedDate || "").localeCompare(a.postedDate || ""));
   return new Response(
     JSON.stringify({
@@ -78,7 +82,10 @@ export default async () => {
       errors,
       opportunities,
     }),
-    { status: 200, headers }
+    {
+      status: failed ? 502 : 200,
+      headers: failed ? { ...headers, "Cache-Control": "no-store", "Netlify-CDN-Cache-Control": "no-store" } : headers,
+    }
   );
 };
 
