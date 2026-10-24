@@ -16,7 +16,10 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   or certifications. Verified claims only: SBA-Certified VOSB & WOSB; NaVOBA-certified
   Veteran's Business Enterprise (VBE), certificate 202600352V, valid Oct 20, 2026 to Oct 20, 2029; SAM.gov
   UEI SVAZQG49VUH7; CAGE 1ZPE9; NAICS 561320/561311; RN/LVN/CNA staffing;
-  W-2 employment model; Katy TX / Greater Houston; founder Renaye Mullings,
+  POSITIONING (founder, Oct 23, 2026, permanent): Hearthstone hires and staffs allied healthcare and all
+  types of medical staffing, but primarily staffs RNs, LVNs and CNAs as the core. Always lead with RN/LVN/CNA
+  as core and mention allied/other medical staffing as available; never imply nursing-only or allied-first.
+  Also verified: W-2 employment model; Katy TX / Greater Houston; founder Renaye Mullings,
   U.S. Army veteran.
   Also founder-verified (Oct 21, 2026): "Texas Women Veterans Registry | City of Houston" listing; Texas HUB
   Certification (applying); "A subsidiary of The Shiylohe Collective".
