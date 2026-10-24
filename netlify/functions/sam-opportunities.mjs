@@ -1,3 +1,4 @@
+// (Redeploy 2026-10-23 to load SAM_GOV_API_KEY.)
 // Read-only feed of public federal contract opportunities from SAM.gov
 // that match Hearthstone's NAICS codes (561320, 561311). Used by internal
 // agents. The API key stays server-side (Netlify env var SAM_GOV_API_KEY)
