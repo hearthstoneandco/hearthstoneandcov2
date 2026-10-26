@@ -269,8 +269,15 @@ window.addEventListener('load', function () {
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style id="ux-a11y-base">
+.skip-link{position:absolute;left:8px;top:-60px;z-index:10000;background:#1A3D2E;color:#fff;padding:12px 18px;border:2px solid #C9A84C;border-radius:4px;font-family:'DM Sans',sans-serif;font-weight:600;text-decoration:none}
+.skip-link:focus{top:8px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #C9A84C;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body data-page="hospital-staffing">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <nav class="nav" id="mainNav">
   <div class="nav-inner">
@@ -287,6 +294,7 @@ window.addEventListener('load', function () {
     <button class="nav-mobile-btn" id="mobileBtn" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleNav()"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<main id="main-content">
 
 <!-- HERO -->
 <section class="page-hero">
@@ -556,6 +564,7 @@ window.addEventListener('load', function () {
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer class="footer">
   <div class="footer-top"><div class="container"><div class="footer-grid">
     <div class="footer-col footer-brand-col">
