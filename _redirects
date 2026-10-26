@@ -56,24 +56,36 @@ https://hearthstoneandco.sintra.site/* https://hearthstoneandco.com/:splat 301!
 /job-account-executive.html       /job-account-executive                 301!
 /job-payroll-compliance-specialist.html /job-payroll-compliance-specialist     301!
 /job-marketing-content-coordinator.html /job-marketing-content-coordinator     301!
-/blog                              /resources                     301!
-/blog/                             /resources                     301!
 /veteran-owned-healthcare-staffing-houston.html    /veteran-owned-healthcare-staffing-houston      301!
 /temp-to-perm-nurse-staffing-houston.html    /temp-to-perm-nurse-staffing-houston      301!
 /home-health-staffing-houston.html    /home-health-staffing-houston      301!
 /outpatient-clinic-staffing-houston.html    /outpatient-clinic-staffing-houston      301!
-/blog-verify-texas-nursing-license.html    /blog-verify-texas-nursing-license      301!
 /open-shift-cost-calculator.html    /open-shift-cost-calculator      301!
 /staffing-agency-vetting-scorecard.html    /staffing-agency-vetting-scorecard      301!
 /clinician-onboarding-checklist.html    /clinician-onboarding-checklist      301!
 /healthcare-staffing-glossary.html    /healthcare-staffing-glossary      301!
-/blog-cms-nursing-home-staffing-rule-repeal-texas.html    /blog-cms-nursing-home-staffing-rule-repeal-texas      301!
 /vosb-wosb-subcontracting-guide-healthcare-primes.html    /vosb-wosb-subcontracting-guide-healthcare-primes      301!
-/blog-houston-healthcare-workforce-trends-2025.html    /blog-houston-healthcare-workforce-trends-2025      301!
-/blog-mission-ready-healthcare-staffing-houston.html    /blog-mission-ready-healthcare-staffing-houston      301!
-/blog-oig-sam-screening-clinicians.html    /blog-oig-sam-screening-clinicians      301!
-/blog-per-diem-staffing-houston-2025.html    /blog-per-diem-staffing-houston-2025      301!
-/blog-per-diem-vs-contract-career-stage.html    /blog-per-diem-vs-contract-career-stage      301!
-/blog-reducing-nurse-staffing-gaps-snf.html    /blog-reducing-nurse-staffing-gaps-snf      301!
-/blog-what-to-ask-staffing-agency-credentialing.html    /blog-what-to-ask-staffing-agency-credentialing      301!
 /why-w2-staffing-for-healthcare-facilities.html    /why-w2-staffing-for-healthcare-facilities      301!
+
+# --- Blog: flat article pages -> /blog/<slug> (301, forced so no duplicate content is served) ---
+/blog-cms-nursing-home-staffing-rule-repeal-texas   /blog/cms-nursing-home-staffing-rule-repeal-texas   301!
+/blog-cms-nursing-home-staffing-rule-repeal-texas.html   /blog/cms-nursing-home-staffing-rule-repeal-texas   301!
+/blog-houston-healthcare-workforce-trends-2025   /blog/houston-healthcare-workforce-trends-2025   301!
+/blog-houston-healthcare-workforce-trends-2025.html   /blog/houston-healthcare-workforce-trends-2025   301!
+/blog-mission-ready-healthcare-staffing-houston   /blog/mission-ready-healthcare-staffing-houston   301!
+/blog-mission-ready-healthcare-staffing-houston.html   /blog/mission-ready-healthcare-staffing-houston   301!
+/blog-oig-sam-screening-clinicians   /blog/oig-sam-screening-clinicians   301!
+/blog-oig-sam-screening-clinicians.html   /blog/oig-sam-screening-clinicians   301!
+/blog-per-diem-staffing-houston-2025   /blog/per-diem-staffing-houston-2025   301!
+/blog-per-diem-staffing-houston-2025.html   /blog/per-diem-staffing-houston-2025   301!
+/blog-per-diem-vs-contract-career-stage   /blog/per-diem-vs-contract-career-stage   301!
+/blog-per-diem-vs-contract-career-stage.html   /blog/per-diem-vs-contract-career-stage   301!
+/blog-reducing-nurse-staffing-gaps-snf   /blog/reducing-nurse-staffing-gaps-snf   301!
+/blog-reducing-nurse-staffing-gaps-snf.html   /blog/reducing-nurse-staffing-gaps-snf   301!
+/blog-verify-texas-nursing-license   /blog/verify-texas-nursing-license   301!
+/blog-verify-texas-nursing-license.html   /blog/verify-texas-nursing-license   301!
+/blog-what-to-ask-staffing-agency-credentialing   /blog/what-to-ask-staffing-agency-credentialing   301!
+/blog-what-to-ask-staffing-agency-credentialing.html   /blog/what-to-ask-staffing-agency-credentialing   301!
+
+# /blog, /blog/*, /sitemap-blog.xml are rendered by netlify/functions/blog.mjs (paths declared in the function).
+# Do NOT add a /blog redirect here; it would shadow the function.

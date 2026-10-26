@@ -4,5 +4,7 @@ Allow: /
 # Don't crawl admin/portal/internal pages
 Disallow: /admin-portal
 Disallow: /clinician-portal
+Disallow: /admin/
 
 Sitemap: https://hearthstoneandco.com/sitemap.xml
+Sitemap: https://hearthstoneandco.com/sitemap-blog.xml
