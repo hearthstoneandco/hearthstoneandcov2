@@ -424,8 +424,15 @@ window.addEventListener('load', function () {
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style id="ux-a11y-base">
+.skip-link{position:absolute;left:8px;top:-60px;z-index:10000;background:#1A3D2E;color:#fff;padding:12px 18px;border:2px solid #C9A84C;border-radius:4px;font-family:'DM Sans',sans-serif;font-weight:600;text-decoration:none}
+.skip-link:focus{top:8px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #C9A84C;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <nav class="nav" id="mainNav">
   <div class="nav-inner">
     <a href="/" class="nav-logo"><img decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUyIDUyIj4KICA8cmVjdCB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIGZpbGw9IiMwRjNEMkEiLz4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8cmVjdCB4PSI3IiB5PSI3IiB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMDEsMTY4LDc2LDAuMykiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjI2IiB5PSIzMyIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iI0M5QTg0QyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SDwvdGV4dD4KPC9zdmc+" alt="Hearthstone &amp; Co. Workforce Solutions" style="height:52px;width:52px;object-fit:contain;border-radius:6px;display:block;"></a>
@@ -441,7 +448,7 @@ window.addEventListener('load', function () {
     <button class="nav-mobile-btn" id="mobileBtn" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleNav()"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<main>
+<main id="main-content">
 
 <section style="background:#1a3d2e;background-image:linear-gradient(135deg,#1a3d2e 0%,#06120a 100%);padding:4.5rem 0 3rem;margin-top:70px">
   <div class="container">
