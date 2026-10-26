@@ -16,13 +16,19 @@ A post is live when `draft: false` and `date` is today or earlier. Page shell (h
 
 ## Publishing without a developer
 1. **CMS (recommended):** `/admin` (Decap CMS). Save = draft pull request; Publish = merge to `main`, Netlify redeploys
-   (about a minute) and the post renders at `/blog/<slug>`. Requires one-time setup below.
+   (about a minute) and the post renders at `/blog/<slug>`. Requires the one-time GitHub login setup below.
 2. **Git:** add a `.md` file to `content/blog/` and merge. Same result.
 
-## One-time CMS setup (founder, Netlify dashboard)
-1. Site configuration > Identity > Enable Identity (registration: **Invite only**).
-2. Identity > Services > Git Gateway > Enable (grants the CMS write access to the repo through Netlify).
-3. Identity > Invite users (your email). Accept the invite, then sign in at `/admin`.
+## One-time CMS setup (founder)
+Netlify Identity / Git Gateway are not used (deprecated for newer sites). The CMS signs in with GitHub through
+`netlify/functions/cms-auth.mjs`.
+1. GitHub > Settings > Developer settings > OAuth Apps > New OAuth App (use the hearthstoneandco org's settings if the repo is org-owned).
+   Homepage URL `https://hearthstoneandco.com`; Authorization callback URL `https://hearthstoneandco.com/oauth/callback`.
+2. Copy the Client ID, generate a Client secret.
+3. Netlify > Project configuration > Environment variables: add `GITHUB_OAUTH_CLIENT_ID` and `GITHUB_OAUTH_CLIENT_SECRET`
+   (mark the secret as secret; scope: Functions). Never put these in the repo or in chat.
+4. Redeploy, open `/admin`, click "Login with GitHub". Anyone who can sign in must have write access to the repo;
+   GitHub enforces that, so adding an editor = adding them as a repo collaborator.
 
 ## Post rules (from CLAUDE.md)
 Verified claims only; no dollar pay/bill rates for clinician roles; "placement target", never "guarantee"; unique

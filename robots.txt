@@ -5,6 +5,7 @@ Allow: /
 Disallow: /admin-portal
 Disallow: /clinician-portal
 Disallow: /admin/
+Disallow: /oauth/
 
 Sitemap: https://hearthstoneandco.com/sitemap.xml
 Sitemap: https://hearthstoneandco.com/sitemap-blog.xml
