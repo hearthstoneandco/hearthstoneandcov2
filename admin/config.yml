@@ -1,0 +1,73 @@
+# Decap CMS config for the Hearthstone & Co. blog.
+# Posts are Markdown files in content/blog/. Publishing commits to the repo; Netlify redeploys
+# and netlify/functions/blog.mjs renders the new post at /blog/<slug> — no page rebuild needed.
+backend:
+  name: git-gateway
+  branch: main
+
+# Editorial workflow: "Save" creates a draft branch + pull request; "Publish" merges it.
+# This keeps the founder-review step required by the repo's CLAUDE.md for new pages.
+publish_mode: editorial_workflow
+
+media_folder: img/blog
+public_folder: /img/blog
+site_url: https://hearthstoneandco.com
+display_url: https://hearthstoneandco.com/blog
+locale: en
+
+collections:
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    folder: content/blog
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: Title (H1), name: title, widget: string }
+      - { label: "SEO title tag (unique, ~60 chars)", name: seo_title, widget: string, required: false, hint: "Leave blank to use: Title | Hearthstone & Co." }
+      - { label: "Meta description (unique, ~155 chars)", name: description, widget: text, hint: "Shown in search results. Must be unique per post." }
+      - { label: "Excerpt (shown on /blog and under the headline)", name: excerpt, widget: text }
+      - { label: Publish date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", hint: "Future dates stay hidden until that day." }
+      - { label: Last updated, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false }
+      - { label: Author, name: author, widget: string, default: "Hearthstone & Co. Workforce Solutions" }
+      - label: Categories
+        name: categories
+        widget: relation
+        collection: settings
+        file: categories
+        search_fields: ["categories.*.name"]
+        value_field: "categories.*.slug"
+        display_fields: ["categories.*.name"]
+        multiple: true
+        min: 1
+      - { label: Read time (minutes, optional), name: read_time, widget: number, required: false, value_type: int, min: 1 }
+      - { label: Social/featured image (optional), name: image, widget: image, required: false }
+      - { label: Draft (hide from site), name: draft, widget: boolean, default: true }
+      - label: FAQ schema (optional)
+        name: faq
+        widget: list
+        required: false
+        hint: "Each question and answer MUST also appear visibly in the post body, or remove it. Do not add FAQ schema that is not on the page."
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: text }
+      - { label: Body, name: body, widget: markdown, hint: "Markdown. Migrated posts are HTML; use the Markdown tab (not Rich Text) when editing them." }
+
+  - name: settings
+    label: Blog settings
+    files:
+      - label: Categories
+        name: categories
+        file: content/blog-categories.yml
+        fields:
+          - label: Categories
+            name: categories
+            widget: list
+            fields:
+              - { label: Slug (URL), name: slug, widget: string, hint: "lowercase-with-dashes. Changing it changes the archive URL." }
+              - { label: Name, name: name, widget: string }
+              - { label: Description (used as the archive meta description), name: description, widget: text }
