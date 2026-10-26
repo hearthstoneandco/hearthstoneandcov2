@@ -2,8 +2,11 @@
 # Posts are Markdown files in content/blog/. Publishing commits to the repo; Netlify redeploys
 # and netlify/functions/blog.mjs renders the new post at /blog/<slug> — no page rebuild needed.
 backend:
-  name: git-gateway
+  name: github
+  repo: hearthstoneandco/hearthstoneandcov2
   branch: main
+  base_url: https://hearthstoneandco.com
+  auth_endpoint: oauth/auth   # handled by netlify/functions/cms-auth.mjs
 
 # Editorial workflow: "Save" creates a draft branch + pull request; "Publish" merges it.
 # This keeps the founder-review step required by the repo's CLAUDE.md for new pages.
