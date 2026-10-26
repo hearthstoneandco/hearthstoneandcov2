@@ -1,0 +1,9 @@
+{
+  "name": "hearthstoneandco-site",
+  "private": true,
+  "description": "Static site. Dependencies are used only by the blog Netlify Function (netlify/functions/blog.mjs).",
+  "dependencies": {
+    "marked": "15.0.12",
+    "yaml": "2.8.1"
+  }
+}

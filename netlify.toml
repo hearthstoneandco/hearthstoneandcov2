@@ -39,3 +39,16 @@
   status = 301
   force = true
 
+
+# --- Blog (rendered by netlify/functions/blog.mjs from content/blog/*.md) ---
+# The function declares its own paths in code: /blog, /blog/*, /sitemap-blog.xml
+[functions]
+  included_files = ["content/**", "netlify/blog-templates/**"]
+  node_bundler = "esbuild"
+
+# Decap CMS admin: keep out of search results
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
