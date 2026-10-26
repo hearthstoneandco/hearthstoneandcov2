@@ -12,15 +12,15 @@ read_time: 6
 draft: false
 ---
 
-<p class="lead">Federal exclusion screening is one of the most consequential compliance obligations in healthcare staffing — and one of the most frequently misunderstood. For any entity that bills Medicare, Medicaid, or any federal healthcare program, employing or contracting with an excluded individual exposes the organization to Civil Monetary Penalties of up to $20,000 per item or service furnished by that individual, plus treble damages and potential program exclusion of the facility itself.</p>
+<p class="lead">Federal exclusion screening is one of the most consequential compliance obligations in healthcare staffing — and one of the most frequently misunderstood. For any entity that bills Medicare, Medicaid, or any federal healthcare program, employing or contracting with an excluded individual exposes the organization to Civil Monetary Penalties (adjusted annually for inflation; see the <a href="https://oig.hhs.gov/exclusions/" rel="noopener">HHS OIG exclusions program</a>) per item or service furnished by that individual, plus treble damages and potential program exclusion of the facility itself.</p>
 
 <h2>The Legal Framework: Why This Is Not Optional</h2>
 <p>The exclusion authority originates in Section 1128 of the Social Security Act, which authorizes the Office of Inspector General of the U.S. Department of Health and Human Services to exclude individuals and entities from participation in federal healthcare programs. The implementing regulations at 42 C.F.R. Part 1001 establish mandatory exclusion — for convictions involving healthcare fraud, patient abuse, or felony drug offenses — and permissive exclusion, which covers a broader range of conduct including license revocations, Medicare/Medicaid overpayments, and default on health education loans.</p>
 <p>Critically, the exclusion sanction attaches to the individual — not just their license. A nurse whose license was revoked in one state and subsequently obtained in another may still appear on the exclusion list. A physician excluded for billing fraud is excluded from all federal healthcare programs regardless of which employer engages them, and that employer bears liability for any claims submitted during the period of excluded employment.</p>
 
 <div class="stat-callout">
-  <div><div class="stat-num">$20K</div></div>
-  <div class="stat-label">Maximum Civil Monetary Penalty per item or service furnished by an excluded individual, under 42 U.S.C. § 1320a-7a. Treble damages may apply. Penalties accrue for each discrete service — meaning a single excluded clinician working a 12-hour shift can generate multiple violations.</div>
+  <div><div class="stat-num">Per item</div></div>
+  <div class="stat-label">Civil Monetary Penalties apply per item or service furnished by an excluded individual, under 42 U.S.C. § 1320a-7a. Dollar amounts are adjusted annually for inflation; see the <a href="https://oig.hhs.gov/exclusions/" rel="noopener">HHS OIG exclusions program</a> for current figures. Treble damages may apply. Penalties accrue for each discrete service — meaning a single excluded clinician working a 12-hour shift can generate multiple violations.</div>
 </div>
 
 <h2>The Three Databases Every Staffing Agency and Facility Must Check</h2>

@@ -12,22 +12,22 @@ read_time: 4
 draft: false
 ---
 
-<p class="lead">In Houston, "staffed" is not the same as "safe." When census spikes and RN lines sit open, your facility is operating under fire — and most agencies answer that pressure by sending warm bodies. Hearthstone &amp; Co. sends something different: a stabilized workforce, verified to the mission and ready for your floor.</p>
+<p class="lead">In Houston, "staffed" is not the same as "safe." When census spikes and RN lines sit open, your facility is operating under fire — and most agencies answer that pressure by sending warm bodies. Hearthstone &amp; Co. sends something different: credentialing managed by Hearthstone and a documented five-step process before a clinician reaches your floor.</p>
 
 <h2>The Problem: A Workforce Under Fire</h2>
 <p>Every administrator in Greater Houston knows the math. When census spikes and RN positions sit vacant, the gap between your schedule and your safe-staffing ratio widens by the shift. The Gulf doesn't care about your recruitment backlog. Neither does a state surveyor, a worried family, or the patient in the bed who needs care right now.</p>
 <p>Filling that gap with whoever is available is not a solution; it is a deferred liability. A clinician who cannot perform at your acuity level, or whose credentials do not hold up under audit, does not stabilize your unit — it destabilizes it. That is the difference between a warm body and a stabilized workforce, and it is the difference we were built to deliver.</p>
 
 <h2>The Hearthstone Advantage</h2>
-<p>We were built by people who understand that "good enough" is how missions fail. Four commitments separate Hearthstone from the agencies flooding your inbox:</p>
+<p>We were built by people who understand that "good enough" is how missions fail. Four commitments set Hearthstone apart:</p>
 <ul>
-  <li><strong>Veteran-Owned Precision.</strong> We operate with military-grade standard operating procedures — not "maybe" lists. Placements follow a documented process.</li>
+  <li><strong>Veteran-Owned Precision.</strong> We operate with documented standard operating procedures — not "maybe" lists. Placements follow a documented process.</li>
   <li><strong>The 36–72 Hour Placement Target.</strong> We bridge the staffing gap before it becomes a survey crisis, working to place qualified, credentialed clinicians within our target window.</li>
   <li><strong>Documented Compliance.</strong> Our onboarding isn't just a folder. Your compliance team gets organized documentation to review before a clinician steps on the floor.</li>
   <li><strong>Local Focus.</strong> We don't staff the whole country. We staff the Greater Houston area — because we live here, and your facilities are our neighbors.</li>
 </ul>
 
-<h2>The 5-Step "Ironclad" Verification</h2>
+<h2>The 5-Step Verification</h2>
 <p>We don't just "check" credentials; we verify the mission. Before a single clinician reaches your floor, they clear a five-step verification built to protect your patients, your survey readiness, and your reimbursement.</p>
 <ul>
   <li><strong>1. Primary Source Licensure.</strong> Direct-from-board verification of every license. No screenshots, no self-reported status.</li>
