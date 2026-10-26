@@ -1,7 +1,7 @@
 ---
 title: "CMS Repealed the Nursing Home Staffing Minimums. Here Is What Still Applies to Texas SNFs."
 seo_title: "CMS Nursing Home Staffing Rule Repeal: What Texas SNFs Need"
-description: "CMS repealed the 24/7 RN and 3.48 HPRD nursing home staffing minimums effective Feb 2, 2026. What changed, what still applies in Texas, and how to plan coverage."
+description: "CMS repealed the 24/7 RN and 3.48 HPRD nursing home staffing minimums effective Feb 2, 2026. What changed, what applies in Texas, and how to plan."
 excerpt: "The federal 24/7 RN and 3.48 hours-per-resident-day requirements are gone. The sufficient-staff, RN-coverage, director-of-nursing and facility-assessment requirements are not. A plain-language guide for administrators and DONs."
 date: 2026-10-24
 updated: 2026-10-24
