@@ -25,7 +25,7 @@ draft: false
 
 <h2>The Three Databases Every Staffing Agency and Facility Must Check</h2>
 <h3>OIG LEIE — List of Excluded Individuals/Entities</h3>
-<p>The OIG maintains the List of Excluded Individuals/Entities (LEIE) at exclusions.oig.hhs.gov. The database is updated on the first business day of each month. Individuals on the LEIE include those excluded under both mandatory and permissive provisions. Search capability is provided by name and, importantly, by Social Security Number or Employer Identification Number — which eliminates ambiguity in common-name searches and reduces false-positive match rates.</p>
+<p>The OIG maintains the List of Excluded Individuals/Entities (<a href="/healthcare-staffing-glossary">LEIE</a>) at exclusions.oig.hhs.gov. The database is updated on the first business day of each month. Individuals on the LEIE include those excluded under both mandatory and permissive provisions. Search capability is provided by name and, importantly, by Social Security Number or Employer Identification Number — which eliminates ambiguity in common-name searches and reduces false-positive match rates.</p>
 <p>The OIG's guidance document "Special Advisory Bulletin on the Effect of Exclusion from Participation in Federal Health Care Programs" (updated 2013, still operative) makes clear that any payment to an excluded party — wages, contract fees, or anything of value — from an entity that receives federal program funds constitutes a violation. This applies even if the excluded person performs services that are not directly billed to a federal program.</p>
 
 <h3>SAM.gov — System for Award Management</h3>
