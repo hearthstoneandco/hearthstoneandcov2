@@ -42,7 +42,7 @@ draft: false
 <p>CRNA demand in particular has been driven by the growth of ambulatory surgical centers as procedures migrate from hospital to outpatient settings — a trend accelerated by payer pressure on hospital utilization.</p>
 
 <h2>Behavioral Health: The Most Severely Undersupplied Discipline</h2>
-<p>Mental health services have been officially designated a Health Professional Shortage Area (HPSA) in multiple Houston metro counties by the Health Resources and Services Administration. The Mental Health Center of Excellence at Texas A&M University's 2025 report identifies a ratio of one licensed behavioral health practitioner for every 710 residents requiring mental health care across the Houston MSA — a gap so severe that it cannot be addressed by training pipeline increases alone.</p>
+<p>Mental health services have been officially designated a Health Professional Shortage Area (HPSA) in multiple Houston metro counties by the Health Resources and Services Administration.</p>
 <p>Licensed Clinical Social Workers (LCSWs), Licensed Professional Counselors (LPCs), and Psychiatric Mental Health Nurse Practitioners are in demand at behavioral health facilities in Greater Houston. Behavioral health is a supply-constrained segment of the market.</p>
 
 <h2>The Digital Platform Market Share Shift</h2>
