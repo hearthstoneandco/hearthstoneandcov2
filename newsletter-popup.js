@@ -1,9 +1,10 @@
-/* Hearthstone & Co. - newsletter signup popup.
-   Shows once per visitor (re-offered after 45 days if dismissed, never after subscribing).
-   Skipped on form/conversion pages so it never interrupts a staffing request or application.
-   Submits to the Netlify form "newsletter" declared on /newsletter. No personal data is sent to analytics. */
+/* Hearthstone & Co. - newsletter signup banner.
+   A slim, non-blocking banner docked at the bottom of the page. Shown once per visitor
+   (re-offered after 45 days if dismissed, never after subscribing). Skipped on form and
+   conversion pages. Submits to the Netlify form "newsletter" declared on /newsletter.
+   No personal data is sent to analytics. */
 (function () {
-  var SKIP = /^\/(request-staffing|contact|apply|join-our-network|careers-portal|bd-contact|teaming-inquiry|newsletter|privacy-policy|sms-consent|accessibility|terms-of-service|admin)(\/|\.html)?$/;
+  var SKIP = /^\/(request-staffing|contact|apply|join-our-network|careers-portal|bd-contact|teaming-inquiry|newsletter|privacy-policy|sms-consent|accessibility|terms-of-service)(\/|\.html)?$/;
   var path = location.pathname.replace(/\/$/, '');
   if (SKIP.test(path) || path.indexOf('/admin') === 0) return;
   var KEY = 'hs_nl', DAYS = 45;
@@ -12,52 +13,64 @@
   var st = get();
   if (st && (st.done || (Date.now() - st.t) < DAYS * 864e5)) return;
   function ev(n) { try { if (typeof gtag === 'function') gtag('event', n, { page_path: location.pathname }); } catch (e) {} }
-  var shown = false, lastFocus = null;
 
-  var css = '#hs-nl{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:1rem;background:rgba(10,25,18,.62)}' +
-    '#hs-nl.on{display:flex}#hs-nl .box{position:relative;max-width:440px;width:100%;background:#fff;border-top:5px solid #C9A84C;border-radius:10px;padding:2rem 1.6rem 1.5rem;box-shadow:0 20px 60px rgba(0,0,0,.35);font-family:"DM Sans",system-ui,sans-serif;color:#22302A}' +
-    '#hs-nl .k{font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#8a6d1f;margin:0 0 .4rem}' +
-    '#hs-nl h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.7rem;line-height:1.15;color:#1A3D2E;margin:0 0 .6rem}' +
-    '#hs-nl p{margin:0 0 .9rem;font-size:.95rem;line-height:1.5}#hs-nl label{display:block;font-size:.8rem;font-weight:600;margin:0 0 .25rem}' +
-    '#hs-nl input[type=email],#hs-nl input[type=text]{width:100%;box-sizing:border-box;padding:.7rem .8rem;border:1px solid #b9c4bd;border-radius:6px;font-size:1rem;margin-bottom:.7rem}' +
-    '#hs-nl button.go{width:100%;background:#1A3D2E;color:#fff;border:0;border-radius:6px;padding:.8rem;font-size:1rem;font-weight:600;cursor:pointer}' +
-    '#hs-nl button.go:hover{background:#245238}#hs-nl button.x{position:absolute;top:.4rem;right:.5rem;background:none;border:0;font-size:1.6rem;line-height:1;color:#55645C;cursor:pointer;padding:.3rem .5rem}' +
-    '#hs-nl .fine{font-size:.76rem;color:#55645C;margin:.7rem 0 0}#hs-nl .fine a{color:#1A3D2E}#hs-nl .no{display:block;margin:.6rem auto 0;background:none;border:0;color:#55645C;font-size:.8rem;text-decoration:underline;cursor:pointer}' +
-    '#hs-nl :focus-visible{outline:3px solid #C9A84C;outline-offset:2px}';
+  var css =
+    '#hs-nl{position:fixed;left:50%;bottom:16px;z-index:900;width:min(880px,calc(100% - 24px));transform:translate(-50%,24px);opacity:0;visibility:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s,visibility 0s .45s}' +
+    '#hs-nl.on{transform:translate(-50%,0);opacity:1;visibility:visible;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s}' +
+    '#hs-nl .hs-bar{position:relative;display:flex;align-items:center;gap:16px;background:#1A3D2E;color:#fff;border-radius:14px;padding:12px 44px 12px 14px;box-shadow:0 12px 40px rgba(10,25,18,.35),0 0 0 1px rgba(201,168,76,.45);font-family:"DM Sans",system-ui,sans-serif}' +
+    '#hs-nl .hs-bar:before{content:"";position:absolute;left:18px;right:18px;top:0;height:2px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);border-radius:2px}' +
+    '#hs-nl img.hs-hs-lg{width:46px;height:46px;border-radius:10px;flex:none;box-shadow:0 0 0 1px rgba(201,168,76,.5)}' +
+    '#hs-nl .hs-tx{flex:1 1 auto;min-width:0}' +
+    '#hs-nl .hs-k{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#C9A84C;margin:0 0 2px}' +
+    '#hs-nl .hs-h{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.22rem;line-height:1.15;font-weight:600;margin:0;color:#fff}' +
+    '#hs-nl .hs-s{font-size:.78rem;color:rgba(255,255,255,.72);margin:3px 0 0;line-height:1.35}' +
+    '#hs-nl form{display:flex;gap:8px;flex:none;align-items:center;margin:0}' +
+    '#hs-nl input[type=email]{width:220px;box-sizing:border-box;padding:.62rem .8rem;border:1px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(255,255,255,.96);color:#1A3D2E;font-size:.92rem;font-family:inherit}' +
+    '#hs-nl input[type=email]::placeholder{color:#6b7c73}' +
+    '#hs-nl button.hs-go{background:#C9A84C;color:#1A3D2E;border:0;border-radius:8px;padding:.62rem 1.05rem;font-size:.9rem;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap;transition:background .2s}' +
+    '#hs-nl button.hs-go:hover{background:#d8b95e}#hs-nl button.hs-go:disabled{opacity:.7;cursor:default}' +
+    '#hs-nl button.hs-x{position:absolute;top:6px;right:8px;width:30px;height:30px;background:none;border:0;border-radius:50%;color:rgba(255,255,255,.7);font-size:1.4rem;line-height:1;cursor:pointer}' +
+    '#hs-nl button.hs-x:hover{color:#fff;background:rgba(255,255,255,.1)}' +
+    '#hs-nl .hs-fine{font-size:.68rem;color:rgba(255,255,255,.55);margin:5px 0 0}#hs-nl .hs-fine a{color:rgba(255,255,255,.8)}' +
+    '#hs-nl .hs-err{font-size:.74rem;color:#f3c9c9;margin:4px 0 0}' +
+    '#hs-nl .hs-ok{display:flex;align-items:center;gap:12px;width:100%}#hs-nl .hs-ok[hidden]{display:none}' +
+    '#hs-nl :focus-visible{outline:2px solid #C9A84C;outline-offset:2px}' +
+    '@media(max-width:720px){#hs-nl{bottom:10px;width:calc(100% - 16px)}#hs-nl .hs-bar{flex-wrap:wrap;gap:10px;padding:12px 40px 12px 12px}' +
+    '#hs-nl img.hs-hs-lg{width:38px;height:38px}#hs-nl .hs-h{font-size:1.1rem}#hs-nl .hs-s{display:none}#hs-nl form{width:100%}#hs-nl input[type=email]{flex:1;width:auto;min-width:0}}' +
+    '@media(prefers-reduced-motion:reduce){#hs-nl,#hs-nl.on{transition:none}}';
   var style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
 
-  var wrap = document.createElement('div'); wrap.id = 'hs-nl'; wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true'); wrap.setAttribute('aria-labelledby', 'hs-nl-h');
-  wrap.innerHTML = '<div class="box"><button type="button" class="x" aria-label="Close">&times;</button>' +
-    '<div id="hs-nl-form"><p class="k">The Hearthstone Brief</p><h2 id="hs-nl-h">One useful email a month for Houston facility leaders</h2>' +
-    '<p>Staffing and credentialing know-how, planning checklists and procurement updates from a veteran-owned, Katy-based healthcare staffing company.</p>' +
-    '<form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="newsletter">' +
+  var wrap = document.createElement('aside'); wrap.id = 'hs-nl'; wrap.setAttribute('role', 'region'); wrap.setAttribute('aria-label', 'Newsletter signup');
+  wrap.innerHTML =
+    '<div class="hs-bar"><button type="button" class="hs-x" aria-label="Dismiss newsletter signup">&times;</button>' +
+    '<div class="hs-ok" id="hs-nl-ok" hidden role="status"><img class="hs-lg" src="/icon-192.png" alt="" width="46" height="46"><div class="hs-tx"><p class="hs-k">Subscribed</p><p class="hs-h">You are on the list. Thank you.</p></div></div>' +
+    '<img class="hs-lg" id="hs-nl-lg" src="/icon-192.png" alt="" width="46" height="46">' +
+    '<div class="hs-tx" id="hs-nl-tx"><p class="hs-k">The Hearthstone Brief</p><p class="hs-h">One useful email a month for Houston facility leaders</p>' +
+    '<p class="hs-s">Staffing and credentialing know-how and planning checklists. Unsubscribe anytime.</p></div>' +
+    '<form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="hs-nl-form"><input type="hidden" name="form-name" value="newsletter">' +
     '<p hidden><label>Do not fill this out <input name="bot-field"></label></p>' +
-    '<label for="hs-nl-e">Work email</label><input id="hs-nl-e" type="email" name="email" required autocomplete="email" placeholder="you@organization.com">' +
-    '<button class="go" type="submit">Subscribe</button></form>' +
-    '<p class="fine">About once a month. Unsubscribe anytime. <a href="/privacy-policy">Privacy Policy</a></p><button type="button" class="no">No thanks</button></div>' +
-    '<div id="hs-nl-ok" hidden role="status"><p class="k">Subscribed</p><h2>You are on the list</h2><p>Thank you. Look for the next issue in your inbox.</p></div></div>';
+    '<label for="hs-nl-e" style="position:absolute;left:-9999px">Work email</label>' +
+    '<input id="hs-nl-e" type="email" name="email" required autocomplete="email" placeholder="Work email"><button class="hs-go" type="submit">Subscribe</button></form></div>';
   document.body.appendChild(wrap);
 
-  function open() { if (shown) return; shown = true; lastFocus = document.activeElement; wrap.classList.add('on'); document.getElementById('hs-nl-e').focus(); ev('newsletter_popup_view'); }
-  function close(done) { wrap.classList.remove('on'); set({ t: Date.now(), done: !!done }); if (lastFocus && lastFocus.focus) lastFocus.focus(); }
-  wrap.querySelector('.x').onclick = function () { ev('newsletter_popup_close'); close(false); };
-  wrap.querySelector('.no').onclick = function () { ev('newsletter_popup_close'); close(false); };
-  wrap.addEventListener('click', function (e) { if (e.target === wrap) close(false); });
-  document.addEventListener('keydown', function (e) {
-    if (!wrap.classList.contains('on')) return;
-    if (e.key === 'Escape') close(false);
-    if (e.key === 'Tab') { var f = wrap.querySelectorAll('button,input:not([type=hidden]),a'); var v = Array.prototype.filter.call(f, function (n) { return n.offsetParent !== null; }); if (!v.length) return; var a = v[0], z = v[v.length - 1]; if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); } else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); } }
-  });
-  wrap.querySelector('form').addEventListener('submit', function (e) {
-    e.preventDefault(); var f = e.target, b = f.querySelector('button.go'), t = b.textContent; b.disabled = true; b.textContent = 'Subscribing...';
+  var shown = false, lastFocus = null;
+  function open() { if (shown) return; shown = true; wrap.classList.add('on'); ev('newsletter_banner_view'); }
+  function close(done) { wrap.classList.remove('on'); set({ t: Date.now(), done: !!done }); }
+  wrap.querySelector('.hs-x').onclick = function () { ev('newsletter_banner_close'); close(false); };
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && wrap.classList.contains('on') && wrap.contains(document.activeElement)) close(false); });
+  document.getElementById('hs-nl-form').addEventListener('submit', function (e) {
+    e.preventDefault(); var f = e.target, b = f.querySelector('button.hs-go'), t = b.textContent; b.disabled = true; b.textContent = 'Subscribing...';
+    var old = wrap.querySelector('.hs-err'); if (old) old.remove();
     fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f)).toString() })
-      .then(function (r) { if (!r.ok) throw 0; document.getElementById('hs-nl-form').hidden = true; document.getElementById('hs-nl-ok').hidden = false; set({ t: Date.now(), done: true }); ev('newsletter_signup'); setTimeout(function () { wrap.classList.remove('on'); }, 3500); })
-      .catch(function () { b.disabled = false; b.textContent = t; var m = document.createElement('p'); m.setAttribute('role', 'alert'); m.className = 'fine'; m.textContent = 'Something went wrong. Please try again or email hello@hearthstoneandco.com.'; f.appendChild(m); });
+      .then(function (r) { if (!r.ok) throw 0;
+        ['hs-nl-lg', 'hs-nl-tx', 'hs-nl-form'].forEach(function (id) { document.getElementById(id).style.display = 'none'; });
+        document.getElementById('hs-nl-ok').hidden = false; set({ t: Date.now(), done: true }); ev('newsletter_signup');
+        setTimeout(function () { wrap.classList.remove('on'); }, 4000); })
+      .catch(function () { b.disabled = false; b.textContent = t; var m = document.createElement('p'); m.className = 'hs-err'; m.setAttribute('role', 'alert'); m.textContent = 'Something went wrong. Please try again or email hello@hearthstoneandco.com.'; wrap.querySelector('.hs-tx').appendChild(m); });
   });
 
-  /* Triggers: desktop exit-intent, or after 35s plus 40% scroll (also covers mobile). Never before 12s. */
+  /* Appears after the visitor has engaged: 20s on page plus 25% scroll (or 45s regardless). */
   var start = Date.now(), scrolled = false;
-  window.addEventListener('scroll', function () { var h = document.documentElement; if ((h.scrollTop + window.innerHeight) / h.scrollHeight > 0.4) scrolled = true; }, { passive: true });
-  document.addEventListener('mouseout', function (e) { if (!e.relatedTarget && e.clientY < 8 && Date.now() - start > 12000) open(); });
-  var iv = setInterval(function () { if (shown) return clearInterval(iv); if (Date.now() - start > 35000 && scrolled) { clearInterval(iv); open(); } }, 1500);
+  window.addEventListener('scroll', function () { var h = document.documentElement; if ((h.scrollTop + window.innerHeight) / h.scrollHeight > 0.25) scrolled = true; }, { passive: true });
+  var iv = setInterval(function () { if (shown) return clearInterval(iv); var t = Date.now() - start; if ((t > 20000 && scrolled) || t > 45000) { clearInterval(iv); open(); } }, 1000);
 })();
