@@ -268,19 +268,19 @@ window.addEventListener('load', function () {
         <button class="auth-tab" id="tab-su" onclick="switchTab('signup')">Create Account</button>
       </div>
       <div id="pane-si">
-        <div class="field"><label>Email</label><input type="email" id="si-email" placeholder="your@email.com"></div>
-        <div class="field"><label>Password</label><input type="password" id="si-pass" placeholder="••••••••"></div>
+        <div class="field"><label>Email</label><input type="email" id="si-email" autocomplete="email" placeholder="your@email.com"></div>
+        <div class="field"><label>Password</label><input type="password" id="si-pass" autocomplete="current-password" placeholder="••••••••"></div>
         <button class="btn-primary" id="btn-si" onclick="doSignIn()">Sign In</button>
         <div class="auth-or"><span>or</span></div>
         <p style="text-align:center;font-size:13px;color:var(--text3)">No account? <a href="#" onclick="switchTab('signup');return false" style="color:var(--em-mid);font-weight:600">Create one free →</a></p>
       </div>
       <div id="pane-su" class="hidden">
         <div class="grid2" style="margin-bottom:0">
-          <div class="field"><label>First Name</label><input type="text" id="su-first" placeholder="First"></div>
-          <div class="field"><label>Last Name</label><input type="text" id="su-last" placeholder="Last"></div>
+          <div class="field"><label>First Name</label><input type="text" id="su-first" autocomplete="given-name" placeholder="First"></div>
+          <div class="field"><label>Last Name</label><input type="text" id="su-last" autocomplete="family-name" placeholder="Last"></div>
         </div>
-        <div class="field"><label>Email</label><input type="email" id="su-email" placeholder="your@email.com"></div>
-        <div class="field"><label>Password</label><input type="password" id="su-pass" placeholder="Minimum 8 characters"><span class="hint">At least 8 characters</span></div>
+        <div class="field"><label>Email</label><input type="email" id="su-email" autocomplete="email" placeholder="your@email.com"></div>
+        <div class="field"><label>Password</label><input type="password" id="su-pass" autocomplete="new-password" placeholder="Minimum 8 characters"><span class="hint">At least 8 characters</span></div>
         <button class="btn-primary" id="btn-su" onclick="doSignUp()">Create Account &amp; Apply</button>
         <p style="text-align:center;font-size:11px;color:var(--text3);margin-top:12px;line-height:1.5">Your information is used for recruitment purposes only.</p>
       </div>
@@ -673,11 +673,11 @@ function mkRating(id,label){
 function stepPersonal(){
   var n=AR.steps.length;
   return '<div class="form-sec"><div class="sec-eye">Step 1 of '+n+'</div><div class="sec-title">Personal Information</div><div class="grid2">'+
-    mkField('first_name','First Name','<input id="f-first_name" placeholder="First" required>',1)+
-    mkField('last_name','Last Name','<input id="f-last_name" placeholder="Last" required>',1)+
-    mkField('email','Email Address','<input type="email" id="f-email" placeholder="your@email.com" required>',1)+
-    mkField('phone','Phone Number','<input type="tel" id="f-phone" placeholder="(713) 000-0000" required>',1)+
-    mkField('city','City / Location','<input id="f-city" placeholder="Houston, TX">',0)+
+    mkField('first_name','First Name','<input id="f-first_name" autocomplete="given-name" placeholder="First" required>',1)+
+    mkField('last_name','Last Name','<input id="f-last_name" autocomplete="family-name" placeholder="Last" required>',1)+
+    mkField('email','Email Address','<input type="email" id="f-email" autocomplete="email" placeholder="your@email.com" required>',1)+
+    mkField('phone','Phone Number','<input type="tel" id="f-phone" autocomplete="tel" placeholder="(713) 000-0000" required>',1)+
+    mkField('city','City / Location','<input id="f-city" autocomplete="address-level2" placeholder="Houston, TX">',0)+
     mkField('linkedin','LinkedIn URL','<input type="url" id="f-linkedin" placeholder="linkedin.com/in/yourname">',0)+
   '</div></div>';
 }
