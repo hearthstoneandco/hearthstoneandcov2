@@ -38,7 +38,7 @@ draft: false
 
 <h2>Five Operational Practices That Consistently Improve Fill Rates</h2>
 <h3>1. Submit Work Orders with Lead Time</h3>
-<p>Facilities that submit orders 24–48 hours before shift start receive meaningfully higher fill rates than those calling the morning of. The staffing agency can identify best-matched clinicians, confirm availability, and prevent scheduling conflicts — rather than making a frantic last-minute call that pulls from the bottom of an available pool.</p>
+<p>Giving the agency 24–48 hours of notice before shift start leaves more time to match clinicians and confirm availability. The staffing agency can identify best-matched clinicians, confirm availability, and prevent scheduling conflicts — rather than making a frantic last-minute call that pulls from the bottom of an available pool.</p>
 
 <h3>2. Approve Timesheets Same-Day</h3>
 <p>Agencies prioritize facilities that approve timesheets promptly, because delayed approvals slow invoicing and payment cycles. Facilities that approve within the same shift cycle — or within 24 hours at the latest — build reputations as preferred partners, which translates to priority treatment during high-demand periods (holidays, flu season, summer census spikes).</p>
