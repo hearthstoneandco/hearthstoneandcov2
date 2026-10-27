@@ -21,8 +21,8 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   as core and mention allied/other medical staffing as available; never imply nursing-only or allied-first.
   Also verified: W-2 employment model; Katy TX / Greater Houston; founder Renaye Mullings,
   U.S. Army veteran.
-  Also founder-verified (Oct 21, 2026): "Texas Women Veterans Registry | City of Houston" listing; Texas HUB
-  Certification (applying); "A subsidiary of The Shiylohe Collective".
+  Also founder-verified (Oct 21, 2026): "Texas Women Veterans Registry | City of Houston" listing; Texas VetHUB
+  Certification (applying; founder Oct 27, 2026: program is now VetHUB) and SBA SDVOSB certification (in progress, NOT yet certified; never claim SDVOSB until issued); "A subsidiary of The Shiylohe Collective".
   Also founder-verified (Oct 24, 2026): benefits after 90 days (PTO, paid holidays, group medical/dental/vision with company
   contribution, 401(k)); W-2 clinicians covered by Hearthstone workers' comp ("Zero Employment Risk" wording on
   assisted-living-staffing-houston is verified); background screening via Checkr and FACIS Level 3, Quest drug screening,
