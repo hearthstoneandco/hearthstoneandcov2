@@ -12,7 +12,7 @@ read_time: 4
 draft: false
 ---
 
-<p class="lead">In Houston, "staffed" is not the same as "safe." When census spikes and RN lines sit open, your facility is operating under fire — and most agencies answer that pressure by sending warm bodies. Hearthstone &amp; Co. sends something different: credentialing managed by Hearthstone and a documented five-step process before a clinician reaches your floor.</p>
+<p class="lead">In Houston, "staffed" is not the same as "safe." When census spikes and RN lines sit open, your facility is operating under fire — and most agencies answer that pressure by sending warm bodies. Hearthstone &amp; Co. sends something different: credentialing managed by Hearthstone before a clinician reaches your floor.</p>
 
 <h2>The Problem: A Workforce Under Fire</h2>
 <p>Every administrator in Greater Houston knows the math. When census spikes and RN positions sit vacant, the gap between your schedule and your safe-staffing ratio widens by the shift. The Gulf doesn't care about your recruitment backlog. Neither does a state surveyor, a worried family, or the patient in the bed who needs care right now.</p>
@@ -27,14 +27,13 @@ draft: false
   <li><strong>Local Focus.</strong> We don't staff the whole country. We staff the Greater Houston area — because we live here, and your facilities are our neighbors.</li>
 </ul>
 
-<h2>The 5-Step Verification</h2>
-<p>We don't just "check" credentials; we verify the mission. Before a single clinician reaches your floor, they clear a five-step verification built to protect your patients, your survey readiness, and your reimbursement.</p>
+<h2>Credentialing Managed by Hearthstone</h2>
+<p>Before a clinician reaches your floor, Hearthstone manages their credentialing, built to protect your patients, your survey readiness, and your reimbursement. Key checks include:</p>
 <ul>
-  <li><strong>1. Primary Source Licensure.</strong> Direct-from-board verification of every license. No screenshots, no self-reported status.</li>
-  <li><strong>2. Multi-State Background Checks.</strong> We look deeper than the surface, screening across states rather than a single county lookup.</li>
-  <li><strong>3. Clinical Integrity Screening.</strong> Comprehensive drug screening as a standard — never an upsell.</li>
-  <li><strong>4. Federal Exclusion Shield.</strong> Monthly OIG and SAM.gov checks to protect your federal reimbursement from excluded-individual exposure.</li>
-  <li><strong>5. Acuity-Based Skills Checklists.</strong> We confirm a clinician can actually do the job on your floor — matched to your unit's acuity, not just their job title.</li>
+  <li><strong>License verification.</strong> Every license is verified before placement.</li>
+  <li><strong>Background screening.</strong> Checkr and FACIS Level 3.</li>
+  <li><strong>Drug screening.</strong> Quest drug screening.</li>
+  <li><strong>Federal exclusion checks.</strong> Monthly OIG and SAM.gov checks to protect your federal reimbursement from excluded-individual exposure.</li>
 </ul>
 
 <h2>Stop Reacting. Start Operating.</h2>
