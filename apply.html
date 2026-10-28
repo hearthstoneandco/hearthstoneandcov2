@@ -235,7 +235,7 @@ window.addEventListener('load', function () {
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body data-page="apply">
-<div id="toast-wrap"></div>
+<div id="toast-wrap" role="status" aria-live="polite" aria-atomic="false"></div>
 
 <nav class="nav">
   <div class="nav-inner">
@@ -268,19 +268,19 @@ window.addEventListener('load', function () {
         <button class="auth-tab" id="tab-su" onclick="switchTab('signup')">Create Account</button>
       </div>
       <div id="pane-si">
-        <div class="field"><label>Email</label><input type="email" id="si-email" autocomplete="email" placeholder="your@email.com"></div>
-        <div class="field"><label>Password</label><input type="password" id="si-pass" autocomplete="current-password" placeholder="••••••••"></div>
+        <div class="field"><label for="si-email">Email</label><input type="email" id="si-email" autocomplete="email" placeholder="your@email.com"></div>
+        <div class="field"><label for="si-pass">Password</label><input type="password" id="si-pass" autocomplete="current-password" placeholder="••••••••"></div>
         <button class="btn-primary" id="btn-si" onclick="doSignIn()">Sign In</button>
         <div class="auth-or"><span>or</span></div>
         <p style="text-align:center;font-size:13px;color:var(--text3)">No account? <a href="#" onclick="switchTab('signup');return false" style="color:var(--em-mid);font-weight:600">Create one free →</a></p>
       </div>
       <div id="pane-su" class="hidden">
         <div class="grid2" style="margin-bottom:0">
-          <div class="field"><label>First Name</label><input type="text" id="su-first" autocomplete="given-name" placeholder="First"></div>
-          <div class="field"><label>Last Name</label><input type="text" id="su-last" autocomplete="family-name" placeholder="Last"></div>
+          <div class="field"><label for="su-first">First Name</label><input type="text" id="su-first" autocomplete="given-name" placeholder="First"></div>
+          <div class="field"><label for="su-last">Last Name</label><input type="text" id="su-last" autocomplete="family-name" placeholder="Last"></div>
         </div>
-        <div class="field"><label>Email</label><input type="email" id="su-email" autocomplete="email" placeholder="your@email.com"></div>
-        <div class="field"><label>Password</label><input type="password" id="su-pass" autocomplete="new-password" placeholder="Minimum 8 characters"><span class="hint">At least 8 characters</span></div>
+        <div class="field"><label for="su-email">Email</label><input type="email" id="su-email" autocomplete="email" placeholder="your@email.com"></div>
+        <div class="field"><label for="su-pass">Password</label><input type="password" id="su-pass" autocomplete="new-password" placeholder="Minimum 8 characters"><span class="hint">At least 8 characters</span></div>
         <button class="btn-primary" id="btn-su" onclick="doSignUp()">Create Account &amp; Apply</button>
         <p style="text-align:center;font-size:11px;color:var(--text3);margin-top:12px;line-height:1.5">Your information is used for recruitment purposes only.</p>
       </div>
@@ -646,7 +646,7 @@ function renderStep(){
 }
 
 function mkField(id,label,el,req){
-  return '<div class="field"><label>'+label+(req?' <span class="req">*</span>':'')+'</label>'+el+'</div>';
+  return '<div class="field"><label for="f-'+id+'">'+label+(req?' <span class="req">*</span>':'')+'</label>'+el+'</div>';
 }
 function mkSelect(id,label,opts,req){
   var o=opts.map(function(o){return '<option>'+o+'</option>';}).join('');
@@ -684,11 +684,11 @@ function stepPersonal(){
 function stepWork(){
   var n=AR.steps.length;
   return '<div class="form-sec"><div class="sec-eye">Step 2 of '+n+'</div><div class="sec-title">Work History &amp; Experience</div><div class="grid2">'+
-    '<div class="field"><label>Years of Relevant Experience <span class="req">*</span></label><select id="f-exp_yrs" required><option value="" disabled selected>Select</option><option>Less than 1 year</option><option>1–2 years</option><option>3–5 years</option><option>6–9 years</option><option>10+ years</option></select></div>'+
+    '<div class="field"><label for="f-exp_yrs">Years of Relevant Experience <span class="req">*</span></label><select id="f-exp_yrs" required><option value="" disabled selected>Select</option><option>Less than 1 year</option><option>1–2 years</option><option>3–5 years</option><option>6–9 years</option><option>10+ years</option></select></div>'+
     mkField('cur_title','Current / Most Recent Title','<input id="f-cur_title" placeholder="e.g. Healthcare Recruiter">',0)+
     '<div class="field span2">'+mkField('cur_emp','Current / Most Recent Employer','<input id="f-cur_emp" placeholder="Company name">',0)+'</div>'+
-    '<div class="field span2"><label>Key Responsibilities <span class="req">*</span></label><textarea id="f-resp" placeholder="Describe your day-to-day responsibilities and what you owned..." required></textarea></div>'+
-    '<div class="field span2"><label>Biggest Achievement in the Last 2 Years</label><textarea id="f-achiev" placeholder="Be specific — include numbers, scale, or outcomes..." style="min-height:72px;"></textarea></div>'+
+    '<div class="field span2"><label for="f-resp">Key Responsibilities <span class="req">*</span></label><textarea id="f-resp" placeholder="Describe your day-to-day responsibilities and what you owned..." required></textarea></div>'+
+    '<div class="field span2"><label for="f-achiev">Biggest Achievement in the Last 2 Years</label><textarea id="f-achiev" placeholder="Be specific — include numbers, scale, or outcomes..." style="min-height:72px;"></textarea></div>'+
   '</div></div>';
 }
 function stepRoleQ(){
@@ -706,11 +706,11 @@ function stepRoleQ(){
 function stepAvail(){
   var n=AR.steps.length;
   return '<div class="form-sec"><div class="sec-eye">Step 4 of '+n+'</div><div class="sec-title">Availability &amp; Compensation</div><div class="grid2">'+
-    '<div class="field"><label>Available to Start <span class="req">*</span></label><select id="f-avail" required><option value="" disabled selected>Select</option><option>Immediately</option><option>Within 2 weeks</option><option>Within 30 days</option><option>30–60 days</option><option>60+ days</option></select></div>'+
-    '<div class="field"><label>Work Authorization <span class="req">*</span></label><select id="f-work_auth" required><option value="" disabled selected>Select</option><option>US Citizen</option><option>Permanent Resident (Green Card)</option><option>Valid Work Visa</option><option>Require Sponsorship</option></select></div>'+
-    '<div class="field"><label>Desired Salary / Rate <span class="req">*</span></label><select id="f-salary" required><option value="" disabled selected>Select range</option><option>$35,000 – $45,000</option><option>$45,000 – $55,000</option><option>$55,000 – $70,000</option><option>$70,000 – $85,000</option><option>$85,000 – $100,000</option><option>$100,000+</option><option>Open to discussion</option></select></div>'+
-    '<div class="field"><label>Preferred Schedule</label><select id="f-sched"><option value="" disabled selected>Select</option><option>Standard hours (M–F 9–5)</option><option>Flexible / async</option><option>Early morning (6–2)</option><option>Evening availability</option><option>No preference</option></select></div>'+
-    '<div class="field span2"><label>Anything else we should know? (Optional)</label><textarea id="f-notes" placeholder="Certifications, questions for us, scheduling constraints..." style="min-height:72px;"></textarea></div>'+
+    '<div class="field"><label for="f-avail">Available to Start <span class="req">*</span></label><select id="f-avail" required><option value="" disabled selected>Select</option><option>Immediately</option><option>Within 2 weeks</option><option>Within 30 days</option><option>30–60 days</option><option>60+ days</option></select></div>'+
+    '<div class="field"><label for="f-work_auth">Work Authorization <span class="req">*</span></label><select id="f-work_auth" required><option value="" disabled selected>Select</option><option>US Citizen</option><option>Permanent Resident (Green Card)</option><option>Valid Work Visa</option><option>Require Sponsorship</option></select></div>'+
+    '<div class="field"><label for="f-salary">Desired Salary / Rate <span class="req">*</span></label><select id="f-salary" required><option value="" disabled selected>Select range</option><option>$35,000 – $45,000</option><option>$45,000 – $55,000</option><option>$55,000 – $70,000</option><option>$70,000 – $85,000</option><option>$85,000 – $100,000</option><option>$100,000+</option><option>Open to discussion</option></select></div>'+
+    '<div class="field"><label for="f-sched">Preferred Schedule</label><select id="f-sched"><option value="" disabled selected>Select</option><option>Standard hours (M–F 9–5)</option><option>Flexible / async</option><option>Early morning (6–2)</option><option>Evening availability</option><option>No preference</option></select></div>'+
+    '<div class="field span2"><label for="f-notes">Anything else we should know? (Optional)</label><textarea id="f-notes" placeholder="Certifications, questions for us, scheduling constraints..." style="min-height:72px;"></textarea></div>'+
   '</div></div>';
 }
 function stepReview(){
