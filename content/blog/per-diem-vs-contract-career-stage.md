@@ -18,11 +18,11 @@ draft: false
 <h2>Understanding the Two Models</h2>
 <h3>Per Diem: Maximum Flexibility, Variable Income</h3>
 <p>Per diem staffing — from the Latin for "by the day" — is a shift-based arrangement in which the clinician accepts or declines individual shifts with no guaranteed schedule and no minimum hours commitment. The clinician drives the relationship: you work when it fits your life, and you decline when it doesn't. In exchange for this flexibility, per diem benefits vary by employer, no guaranteed income stability, and the psychological weight of managing your own scheduling.</p>
-<p>Per diem rates are often higher per hour than permanent staff positions at comparable facilities, reflecting the flexibility premium and the absence of benefits overhead. Rates vary by role, facility and shift.</p>
+<p>Per diem pay is set per shift and varies by role, facility and shift, and per diem work often does not carry the same benefits as a scheduled position. Ask any agency how pay and benefits work before you accept a shift.</p>
 
 <h3>Contract Assignments: Structured Income, Defined Commitment</h3>
 <p>A contract assignment — typically 13 weeks, though terms ranging from 4 to 26 weeks are common — is a fixed-term placement at a specific facility on a defined schedule. The clinician commits to a set number of weekly hours for the contract duration and is scheduled for a set number of hours each week. Those hours are specified in the contract (subject to census and facility circumstances) at the confirmed rate for the contract term.</p>
-<p>Contract rates reflect volume and commitment. Because the facility is committing to a longer engagement, the per-hour rate is often modestly lower than a pure per diem fill — but total weekly income is typically higher because the hours are scheduled in advance. For clinicians who want predictability and are geographically flexible, contract work typically maximizes weekly and monthly income.</p>
+<p>Contract pay reflects the longer commitment. Because the hours are scheduled in advance, weekly income is more predictable than with per diem shifts. For clinicians who want predictability and are geographically flexible, contract work can suit that goal.</p>
 
 <div class="stat-callout">
   <div><div class="stat-num">13</div></div>
@@ -49,7 +49,7 @@ draft: false
 
 <h2>How W-2 Compensation Works</h2>
 <p>At Hearthstone & Co., all clinician compensation is W-2 taxable wages. We do not structure tax-free housing stipends, meal and incidental expense allowances, or other non-taxable travel allowances. This is important context for comparing offers across agencies: some travel nursing agencies advertise inflated "package rates" that include non-taxable stipends — rates that appear substantially higher but require the clinician to maintain a legitimate tax home more than 50 miles from the assignment to qualify legally under IRS rules. The comparison is not apples-to-apples.</p>
-<p>As a W-2 employee, Hearthstone covers your employer-side FICA taxes (7.65% of wages). You receive weekly direct deposit. Your W-2 at year-end reflects your total wages — straightforward, clean, and IRS-compliant without requiring you to maintain a tax home or document meal expenses.</p>
+<p>As a W-2 employee, Hearthstone covers your employer-side FICA taxes (7.65% of wages). You are paid weekly. Your W-2 at year-end reflects your total wages — straightforward, clean, and IRS-compliant without requiring you to maintain a tax home or document meal expenses.</p>
 
 <h2>The Hybrid Strategy</h2>
 <p>Many of the highest-earning clinicians in the agency market use a deliberate hybrid approach. They anchor their income with a 13-week contract at one facility — providing schedule predictability and steady scheduled hours — while selectively picking up per diem shifts at secondary facilities on their days off when advantageous shift premiums are available. This strategy maximizes total weekly income while building relationships across multiple facilities, which creates optionality when the contract ends.</p>
