@@ -15,7 +15,7 @@ draft: false
 <p class="lead">Per diem staffing in Greater Houston has entered a period of structural recalibration in 2026. Post-pandemic rate normalization, the emergence of digital shift-fill platforms, and sustained workforce shortages are reshaping how facilities and agencies interact — and administrators who understand the economics of per diem staffing make meaningfully better decisions than those who don't.</p>
 
 <h2>The 2026 Houston Per Diem Market at a Glance</h2>
-<p>Houston remains one of the most active per diem nursing markets in the South, driven by the density of the Texas Medical Center, a large network of skilled nursing facilities across the greater metro. Bill rates — the all-inclusive hourly rate agencies charge facilities — have normalized from their 2022 pandemic peaks but remain well above pre-2020 levels.</p>
+<p>Houston remains one of the most active per diem nursing markets in the South, driven by the density of the Texas Medical Center and a large network of skilled nursing facilities across the greater metro. Bill rates — the all-inclusive hourly rate agencies charge facilities — have normalized from their 2022 pandemic peaks but remain well above pre-2020 levels.</p>
 
 
 <p>Per diem and contract bill rates cover all employer costs beyond the clinician's base wage, including employer payroll taxes, insurance and overhead. Rates vary by specialty, facility type, shift and urgency, so the most useful comparison for a facility is a written quote for the specific role and schedule it needs.</p>
