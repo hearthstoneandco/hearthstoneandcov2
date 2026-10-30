@@ -49,7 +49,7 @@ draft: false
 
 <h2>How W-2 Compensation Works</h2>
 <p>At Hearthstone & Co., all clinician compensation is W-2 taxable wages. We do not structure tax-free housing stipends, meal and incidental expense allowances, or other non-taxable travel allowances. This is important context for comparing offers across agencies: some travel nursing agencies advertise inflated "package rates" that include non-taxable stipends — rates that appear substantially higher but require the clinician to maintain a legitimate tax home more than 50 miles from the assignment to qualify legally under IRS rules. The comparison is not apples-to-apples.</p>
-<p>As a W-2 employee, Hearthstone covers your employer-side FICA taxes (7.65% of wages). You are paid weekly. Your W-2 at year-end reflects your total wages — straightforward, clean, and IRS-compliant without requiring you to maintain a tax home or document meal expenses.</p>
+<p>As a W-2 employee, you are paid weekly. Your W-2 at year-end reflects your total wages — straightforward, clean, and IRS-compliant without requiring you to maintain a tax home or document meal expenses.</p>
 
 <h2>The Hybrid Strategy</h2>
 <p>Many of the highest-earning clinicians in the agency market use a deliberate hybrid approach. They anchor their income with a 13-week contract at one facility — providing schedule predictability and steady scheduled hours — while selectively picking up per diem shifts at secondary facilities on their days off when advantageous shift premiums are available. This strategy maximizes total weekly income while building relationships across multiple facilities, which creates optionality when the contract ends.</p>

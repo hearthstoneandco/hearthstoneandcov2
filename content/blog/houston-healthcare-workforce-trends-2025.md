@@ -15,7 +15,7 @@ draft: false
 <p class="lead">Houston's healthcare labor market in 2026 is defined by three converging dynamics: rate normalization following the post-pandemic staffing surge, structural workforce shortages that modeling suggests will persist through at least 2035, and a rapidly bifurcating staffing model landscape in which traditional agencies and digital platforms compete for the same clinician supply. Understanding these dynamics at the data level — rather than through anecdote — is what separates effective workforce planning from reactive crisis management.</p>
 
 <h2>Baseline: The Houston Healthcare Labor Market</h2>
-<p>Greater Houston is home to the Texas Medical Center, the world's largest medical complex with more than 60 institutions, 13 hospitals, and approximately 100,000 employees. This ecosystem creates a labor market that is both robust in its demand and intensely competitive for supply. For current wage benchmarks by occupation, see the Bureau of Labor Statistics' Occupational Employment and Wage Statistics for the Houston metropolitan area.</p>
+<p>Greater Houston is home to the Texas Medical Center. This ecosystem creates a labor market that is both robust in its demand and intensely competitive for supply. For current wage benchmarks by occupation, see the Bureau of Labor Statistics' Occupational Employment and Wage Statistics for the Houston metropolitan area.</p>
 <p>The local market is bifurcated: acute care settings (hospital systems, specialty centers, the TMC ecosystem) drive RN demand, while the <a href="/nursing-home-staffing-houston">SNF/LTC sector</a> predominantly employs LVNs and CNAs and operates on constrained Medicaid reimbursement.</p>
 
 <div class="stat-callout">
