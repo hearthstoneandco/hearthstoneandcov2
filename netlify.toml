@@ -43,7 +43,7 @@
 # --- Blog (rendered by netlify/functions/blog.mjs from content/blog/*.md) ---
 # The function declares its own paths in code: /blog, /blog/*, /sitemap-blog.xml
 [functions]
-  included_files = ["content/**", "netlify/blog-templates/**"]
+  included_files = ["content/**", "netlify/blog-templates/**", "careers-portal.html"]
   node_bundler = "esbuild"
 
 # Decap CMS admin: keep out of search results
