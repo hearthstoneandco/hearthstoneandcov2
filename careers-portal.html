@@ -523,7 +523,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <p class="app-blurb" id="fBlurb"></p>
         </div>
 
-        <form id="careersForm" name="careers-application">
+        <form id="careersForm" name="careers-application" enctype="multipart/form-data">
           <input type="hidden" name="form-name" value="careers-application">
           <input type="hidden" name="role" id="fRole">
           <p class="hp"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
@@ -552,8 +552,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <div class="fieldset-legend">Role Qualifications</div>
           <div id="roleQuestions"></div>
 
-          <div class="fieldset-legend">Resume &amp; Notes</div>
-          <div class="fld"><label class="q" for="resume_link">Link to your resume, LinkedIn, or portfolio <span class="req">*</span></label><input type="url" id="resume_link" name="resume_link" placeholder="https://" required><small style="display:block;margin-top:.4rem;color:var(--text-3);font-size:.78rem">You may also email your resume to careers@hearthstoneandco.com</small></div>
+          <div class="fieldset-legend">Resume &amp; Cover Letter</div>
+          <div class="fld"><label class="q" for="resume">Upload your resume <span class="req">*</span></label><input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><small style="display:block;margin-top:.4rem;color:var(--text-3);font-size:.78rem">PDF or Word. Up to 4 MB.</small></div>
+          <div class="fld"><label class="q" for="cover_letter">Upload a cover letter (optional)</label><input type="file" id="cover_letter" name="cover_letter" accept=".pdf,.doc,.docx"><small style="display:block;margin-top:.4rem;color:var(--text-3);font-size:.78rem">PDF or Word. Up to 4 MB.</small></div>
+          <div class="fld"><label class="q" for="linkedin_url">LinkedIn profile URL <span class="req">*</span></label><input type="url" id="linkedin_url" name="linkedin_url" placeholder="https://www.linkedin.com/in/your-name" pattern="https?://([a-zA-Z0-9-]+\.)?linkedin\.com/.+" title="Enter your LinkedIn profile link (linkedin.com/in/...)" required></div>
           <div class="fld"><label class="q" for="extra">Anything else you&rsquo;d like us to know? (optional)</label><textarea id="extra" name="extra"></textarea></div>
 
           <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Application</button>
@@ -572,7 +574,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 </section>
 
 <!-- Hidden static form so Netlify detects every possible field at deploy time -->
-<form name="careers-application" data-netlify="true" netlify-honeypot="bot-field" hidden>
+<form name="careers-application" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
   <input type="hidden" name="form-name" value="careers-application">
   <input type="text" name="bot-field">
       <input type="text" name="full_name">
@@ -580,7 +582,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <input type="text" name="phone">
       <input type="text" name="live_in_texas">
       <input type="text" name="work_authorized">
-      <input type="text" name="resume_link">
+      <input type="text" name="linkedin_url">
+      <input type="file" name="resume">
+      <input type="file" name="cover_letter">
       <input type="text" name="extra">
       <input type="text" name="role">
       <input type="text" name="q_recruiting_years">
@@ -697,12 +701,11 @@ function buildForm(id, r) {
     e.preventDefault();
     const btn = form.querySelector('[type=submit]');
     const orig = btn.textContent; btn.textContent = 'Submitting…'; btn.disabled = true;
+    const MAX = 4 * 1024 * 1024;
+    const tooBig = ['resume','cover_letter'].some(n => { const f = form.elements[n].files[0]; return f && f.size > MAX; });
+    if (tooBig) { alert('Each file must be 4 MB or smaller. Please choose a smaller file.'); btn.textContent = orig; btn.disabled = false; return; }
     try {
-      const res = await fetch('/', {
-        method:'POST',
-        headers:{'Content-Type':'application/x-www-form-urlencoded'},
-        body:new URLSearchParams(new FormData(form)).toString()
-      });
+      const res = await fetch('/', { method:'POST', body:new FormData(form) });
       if (res.ok) { form.style.display='none'; document.getElementById('appSuccess').style.display='block'; window.scrollTo({top:0,behavior:'smooth'}); }
       else throw new Error();
     } catch {

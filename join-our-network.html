@@ -658,11 +658,10 @@ function bindForm(formId, successId) {
     btn.textContent = 'Submitting…';
     btn.disabled = true;
     try {
-      const r = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
-      });
+      const hasFile = !!form.querySelector('input[type=file]');
+      const r = await fetch('/', hasFile
+        ? { method: 'POST', body: new FormData(form) }
+        : { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() });
       if (r.ok) { form.style.display = 'none'; suc.style.display = 'block'; if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: form.getAttribute('name') || 'form' }); }
       else throw new Error();
     } catch {
