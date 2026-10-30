@@ -36,8 +36,8 @@ function loadRoles() {
   return rolesCache;
 }
 
-const CORE = ["full_name", "name", "email", "phone", "city", "live_in_texas", "work_authorized", "resume_link"];
-const CORE_LABELS = { full_name: "Full name", name: "Name", email: "Email", phone: "Phone", city: "City", live_in_texas: "Lives in Texas", work_authorized: "Authorized to work in the U.S. (no sponsorship)", resume_link: "Resume / LinkedIn / portfolio link" };
+const CORE = ["full_name", "name", "email", "phone", "city", "live_in_texas", "work_authorized", "linkedin_url", "resume_link"];
+const CORE_LABELS = { full_name: "Full name", name: "Name", email: "Email", phone: "Phone", city: "City", live_in_texas: "Lives in Texas", work_authorized: "Authorized to work in the U.S. (no sponsorship)", linkedin_url: "LinkedIn profile", resume_link: "Resume / LinkedIn / portfolio link" };
 const NOTE_KEYS = ["extra", "notes"];
 
 async function emailSubmission(payload) {
