@@ -6,14 +6,28 @@ import path from "node:path";
 // contact lands in HubSpot with no manual step. No secrets: the portal ID and form GUID are
 // public identifiers set as Netlify env vars HUBSPOT_PORTAL_ID and HUBSPOT_NEWSLETTER_FORM_GUID.
 // If either is unset, this does nothing and the signup stays in Netlify Forms only.
-// Careers and clinician-network forms are emailed straight to their inboxes (see below). All other forms are ignored.
+// Other forms are routed to their inboxes by FORM_RECIPIENTS below; anything unlisted is ignored.
 
-// Careers applications go to careers@ and "Join Our Network" clinician signups go to clinicians@
-// (in addition to being stored in Netlify Forms). Needs Netlify env var RESEND_API_KEY (a Resend API key for a verified
-// hearthstoneandco.com sender). If unset, nothing is sent and the submission stays in Netlify Forms.
+// Inbox routing (all also stored in Netlify Forms). Needs Netlify env var RESEND_API_KEY (a Resend API key for the
+// verified hearthstoneandco.com domain). If unset, nothing is sent and the submission stays in Netlify Forms.
+//  - careers-application  -> careers@     + applicant confirmation from careers@
+//  - clinician-network    -> clinicians@  + applicant confirmation from clinicians@
+//  - staffing-request, teaming-inquiry, bd-contact -> facilities@
+//  - contact -> hello@ ; review-submission (future review form) -> reviews@
+const CAREERS = { team: "Careers & Recruitment Team", address: "careers@hearthstoneandco.com" };
+const CLINICIANS = { team: "Clinician Recruitment Team", address: "clinicians@hearthstoneandco.com" };
+const FACILITIES = { team: "Facility Staffing Team", address: "facilities@hearthstoneandco.com" };
+const BD = { team: "Business Development Team", address: "facilities@hearthstoneandco.com" };
+const mailbox = (name, address) => `${name} <${address}>`;
 const FORM_RECIPIENTS = {
-  "careers-application": { to: "careers@hearthstoneandco.com", label: "application", from: "Hearthstone Careers <careers@hearthstoneandco.com>" },
-  "clinician-network": { to: "clinicians@hearthstoneandco.com", label: "clinician network signup", from: "Hearthstone Clinicians <clinicians@hearthstoneandco.com>" },
+  "careers-application": { to: CAREERS.address, label: "application", from: mailbox("Hearthstone Careers", CAREERS.address), confirm: { kind: "careers", ...CAREERS } },
+  "clinician-network": { to: CLINICIANS.address, label: "clinician network signup", from: mailbox("Hearthstone Clinicians", CLINICIANS.address), confirm: { kind: "clinician", ...CLINICIANS } },
+  "staffing-request": { to: FACILITIES.address, label: "facility staffing request", from: mailbox("Hearthstone Facilities", FACILITIES.address), confirm: { kind: "staffing", ...FACILITIES } },
+  "teaming-inquiry": { to: BD.address, label: "teaming inquiry", from: mailbox("Hearthstone Facilities", BD.address), confirm: { kind: "partner", ...BD } },
+  "bd-contact": { to: BD.address, label: "business development inquiry", from: mailbox("Hearthstone Facilities", BD.address), confirm: { kind: "partner", ...BD } },
+  "contact": { to: "hello@hearthstoneandco.com", label: "contact message", from: mailbox("Hearthstone", "hello@hearthstoneandco.com") },
+  "reviews": { to: "reviews@hearthstoneandco.com", label: "review submission", from: mailbox("Hearthstone Reviews", "reviews@hearthstoneandco.com") },
+  "review-submission": { to: "reviews@hearthstoneandco.com", label: "review submission", from: mailbox("Hearthstone Reviews", "reviews@hearthstoneandco.com") },
 };
 const esc = (v) => String(v ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pretty = (k) => String(k).replace(/^q_/, "").replace(/[_-]+/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
@@ -36,8 +50,8 @@ function loadRoles() {
   return rolesCache;
 }
 
-const CORE = ["full_name", "name", "email", "phone", "city", "live_in_texas", "work_authorized", "linkedin_url", "resume_link"];
-const CORE_LABELS = { full_name: "Full name", name: "Name", email: "Email", phone: "Phone", city: "City", live_in_texas: "Lives in Texas", work_authorized: "Authorized to work in the U.S. (no sponsorship)", linkedin_url: "LinkedIn profile", resume_link: "Resume / LinkedIn / portfolio link" };
+const CORE = ["full_name", "name", "first_name", "last_name", "facility_name", "title", "email", "phone", "city", "live_in_texas", "work_authorized", "linkedin_url", "resume_link"];
+const CORE_LABELS = { first_name: "First name", last_name: "Last name", facility_name: "Facility / organization", title: "Title", full_name: "Full name", name: "Name", email: "Email", phone: "Phone", city: "City", live_in_texas: "Lives in Texas", work_authorized: "Authorized to work in the U.S. (no sponsorship)", linkedin_url: "LinkedIn profile", resume_link: "Resume / LinkedIn / portfolio link" };
 const NOTE_KEYS = ["extra", "notes"];
 
 async function emailSubmission(payload) {
@@ -65,7 +79,8 @@ async function emailSubmission(payload) {
   const other = Object.keys(d).filter((k) => present(k) && !CORE.includes(k) && !NOTE_KEYS.includes(k) && !/^q_/.test(k) && !/^sms/i.test(k));
   const consent = Object.keys(d).filter((k) => present(k) && /^sms/i.test(k));
 
-  const who = d.full_name || d.name || d.email || "New applicant";
+  const person = d.full_name || d.name || [d.first_name, d.last_name].filter(Boolean).join(" ");
+  const who = person || d.email || "New applicant";
   const roleTitle = role ? role.title : d.role ? pretty(d.role) : "";
   const subject = route.label === "application" ? `Application: ${roleTitle || "General"} - ${who}` : `${route.label[0].toUpperCase()}${route.label.slice(1)}: ${who}`;
 
@@ -124,7 +139,7 @@ ${consent.length ? section("Consent") + `<table style="border-collapse:collapse"
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      from: process.env.CAREERS_FROM || route.from,
+      from: (payload.form_name === "careers-application" && process.env.CAREERS_FROM) || route.from,
       to: [route.to],
       reply_to: d.email || undefined,
       subject,
@@ -132,6 +147,59 @@ ${consent.length ? section("Consent") + `<table style="border-collapse:collapse"
       text,
       attachments: attachments.length ? attachments : undefined,
     }),
+  });
+  const sent = res.ok ? "ok" : `resend ${res.status}`;
+  let confirmed = "";
+  if (route.confirm && d.email) {
+    try { confirmed = " confirm:" + (await sendConfirmation({ key, route, d, person, roleTitle, val })); } catch (e) { confirmed = " confirm:error"; }
+  }
+  return sent + confirmed;
+}
+
+// Applicant confirmation, sent from the matching mailbox. Specific to the application type; makes no promise of
+// a response, interview, timeline or placement.
+async function sendConfirmation({ key, route, d, person, roleTitle, val }) {
+  const c = route.confirm;
+  const first = String(person || "").trim().split(/\s+/)[0] || "there";
+  const isApp = c.kind === "careers" || c.kind === "clinician";
+  const discipline = c.kind === "clinician" ? [d.license_type, d.assignment_type].filter(Boolean).map(val).join(" / ") : "";
+  const appliedFor = c.kind === "careers" ? (roleTitle ? `your application for the ${roleTitle} position` : "your application") : "your interest in joining the Hearthstone & Co. clinician network";
+  const detail = {
+    careers: `Thank you for applying to join the Hearthstone &amp; Co. internal team.`,
+    clinician: `Thank you for applying to join the Hearthstone &amp; Co. clinician network${discipline ? ` as ${/^(rn|lvn|mri|[aeiou])/i.test(discipline) ? "an" : "a"} ${esc(discipline)}` : ""}.`,
+    staffing: `Thank you for submitting your staffing request to Hearthstone &amp; Co.`,
+    partner: `Thank you for reaching out to Hearthstone &amp; Co. about working together.`,
+  }[c.kind];
+  const body = isApp
+    ? `The ${esc(c.team)} will be reviewing your application and will reach out if you are selected to move forward.`
+    : `A member of our ${esc(c.team)} will reach out within 24-48 hours to review your ${c.kind === "staffing" ? "request" : "inquiry"} with you.`;
+  const subject = { careers: `We received your application${roleTitle ? `: ${roleTitle}` : ""}`, clinician: "We received your clinician application", staffing: "We received your staffing request", partner: "We received your inquiry" }[c.kind];
+  const eyebrow = isApp ? "Application received" : c.kind === "staffing" ? "Request received" : "Inquiry received";
+  const headline = isApp ? "Thank you for your application" : c.kind === "staffing" ? "Thank you for your request" : "Thank you for reaching out";
+  const received = isApp ? (c.kind === "careers" ? `We have received ${appliedFor}.` : "We have received your application.") : c.kind === "staffing" ? "We have received your request." : "We have received your inquiry.";
+  const closing = isApp ? "There is nothing more you need to do right now. If you need to add anything, simply reply to this email." : "If you have anything to add in the meantime, simply reply to this email or call (713) 938-3989.";
+  const html = `<!doctype html><html><body style="margin:0;padding:0;background:#f4f1ea">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f1ea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff">
+<tr><td align="center" bgcolor="#1A3D2E" style="background:#1A3D2E;padding:24px;border-bottom:4px solid #C9A84C"><a href="https://hearthstoneandco.com"><img src="https://hearthstoneandco.com/logo.png" width="80" height="80" alt="Hearthstone &amp; Co. Workforce Solutions" style="display:block;border:0;background:#0F3D2A;color:#C9A84C;font:14px Georgia,serif"></a></td></tr>
+<tr><td style="padding:32px 36px 8px;font:12px 'Courier New',monospace;letter-spacing:.12em;text-transform:uppercase;color:#C9A84C">${eyebrow}</td></tr>
+<tr><td style="padding:0 36px;font:600 26px Georgia,serif;color:#1A3D2E">${headline}</td></tr>
+<tr><td style="padding:18px 36px 0;font:16px/1.6 Arial,sans-serif;color:#1a1a1a">
+<p style="margin:0 0 14px">Hi ${esc(first)},</p>
+<p style="margin:0 0 14px">${detail} ${received}</p>
+<p style="margin:0 0 14px">${body}</p>
+<p style="margin:0 0 14px">${closing}</p></td></tr>
+<tr><td style="padding:8px 36px 32px;font:16px/1.6 Arial,sans-serif;color:#1a1a1a">Sincerely,<br><strong style="color:#1A3D2E">The ${esc(c.team)}</strong><br>Hearthstone &amp; Co. Workforce Solutions</td></tr>
+<tr><td bgcolor="#1A3D2E" align="center" style="background:#1A3D2E;padding:18px 24px;font:12px/1.5 Arial,sans-serif;color:#ffffff">Hearthstone &amp; Co. Workforce Solutions LLC &middot; Katy, TX &middot; (713) 938-3989${isApp ? "<br>Hearthstone &amp; Co. is an equal opportunity employer." : ""}</td></tr>
+</table></td></tr></table></body></html>`;
+  const text = [`Hi ${first},`, "", `${detail.replace(/&amp;/g, "&").replace(/<[^>]+>/g, "")} ${received}`, "",
+    body.replace(/&amp;/g, "&"), "",
+    closing, "",
+    "Sincerely,", `The ${c.team}`, "Hearthstone & Co. Workforce Solutions", "(713) 938-3989"].join("\n");
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ from: (c.kind === "careers" && process.env.CAREERS_FROM) || mailbox(c.team, c.address), to: [String(d.email).trim()], reply_to: c.address, subject, html, text }),
   });
   return res.ok ? "ok" : `resend ${res.status}`;
 }
