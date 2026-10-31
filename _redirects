@@ -100,3 +100,4 @@ https://hearthstoneandco.sintra.site/* https://hearthstoneandco.com/:splat 301!
 # /blog, /blog/*, /sitemap-blog.xml are rendered by netlify/functions/blog.mjs (paths declared in the function).
 # Do NOT add a /blog redirect here; it would shadow the function.
 /newsletter.html                /newsletter                    301!
+/healthcare-staffing-texas.html /healthcare-staffing-texas 301!
