@@ -21,14 +21,14 @@ draft: false
 <h2>The Hearthstone Advantage</h2>
 <p>We were built by people who understand that "good enough" is how missions fail. Four commitments set Hearthstone apart:</p>
 <ul>
-  <li><strong>Veteran-Owned Precision.</strong> We operate with documented standard operating procedures — not "maybe" lists. Placements follow a documented process.</li>
+  <li><strong><a href="/veteran-owned-healthcare-staffing-houston" style="color:var(--em);font-weight:600">Veteran-Owned</a> Precision.</strong> We operate with documented standard operating procedures — not "maybe" lists. Placements follow a documented process.</li>
   <li><strong>The 36–72 Hour Placement Target.</strong> We bridge the staffing gap before it becomes a survey crisis, working to place qualified, credentialed clinicians within our target window.</li>
   <li><strong>Documented Compliance.</strong> Our onboarding isn't just a folder. Your compliance team gets organized documentation to review before a clinician steps on the floor.</li>
   <li><strong>Local Focus.</strong> We don't staff the whole country. We staff the Greater Houston area — because we live here, and your facilities are our neighbors.</li>
 </ul>
 
 <h2>Credentialing Managed by Hearthstone</h2>
-<p>Before a clinician reaches your floor, Hearthstone manages their credentialing, built to protect your patients, your survey readiness, and your reimbursement. Key checks include:</p>
+<p>Before a clinician reaches your floor, Hearthstone manages their <a href="/compliance-credentialing" style="color:var(--em);font-weight:600">credentialing</a>, built to protect your patients, your survey readiness, and your reimbursement. Key checks include:</p>
 <ul>
   <li><strong>License verification.</strong> Every license is verified before placement.</li>
   <li><strong>Background screening.</strong> Checkr and FACIS Level 3.</li>
@@ -37,5 +37,5 @@ draft: false
 </ul>
 
 <h2>Stop Reacting. Start Operating.</h2>
-<p>Your staffing strategy shouldn't depend on who happens to answer the phone. It should depend on a partner who treats coverage like a mission — verified, accountable, and local. That is what Hearthstone &amp; Co. Workforce Solutions delivers for facilities across the Greater Houston area.</p>
+<p>Your staffing strategy shouldn't depend on who happens to answer the phone. It should depend on a partner who treats coverage like a mission — verified, accountable, and local. That is what Hearthstone &amp; Co. Workforce Solutions delivers for <a href="/for-healthcare-facilities" style="color:var(--em);font-weight:600">facilities across the Greater Houston area</a>.</p>
 <p>Ready to close the gap between "staffed" and "safe"? Call <strong><a href="tel:+17139383989" style="color:var(--em);font-weight:600">(713) 938-3989</a></strong> or <a href="/request-staffing" style="color:var(--em);font-weight:600">request staffing online</a> to put a stabilized, mission-ready workforce on your schedule.</p>
