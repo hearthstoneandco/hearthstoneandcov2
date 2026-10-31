@@ -1,4 +1,4 @@
-# Hearthstone & Co. Brand Guidelines (DRAFT v1, 2026-10-28)
+# Hearthstone & Co. Brand Guidelines (DRAFT v1.1, 2026-10-31)
 
 Status: draft for founder review. Source of truth for wording is /CLAUDE.md (Hard Rules). Items marked FOUNDER DECISION are open. This file contains no internal audit notes and only verified claims, because the repo root is published by Netlify.
 
@@ -50,21 +50,34 @@ Primary CTA: Request Staffing (request-staffing.html) plus Calendly. Clinicians:
 | Ink | #1E1E1E | Body text |
 | Text 2 | #4A4A4A | Secondary text |
 
-Contrast (WCAG 2.x, computed): white on green 11.99:1 (AAA); gold on green 5.25:1 (AA); gold-light on green 7.30:1 (AAA); ink on white 16.67:1; text-2 on white 8.86:1; green on white 11.99:1; gold on white 2.29:1 (FAILS, do not use for text). Tertiary grey #787876 is 4.42:1 on white and fails AA for normal text; use a darker grey (about #6B6B69 or darker) for small text. FOUNDER DECISION: single green is #1A3D2E; retire #0F3D2A.
+Contrast (WCAG 2.x, computed; AA normal text needs 4.5, large text and UI 3.0):
+- Safe: white / off-white / Em-pale on green (11.99 / 11.38 / 10.53); gold-light on green 7.30 (preferred small gold text); gold on green 5.25 (16px and up); gold on ink 7.29; green on white 11.99; green on gold 5.25; ink on white 16.67; text-2 on white 8.86; tertiary grey #6B6B69 on white / off-white / light grey / Em-pale 5.34 / 5.07 / 4.80 / 4.69.
+- Large text or UI only: gold on Green-mid 3.38; Green-light on Em-pale 4.48 (use Green-light on white or off-white only).
+- Never: gold on white 2.29; gold on light grey 1.81; Green-light on green 2.35; old tertiary grey #787876 on white 4.42 (fails AA).
+- Gold is for green or ink backgrounds and for decorative rules. On light backgrounds use green for text.
+- Semantic status colors (info blue, warning amber, error red) are for UI states only, never brand surfaces. FOUNDER DECISION: document them as official tokens.
+- FOUNDER DECISION: single green is #1A3D2E; retire #0F3D2A.
 
 ## 7. Typography
-Cormorant Garamond (display; weights 300/400, italic as accent, never bold), DM Sans (body, UI), Space Mono (labels; FOUNDER DECISION whether it stays, currently not loaded on any page). Load one canonical Google Fonts link per page.
+Cormorant Garamond (display): headings use weight 600, numerals and stats 700, italic as an accent. This is what the live site does; the lighter 300/400 look in the April Canva kit is not loaded on the site. FOUNDER DECISION: confirm 600 for headings. DM Sans (body and UI; 300/400/500/600; tracked uppercase for labels). Space Mono is declared on two pages but not loaded anywhere; FOUNDER DECISION whether it stays.
+
+Heading scale (as built): H1 clamp(2.4rem, 5vw, 3.8rem); H2 clamp(1.9rem, 3.5vw, 2.8rem); H3 clamp(1.2rem, 2vw, 1.6rem); line-height 1.1 to 1.15 for display, 1.6 to 1.7 for body. Smallest readable text: 0.75rem (12px); avoid sizes below it. Preferred small-text steps: 0.75, 0.875, 1, 1.125 rem. Load one canonical Google Fonts link per page.
+
+Radius and shadow tokens: --rad 5px, --rad-md 10px, --rad-lg 16px, pills 100px; shadows neutral black (--sh-sm, --sh-md, --sh-lg). Use the tokens, not hard-coded values.
 
 ## 8. Logo
-Current asset: logo.png, a gold serif italic "H" in a double gold frame on green (512x512). Clear space: height of the "H" on all sides. Minimum size: 24 px digital, 0.5 in print. Do not recolor, stretch, rotate, add effects, or place on busy photos. Light-background, mono and horizontal variants, and vector masters: FOUNDER to supply originals; logo changes are founder-only.
+Current asset: logo.png, a gold serif italic "H" in a double gold frame on green (512x512). Clear space: height of the "H" on all sides. Minimum size: 24 px digital, 0.5 in print. Do not recolor, stretch, rotate, add effects, or place on busy photos. Do not place the mark on photos, on gold, or inside another badge, and do not set the company name in a different font beside it. Light-background, mono and horizontal variants, and vector masters: FOUNDER to supply originals; logo changes are founder-only. Never place the mark beside agency marks in a way that implies endorsement.
 
 Third-party marks: use the NaVOBA VBE badge only as supplied. No SBA, VA or other agency logos unless the issuing body allows it and the founder supplies the artwork.
 
 ## 9. Photography and imagery
-Real people only: founder, real clinicians with consent, real facilities. No stock "clinicians" posed as staff, no AI-generated people presented as staff. Alt text must be honest and descriptive. Open Graph images: branded 1200x630 template per audience (proposed; founder approval).
+Real people only: founder, real clinicians with consent, real facilities. No stock "clinicians" posed as staff, no AI-generated people presented as staff. Treatment: natural light, warm neutral grade, 4:5 crops for social, no patient faces or readable charts (PHI), green duotone for backgrounds only and never over faces. Alt text must be honest and descriptive and never claims a role the person does not hold. Open Graph images: branded 1200x630 template per audience (proposed; founder approval).
 
 ## 10. Templates (Canva, free tier)
 19 template briefs (social, carousel, pin, GBP post, OG image, one-pagers, capability cover, letterhead, proposal cover, business card, email signature, deck) are tracked in issue #117 section 4. Locked fields: CTA, cert numbers, contact line, "placement target" disclaimer. Footer on external pieces: (713) 938-3989 | hearthstoneandco.com.
 
 ## 11. Open founder decisions
 Logo vectors and variants; keep or drop Space Mono; unify the 13 off-token pages to the brand tokens; confirm contact details on legacy Canva kit items; which taglines are primary versus the slogan.
+
+## 12. Icons and charts
+Icons: line style, 1.5px stroke, rounded caps, one color (green on light; gold-light or white on green), 24px grid; no medical-cross or stethoscope clip art, no emoji as icons. Charts: series colors in order #1A3D2E, #3A7A5C, #C9A84C (on dark only or with a label), #4A4A4A, #A7B5AD; at most 4 series; direct labels; gridlines #E5E5E1; every statistic carries a source and date; only cited primary data, never bench, fill-rate, response-time or placement figures.
