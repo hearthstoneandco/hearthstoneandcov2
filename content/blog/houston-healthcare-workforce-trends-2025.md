@@ -28,8 +28,8 @@ draft: false
 <p>For facilities, this normalization is welcome. For clinicians who became accustomed to pandemic-era compensation, the adjustment has created workforce mobility — many RNs who left staff positions for travel nursing during the pandemic have not returned to staff employment, preferring the continued flexibility of the agency model even at lower rates.</p>
 <p>Industry margins have come under competitive pressure — not declining demand, but a market returning to equilibrium pricing after an extraordinary supply-demand dislocation.</p>
 
-<h2>Allied Health: The Fastest-Growing and Most Undersupplied Segment</h2>
-<p>The segment of healthcare staffing experiencing the most acute and sustained supply shortage in 2026 is not nursing — it is allied health. Several disciplines are in genuine crisis conditions:</p>
+<h2>Allied Health: Recurring Staffing Needs</h2>
+<p>Alongside nursing, allied health is a source of recurring staffing needs in Greater Houston. Several disciplines are commonly reported as hard to fill:</p>
 <h3>Speech-Language Pathology</h3>
 <p>Speech-language pathology is a recurring staffing need. The combination of aging population growth and school district expansion creates demand that current SLP graduation rates cannot meet.</p>
 <h3>Diagnostic Imaging</h3>
@@ -41,7 +41,7 @@ draft: false
 <p>Primary care physician shortages are driving increasing reliance on Nurse Practitioners and Physician Assistants for primary, urgent, and acute care delivery, which is driving sustained demand growth for APP staffing.</p>
 <p>CRNA demand in particular has been driven by the growth of ambulatory surgical centers as procedures migrate from hospital to outpatient settings — a trend accelerated by payer pressure on hospital utilization.</p>
 
-<h2>Behavioral Health: The Most Severely Undersupplied Discipline</h2>
+<h2>Behavioral Health: A Supply-Constrained Discipline</h2>
 <p>Mental health services have been officially designated a Health Professional Shortage Area (HPSA) in multiple Houston metro counties by the Health Resources and Services Administration.</p>
 <p>Licensed Clinical Social Workers (LCSWs), Licensed Professional Counselors (LPCs), and Psychiatric Mental Health Nurse Practitioners are in demand at behavioral health facilities in Greater Houston. Behavioral health is a supply-constrained segment of the market.</p>
 
