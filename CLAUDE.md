@@ -38,6 +38,12 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   recruiter, credentialing, admin): DISPLAY the pay rate for every available role; if the founder has not supplied the figure, mark it
   "FOUNDER VERIFICATION REQUIRED" and never invent one. Third-party market data in blogs must cite a fetched primary source, and must
   contain no dollar pay or bill rates.
+  RESPONSE-TIME STANDARD (founder, Oct 31, 2026, permanent; applies to ALL AI agents and every page, form, email, ad and post):
+  (1) RESPONSE: Hearthstone responds to every facility staffing request, teaming inquiry and BD inquiry within 24-48 hours to begin
+  reviewing the request. The founder has approved stating this response time as a commitment. (2) FILL GOAL: the goal is to fill the
+  role within 36-72 hours after the INITIAL request; this stays a "placement target", never a guarantee of a fill. Always measure
+  from the initial request; never say "after your request is confirmed" or "from a confirmed request". The facility confirmation
+  emails in netlify/functions/submission-created.mjs use the same 24-48 hour wording; keep all copy consistent with it.
   Pay cycle: clinicians weekly, internal roles biweekly. Hours of operation follow the Google Business Profile.
   Emails: hello@ general; careers@ internal careers; clinicians@ clinicians; facilities@ facility staffing requests.
   One phone number only: (713) 938-3989. Say "placement target", not "guarantee".
