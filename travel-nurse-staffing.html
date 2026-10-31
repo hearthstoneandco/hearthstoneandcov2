@@ -19,50 +19,93 @@
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalBusiness",
-        "name": "Hearthstone & Co. Workforce Solutions",
-        "url": "https://www.hearthstoneandco.com",
-        "telephone": "+17139383989",
-        "email": "hello@hearthstoneandco.com",
-        "address": {"@type":"PostalAddress","streetAddress": "29655 Jordan Crossing Blvd", "addressLocality":"Katy","addressRegion":"TX","postalCode":"77494","addressCountry":"US"},
-        "areaServed": [
-          {"@type":"City","name":"Houston"},{"@type":"City","name":"Katy"},
-          {"@type":"City","name":"Sugar Land"},{"@type":"City","name":"The Woodlands"},
-          {"@type":"City","name":"Pearland"},{"@type":"City","name":"Pasadena"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EmploymentAgency",
+      "name": "Hearthstone & Co. Workforce Solutions",
+      "url": "https://hearthstoneandco.com",
+      "telephone": "+17139383989",
+      "email": "hello@hearthstoneandco.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "29655 Jordan Crossing Blvd",
+        "addressLocality": "Katy",
+        "addressRegion": "TX",
+        "postalCode": "77494",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Service",
-        "name": "Travel Nurse Staffing",
-        "description": "13-week travel nurse contracts for hospitals and healthcare facilities across Greater Houston. Credentialed RN professionals managed end-to-end by Hearthstone & Co.",
-        "provider": {"@type":"MedicalBusiness","name":"Hearthstone & Co. Workforce Solutions"},
-        "areaServed": {"@type":"State","name":"Texas"},
-        "serviceType": "Healthcare Staffing",
-        "offers": {
-          "@type": "Offer",
-          "description": "Travel nurse placement — 13-week standard contracts with extension options. Full credentialing and compliance managed."
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Houston"
+        },
+        {
+          "@type": "City",
+          "name": "Katy"
+        },
+        {
+          "@type": "City",
+          "name": "Sugar Land"
+        },
+        {
+          "@type": "City",
+          "name": "The Woodlands"
+        },
+        {
+          "@type": "City",
+          "name": "Pearland"
+        },
+        {
+          "@type": "City",
+          "name": "Pasadena"
         }
+      ],
+      "@id": "https://hearthstoneandco.com/#localbusiness"
+    },
+    {
+      "@type": "Service",
+      "name": "Travel Nurse Staffing",
+      "description": "13-week travel nurse contracts for hospitals and healthcare facilities across Greater Houston. Credentialed RN professionals managed end-to-end by Hearthstone & Co.",
+      "provider": {
+        "@type": "EmploymentAgency",
+        "name": "Hearthstone & Co. Workforce Solutions",
+        "@id": "https://hearthstoneandco.com/#localbusiness",
+        "url": "https://hearthstoneandco.com"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How long are travel nurse contracts with Hearthstone & Co.?",
-            "acceptedAnswer": {"@type":"Answer","text":"Standard contracts are 13 weeks, mirroring the industry norm for travel nursing. Extensions are offered in advance — typically 4 weeks before contract end — and can run week-by-week or in new 13-week blocks depending on mutual availability."}
-          },
-          {
-            "@type": "Question",
-            "name": "How quickly can you deploy a travel nurse to our facility?",
-            "acceptedAnswer": {"@type":"Answer","text":"Start dates depend on contract execution and full credentialing sign-off. We confirm a realistic timeline for each request up front."}
-          }
-        ]
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      },
+      "serviceType": "Healthcare Staffing",
+      "offers": {
+        "@type": "Offer",
+        "description": "Travel nurse placement — 13-week standard contracts with extension options. Full credentialing and compliance managed."
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long are travel nurse contracts with Hearthstone & Co.?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard contracts are 13 weeks, mirroring the industry norm for travel nursing. Extensions are offered in advance — typically 4 weeks before contract end — and can run week-by-week or in new 13-week blocks depending on mutual availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can you deploy a travel nurse to our facility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start dates depend on contract execution and full credentialing sign-off. We confirm a realistic timeline for each request up front."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

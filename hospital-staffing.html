@@ -19,55 +19,101 @@
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalBusiness",
-        "name": "Hearthstone & Co. Workforce Solutions",
-        "url": "https://www.hearthstoneandco.com",
-        "telephone": "+17139383989",
-        "email": "hello@hearthstoneandco.com",
-        "address": {"@type":"PostalAddress","streetAddress": "29655 Jordan Crossing Blvd", "addressLocality":"Katy","addressRegion":"TX","postalCode":"77494","addressCountry":"US"},
-        "areaServed": [
-          {"@type":"City","name":"Houston"},{"@type":"City","name":"Katy"},
-          {"@type":"City","name":"Sugar Land"},{"@type":"City","name":"The Woodlands"},
-          {"@type":"City","name":"Pearland"},{"@type":"City","name":"Pasadena"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EmploymentAgency",
+      "name": "Hearthstone & Co. Workforce Solutions",
+      "url": "https://hearthstoneandco.com",
+      "telephone": "+17139383989",
+      "email": "hello@hearthstoneandco.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "29655 Jordan Crossing Blvd",
+        "addressLocality": "Katy",
+        "addressRegion": "TX",
+        "postalCode": "77494",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Service",
-        "name": "Hospital Staffing",
-        "description": "Acute care hospital staffing across Greater Houston. Credentialed RNs, LVNs, and CNAs for med-surg, telemetry, emergency, ICU, and step-down units, available per diem or on contract.",
-        "provider": {"@type":"MedicalBusiness","name":"Hearthstone & Co. Workforce Solutions"},
-        "areaServed": {"@type":"State","name":"Texas"},
-        "serviceType": "Acute Care Hospital Staffing",
-        "offers": {
-          "@type": "Offer",
-          "description": "Per diem and contract hospital coverage. Acute-care-experienced clinicians matched to unit and acuity, with a 36–72 hour placement target across Greater Houston."
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Houston"
+        },
+        {
+          "@type": "City",
+          "name": "Katy"
+        },
+        {
+          "@type": "City",
+          "name": "Sugar Land"
+        },
+        {
+          "@type": "City",
+          "name": "The Woodlands"
+        },
+        {
+          "@type": "City",
+          "name": "Pearland"
+        },
+        {
+          "@type": "City",
+          "name": "Pasadena"
         }
+      ],
+      "@id": "https://hearthstoneandco.com/#localbusiness"
+    },
+    {
+      "@type": "Service",
+      "name": "Hospital Staffing",
+      "description": "Acute care hospital staffing across Greater Houston. Credentialed RNs, LVNs, and CNAs for med-surg, telemetry, emergency, ICU, and step-down units, available per diem or on contract.",
+      "provider": {
+        "@type": "EmploymentAgency",
+        "name": "Hearthstone & Co. Workforce Solutions",
+        "@id": "https://hearthstoneandco.com/#localbusiness",
+        "url": "https://hearthstoneandco.com"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Which hospital units can Hearthstone staff?",
-            "acceptedAnswer": {"@type":"Answer","text":"We place clinicians across med-surg, telemetry and step-down, emergency, and ICU/critical care units. Every placement is matched to the specific unit and acuity level you request, so the clinician arrives with relevant experience."}
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer contract and block-booked coverage, not just per diem?",
-            "acceptedAnswer": {"@type":"Answer","text":"Yes. We provide per diem coverage for short-notice gaps and contract or block-booked staffing for sustained needs such as census surges, seasonal volume, and extended leaves. We'll help you choose the model that fits the situation."}
-          },
-          {
-            "@type": "Question",
-            "name": "Are your clinicians credentialed for acute care?",
-            "acceptedAnswer": {"@type":"Answer","text":"Every clinician is credentialed — active Texas licensure, background and OIG/SAM screening, BLS and any specialty certifications such as ACLS, and current health and immunization records — verified before the first shift. Specialty competencies are confirmed for the unit you're staffing."}
-          }
-        ]
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      },
+      "serviceType": "Acute Care Hospital Staffing",
+      "offers": {
+        "@type": "Offer",
+        "description": "Per diem and contract hospital coverage. Acute-care-experienced clinicians matched to unit and acuity, with a 36–72 hour placement target across Greater Houston."
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which hospital units can Hearthstone staff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We place clinicians across med-surg, telemetry and step-down, emergency, and ICU/critical care units. Every placement is matched to the specific unit and acuity level you request, so the clinician arrives with relevant experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer contract and block-booked coverage, not just per diem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide per diem coverage for short-notice gaps and contract or block-booked staffing for sustained needs such as census surges, seasonal volume, and extended leaves. We'll help you choose the model that fits the situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your clinicians credentialed for acute care?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every clinician is credentialed — active Texas licensure, background and OIG/SAM screening, BLS and any specialty certifications such as ACLS, and current health and immunization records — verified before the first shift. Specialty competencies are confirmed for the unit you're staffing."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
