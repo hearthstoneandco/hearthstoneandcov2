@@ -166,7 +166,7 @@ async function sendConfirmation({ key, route, d, person, roleTitle, val }) {
   const appliedFor = c.kind === "careers" ? (roleTitle ? `your application for the ${roleTitle} position` : "your application") : "your interest in joining the Hearthstone & Co. clinician network";
   const detail = {
     careers: `Thank you for applying to join the Hearthstone &amp; Co. internal team.`,
-    clinician: `Thank you for applying to join the Hearthstone &amp; Co. clinician network${discipline ? ` as ${/^[aeiou]/i.test(discipline) ? "an" : "a"} ${esc(discipline)}` : ""}.`,
+    clinician: `Thank you for applying to join the Hearthstone &amp; Co. clinician network${discipline ? ` as ${/^(rn|lvn|mri|[aeiou])/i.test(discipline) ? "an" : "a"} ${esc(discipline)}` : ""}.`,
     staffing: `Thank you for submitting your staffing request to Hearthstone &amp; Co.`,
     partner: `Thank you for reaching out to Hearthstone &amp; Co. about working together.`,
   }[c.kind];
