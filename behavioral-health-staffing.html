@@ -19,55 +19,101 @@
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalBusiness",
-        "name": "Hearthstone & Co. Workforce Solutions",
-        "url": "https://www.hearthstoneandco.com",
-        "telephone": "+17139383989",
-        "email": "hello@hearthstoneandco.com",
-        "address": {"@type":"PostalAddress","streetAddress": "29655 Jordan Crossing Blvd", "addressLocality":"Katy","addressRegion":"TX","postalCode":"77494","addressCountry":"US"},
-        "areaServed": [
-          {"@type":"City","name":"Houston"},{"@type":"City","name":"Katy"},
-          {"@type":"City","name":"Sugar Land"},{"@type":"City","name":"The Woodlands"},
-          {"@type":"City","name":"Pearland"},{"@type":"City","name":"Pasadena"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EmploymentAgency",
+      "name": "Hearthstone & Co. Workforce Solutions",
+      "url": "https://hearthstoneandco.com",
+      "telephone": "+17139383989",
+      "email": "hello@hearthstoneandco.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "29655 Jordan Crossing Blvd",
+        "addressLocality": "Katy",
+        "addressRegion": "TX",
+        "postalCode": "77494",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Service",
-        "name": "Behavioral Health Staffing",
-        "description": "Psychiatric and behavioral health staffing across Greater Houston. De-escalation-trained psych RNs, LVNs, behavioral health technicians, and CNAs for psychiatric units, substance-use treatment, crisis stabilization, and residential treatment settings.",
-        "provider": {"@type":"MedicalBusiness","name":"Hearthstone & Co. Workforce Solutions"},
-        "areaServed": {"@type":"State","name":"Texas"},
-        "serviceType": "Behavioral Health & Psychiatric Staffing",
-        "offers": {
-          "@type": "Offer",
-          "description": "Per diem and contract behavioral health coverage. De-escalation-trained clinicians screened for psychiatric and substance-use settings, with a 36–72 hour placement target."
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Houston"
+        },
+        {
+          "@type": "City",
+          "name": "Katy"
+        },
+        {
+          "@type": "City",
+          "name": "Sugar Land"
+        },
+        {
+          "@type": "City",
+          "name": "The Woodlands"
+        },
+        {
+          "@type": "City",
+          "name": "Pearland"
+        },
+        {
+          "@type": "City",
+          "name": "Pasadena"
         }
+      ],
+      "@id": "https://hearthstoneandco.com/#localbusiness"
+    },
+    {
+      "@type": "Service",
+      "name": "Behavioral Health Staffing",
+      "description": "Psychiatric and behavioral health staffing across Greater Houston. De-escalation-trained psych RNs, LVNs, behavioral health technicians, and CNAs for psychiatric units, substance-use treatment, crisis stabilization, and residential treatment settings.",
+      "provider": {
+        "@type": "EmploymentAgency",
+        "name": "Hearthstone & Co. Workforce Solutions",
+        "@id": "https://hearthstoneandco.com/#localbusiness",
+        "url": "https://hearthstoneandco.com"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do your clinicians have de-escalation and crisis training?",
-            "acceptedAnswer": {"@type":"Answer","text":"Yes. For behavioral health placements we prioritize clinicians with documented de-escalation and crisis-prevention training, and we confirm it before matching anyone to a psychiatric or crisis unit. Where a role requires a specific safe-hold or restraint certification, we verify that as well."}
-          },
-          {
-            "@type": "Question",
-            "name": "What behavioral health settings do you staff?",
-            "acceptedAnswer": {"@type":"Answer","text":"Hearthstone places clinicians in inpatient psychiatric hospitals, behavioral health units inside acute hospitals, substance-use and detox programs, crisis stabilization units, and residential treatment centers across Greater Houston."}
-          },
-          {
-            "@type": "Question",
-            "name": "How quickly can you provide behavioral health coverage?",
-            "acceptedAnswer": {"@type":"Answer","text":"For facilities with an active staffing agreement, our placement target is 36–72 hours from a confirmed request, depending on the role, availability and credentialing."}
-          }
-        ]
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      },
+      "serviceType": "Behavioral Health & Psychiatric Staffing",
+      "offers": {
+        "@type": "Offer",
+        "description": "Per diem and contract behavioral health coverage. De-escalation-trained clinicians screened for psychiatric and substance-use settings, with a 36–72 hour placement target."
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do your clinicians have de-escalation and crisis training?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. For behavioral health placements we prioritize clinicians with documented de-escalation and crisis-prevention training, and we confirm it before matching anyone to a psychiatric or crisis unit. Where a role requires a specific safe-hold or restraint certification, we verify that as well."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What behavioral health settings do you staff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hearthstone places clinicians in inpatient psychiatric hospitals, behavioral health units inside acute hospitals, substance-use and detox programs, crisis stabilization units, and residential treatment centers across Greater Houston."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can you provide behavioral health coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For facilities with an active staffing agreement, our placement target is 36–72 hours from a confirmed request, depending on the role, availability and credentialing."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

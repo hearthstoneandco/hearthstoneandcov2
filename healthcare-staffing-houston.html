@@ -23,38 +23,82 @@
   <!-- Schema: LocalBusiness + Service -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Hearthstone & Co. Workforce Solutions",
-    "description": "Veteran-owned and woman-owned healthcare staffing agency in Katy, TX serving Greater Houston. Primarily staffs RNs, LVNs and CNAs, and also staffs allied healthcare and other medical roles for skilled nursing, assisted living, hospitals and clinics.",
-    "url": "https://hearthstoneandco.com",
-    "telephone": "+17139383989",
-    "email": "hello@hearthstoneandco.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "29655 Jordan Crossing Blvd", "addressLocality": "Katy",
-      "addressRegion": "TX",
-      "addressCountry": "US"
+  "@context": "https://schema.org",
+  "@type": "EmploymentAgency",
+  "name": "Hearthstone & Co. Workforce Solutions",
+  "description": "Veteran-owned and woman-owned healthcare staffing agency in Katy, TX serving Greater Houston. Primarily staffs RNs, LVNs and CNAs, and also staffs allied healthcare and other medical roles for skilled nursing, assisted living, hospitals and clinics.",
+  "url": "https://hearthstoneandco.com",
+  "telephone": "+17139383989",
+  "email": "hello@hearthstoneandco.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "29655 Jordan Crossing Blvd",
+    "addressLocality": "Katy",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Houston"
     },
-    "areaServed": [
-      {"@type": "City", "name": "Houston"},
-      {"@type": "City", "name": "Katy"},
-      {"@type": "City", "name": "Sugar Land"},
-      {"@type": "City", "name": "The Woodlands"},
-      {"@type": "City", "name": "Pearland"},
-      {"@type": "City", "name": "Pasadena"}
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Healthcare Staffing Services",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "RN, LVN & CNA Staffing"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Per Diem Nurse Staffing"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Contract & Travel Nurse Staffing"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Allied Healthcare & Other Medical Staffing"}}
-      ]
+    {
+      "@type": "City",
+      "name": "Katy"
+    },
+    {
+      "@type": "City",
+      "name": "Sugar Land"
+    },
+    {
+      "@type": "City",
+      "name": "The Woodlands"
+    },
+    {
+      "@type": "City",
+      "name": "Pearland"
+    },
+    {
+      "@type": "City",
+      "name": "Pasadena"
     }
-  }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Healthcare Staffing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "RN, LVN & CNA Staffing"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Per Diem Nurse Staffing"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Contract & Travel Nurse Staffing"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Allied Healthcare & Other Medical Staffing"
+        }
+      }
+    ]
+  },
+  "@id": "https://hearthstoneandco.com/#localbusiness"
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -711,15 +755,78 @@ document.addEventListener('DOMContentLoaded',()=>{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"How fast can Hearthstone place a clinician at my facility?","acceptedAnswer":{"@type":"Answer","text":"Our placement target is 36 to 72 hours from the time your request is confirmed. This is a target, not a guarantee, and timing depends on the role, shift and facility requirements. New facilities start by submitting the Request Staffing form or emailing our facilities team, and we follow up on every request. For urgent coverage, call (713) 938-3989."}},
-    {"@type":"Question","name":"What roles does Hearthstone staff in Houston?","acceptedAnswer":{"@type":"Answer","text":"Our core is RN, LVN and CNA staffing. Hearthstone also hires and staffs allied healthcare and other medical roles, so tell us the role and setting when you submit a request."}},
-    {"@type":"Question","name":"Are your clinicians W-2 employees or 1099 contractors?","acceptedAnswer":{"@type":"Answer","text":"Hearthstone clinicians are W-2 employees of Hearthstone. We run payroll and handle employer obligations under Texas Workforce Commission requirements, which keeps the employment relationship clear for your facility."}},
-    {"@type":"Question","name":"Which areas of Greater Houston do you serve?","acceptedAnswer":{"@type":"Answer","text":"We serve Harris, Fort Bend, and Montgomery Counties — including Houston, Katy, Sugar Land, The Woodlands, Pearland, Missouri City, Spring, Cypress, Conroe, and surrounding communities."}},
-    {"@type":"Question","name":"What types of facilities do you staff?","acceptedAnswer":{"@type":"Answer","text":"We staff skilled nursing facilities (SNFs), assisted living and memory care communities, hospitals and acute-care units, behavioral health and psychiatric facilities, rehabilitation centers, dialysis clinics, and outpatient programs across Greater Houston."}},
-    {"@type":"Question","name":"What does your credentialing process include?","acceptedAnswer":{"@type":"Answer","text":"Credentialing covers license verification, background screening, immunization and BLS/CPR records, federal exclusion checks against the HHS-OIG exclusion list and SAM.gov, and facility-specific requirements before a clinician is submitted to your facility. Our compliance and credentialing page has more detail."}},
-    {"@type":"Question","name":"What staffing arrangements are available?","acceptedAnswer":{"@type":"Answer","text":"Hearthstone offers per diem, contract and travel, and temp-to-hire arrangements. Share your role, shift and timeframe in the Request Staffing form and we will confirm what is available for your facility."}},
-    {"@type":"Question","name":"Is Hearthstone a certified veteran-owned and woman-owned business?","acceptedAnswer":{"@type":"Answer","text":"Yes. Hearthstone & Co. is SBA-certified as a Veteran-Owned Small Business (VOSB) and Woman-Owned Small Business (WOSB), and holds NaVOBA Veteran's Business Enterprise (VBE) certification. Our SAM.gov UEI is SVAZQG49VUH7 and CAGE code is 1ZPE9. See our certifications page."}},
-    {"@type":"Question","name":"How do I choose a healthcare staffing agency in Houston?","acceptedAnswer":{"@type":"Answer","text":"Ask each agency how it verifies licenses, screens against the HHS-OIG exclusion list, classifies its clinicians (W-2 or 1099), and defines its fill times. Our staffing agency vetting scorecard turns these questions into a checklist."}}
+    {
+      "@type": "Question",
+      "name": "How fast can Hearthstone place a clinician at my facility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our placement target is 36 to 72 hours from the time your request is confirmed. This is a target, not a guarantee, and timing depends on the role, shift and facility requirements. New facilities start by submitting the Request Staffing form or emailing our facilities team, and we follow up on every request. For urgent coverage, call (713) 938-3989."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What roles does Hearthstone staff in Houston?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our core is RN, LVN and CNA staffing. Hearthstone also hires and staffs allied healthcare and other medical roles, so tell us the role and setting when you submit a request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your clinicians W-2 employees or 1099 contractors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hearthstone clinicians are W-2 employees of Hearthstone. We run payroll and handle employer obligations under Texas Workforce Commission requirements, which keeps the employment relationship clear for your facility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas of Greater Houston do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve Harris, Fort Bend, and Montgomery Counties — including Houston, Katy, Sugar Land, The Woodlands, Pearland, Missouri City, Spring, Cypress, Conroe, and surrounding communities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of facilities do you staff?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We staff skilled nursing facilities (SNFs), assisted living and memory care communities, hospitals and acute-care units, behavioral health and psychiatric facilities, rehabilitation centers, dialysis clinics, and outpatient programs across Greater Houston."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does your credentialing process include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Credentialing covers license verification, background screening, immunization and BLS/CPR records, federal exclusion checks against the HHS-OIG exclusion list and SAM.gov, and facility-specific requirements before a clinician is submitted to your facility. Our compliance and credentialing page has more detail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What staffing arrangements are available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hearthstone offers per diem, contract and travel, and temp-to-hire arrangements. Share your role, shift and timeframe in the Request Staffing form and we will confirm what is available for your facility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Hearthstone a certified veteran-owned and woman-owned business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Hearthstone & Co. is SBA-certified as a Veteran-Owned Small Business (VOSB) and Woman-Owned Small Business (WOSB), and holds NaVOBA Veteran's Business Enterprise (VBE) certification. Our SAM.gov UEI is SVAZQG49VUH7 and CAGE code is 1ZPE9. See our certifications page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose a healthcare staffing agency in Houston?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask each agency how it verifies licenses, screens against the HHS-OIG exclusion list, classifies its clinicians (W-2 or 1099), and defines its fill times. Our staffing agency vetting scorecard turns these questions into a checklist."
+      }
+    }
   ]
 }
 </script>

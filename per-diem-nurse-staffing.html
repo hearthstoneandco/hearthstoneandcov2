@@ -19,83 +19,156 @@
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalBusiness",
-        "name": "Hearthstone & Co. Workforce Solutions",
-        "url": "https://www.hearthstoneandco.com",
-        "telephone": "+17139383989",
-        "email": "hello@hearthstoneandco.com",
-        "address": {"@type":"PostalAddress","streetAddress": "29655 Jordan Crossing Blvd", "addressLocality":"Katy","addressRegion":"TX","postalCode":"77494","addressCountry":"US"},
-        "areaServed": [
-          {"@type":"City","name":"Houston"},{"@type":"City","name":"Katy"},
-          {"@type":"City","name":"Sugar Land"},{"@type":"City","name":"The Woodlands"},
-          {"@type":"City","name":"Pearland"},{"@type":"City","name":"Pasadena"}
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EmploymentAgency",
+      "name": "Hearthstone & Co. Workforce Solutions",
+      "url": "https://hearthstoneandco.com",
+      "telephone": "+17139383989",
+      "email": "hello@hearthstoneandco.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "29655 Jordan Crossing Blvd",
+        "addressLocality": "Katy",
+        "addressRegion": "TX",
+        "postalCode": "77494",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Service",
-        "name": "Per Diem Nurse Staffing",
-        "description": "Per diem RN, LVN and CNA staffing for hospitals, skilled nursing facilities and assisted living communities across Greater Houston. W-2 clinicians, credentialing managed by Hearthstone, 36-72 hour placement target.",
-        "provider": {"@type":"MedicalBusiness","name":"Hearthstone & Co. Workforce Solutions"},
-        "areaServed": {"@type":"State","name":"Texas"},
-        "serviceType": "Per Diem Healthcare Staffing",
-        "offers": {
-          "@type": "Offer",
-          "description": "Per diem shift coverage by W-2 RNs, LVNs and CNAs, with credentialing managed by Hearthstone and a 36-72 hour placement target."
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Houston"
+        },
+        {
+          "@type": "City",
+          "name": "Katy"
+        },
+        {
+          "@type": "City",
+          "name": "Sugar Land"
+        },
+        {
+          "@type": "City",
+          "name": "The Woodlands"
+        },
+        {
+          "@type": "City",
+          "name": "Pearland"
+        },
+        {
+          "@type": "City",
+          "name": "Pasadena"
         }
+      ],
+      "@id": "https://hearthstoneandco.com/#localbusiness"
+    },
+    {
+      "@type": "Service",
+      "name": "Per Diem Nurse Staffing",
+      "description": "Per diem RN, LVN and CNA staffing for hospitals, skilled nursing facilities and assisted living communities across Greater Houston. W-2 clinicians, credentialing managed by Hearthstone, 36-72 hour placement target.",
+      "provider": {
+        "@type": "EmploymentAgency",
+        "name": "Hearthstone & Co. Workforce Solutions",
+        "@id": "https://hearthstoneandco.com/#localbusiness",
+        "url": "https://hearthstoneandco.com"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is per diem nurse staffing?",
-            "acceptedAnswer": {"@type":"Answer","text":"Per diem nurse staffing means a clinician covers a single shift or a short run of shifts as the facility needs them, instead of joining the permanent schedule. Hearthstone provides RNs, LVNs and CNAs as our core per diem roles, and can also staff allied healthcare and other medical roles on request."}
-          },
-          {
-            "@type": "Question",
-            "name": "How quickly can Hearthstone provide per diem coverage?",
-            "acceptedAnswer": {"@type":"Answer","text":"Our placement target is 36-72 hours after a facility requests a shift. It is a target, not a guarantee. Timing depends on the role, the shift, the unit and the credentials your facility requires, and we confirm a realistic timeline when you submit the request."}
-          },
-          {
-            "@type": "Question",
-            "name": "Are your per diem nurses W-2 employees or independent contractors?",
-            "acceptedAnswer": {"@type":"Answer","text":"Hearthstone clinicians are W-2 employees of Hearthstone. They are paid weekly and are covered by Hearthstone's workers' compensation."}
-          },
-          {
-            "@type": "Question",
-            "name": "How do you screen clinicians before a shift?",
-            "acceptedAnswer": {"@type":"Answer","text":"Background screening runs through Checkr and FACIS Level 3, drug screening runs through Quest, credentialing follows a five-step process managed by Hearthstone, and clinicians are checked monthly against the OIG and SAM exclusion lists."}
-          },
-          {
-            "@type": "Question",
-            "name": "Do we need a long-term contract to use per diem staffing?",
-            "acceptedAnswer": {"@type":"Answer","text":"Per diem coverage is arranged under a staffing services agreement with Hearthstone. Contract lengths and terms depend on the coverage you need, so ask us about your situation when you request staffing. For longer needs we also offer 13-week standard contracts."}
-          },
-          {
-            "@type": "Question",
-            "name": "Can you cover LVN and CNA shifts at skilled nursing and assisted living facilities?",
-            "acceptedAnswer": {"@type":"Answer","text":"Yes. LVNs and CNAs are part of our core per diem staffing alongside RNs, and we work with hospitals, skilled nursing facilities and assisted living communities across Greater Houston."}
-          },
-          {
-            "@type": "Question",
-            "name": "Which exclusion lists apply when a facility uses per diem nurses?",
-            "acceptedAnswer": {"@type":"Answer","text":"The HHS Office of Inspector General keeps the List of Excluded Individuals/Entities (LEIE), and federal health care programs do not pay for services furnished by an excluded person. OIG's own guidance uses a hospital using a staffing agency's per diem nurses as an example of where the facility can still face overpayment liability. Hearthstone checks clinicians monthly against the OIG and SAM lists, and your compliance team may keep its own screening as well."}
-          }
-        ]
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://hearthstoneandco.com/"},
-          {"@type":"ListItem","position":2,"name":"Services","item":"https://hearthstoneandco.com/healthcare-staffing-houston"},
-          {"@type":"ListItem","position":3,"name":"Per Diem Nurse Staffing","item":"https://hearthstoneandco.com/per-diem-nurse-staffing"}
-        ]
+      "serviceType": "Per Diem Healthcare Staffing",
+      "offers": {
+        "@type": "Offer",
+        "description": "Per diem shift coverage by W-2 RNs, LVNs and CNAs, with credentialing managed by Hearthstone and a 36-72 hour placement target."
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is per diem nurse staffing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per diem nurse staffing means a clinician covers a single shift or a short run of shifts as the facility needs them, instead of joining the permanent schedule. Hearthstone provides RNs, LVNs and CNAs as our core per diem roles, and can also staff allied healthcare and other medical roles on request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can Hearthstone provide per diem coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our placement target is 36-72 hours after a facility requests a shift. It is a target, not a guarantee. Timing depends on the role, the shift, the unit and the credentials your facility requires, and we confirm a realistic timeline when you submit the request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your per diem nurses W-2 employees or independent contractors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hearthstone clinicians are W-2 employees of Hearthstone. They are paid weekly and are covered by Hearthstone's workers' compensation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you screen clinicians before a shift?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Background screening runs through Checkr and FACIS Level 3, drug screening runs through Quest, credentialing follows a five-step process managed by Hearthstone, and clinicians are checked monthly against the OIG and SAM exclusion lists."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we need a long-term contract to use per diem staffing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per diem coverage is arranged under a staffing services agreement with Hearthstone. Contract lengths and terms depend on the coverage you need, so ask us about your situation when you request staffing. For longer needs we also offer 13-week standard contracts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you cover LVN and CNA shifts at skilled nursing and assisted living facilities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LVNs and CNAs are part of our core per diem staffing alongside RNs, and we work with hospitals, skilled nursing facilities and assisted living communities across Greater Houston."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which exclusion lists apply when a facility uses per diem nurses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The HHS Office of Inspector General keeps the List of Excluded Individuals/Entities (LEIE), and federal health care programs do not pay for services furnished by an excluded person. OIG's own guidance uses a hospital using a staffing agency's per diem nurses as an example of where the facility can still face overpayment liability. Hearthstone checks clinicians monthly against the OIG and SAM lists, and your compliance team may keep its own screening as well."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hearthstoneandco.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://hearthstoneandco.com/healthcare-staffing-houston"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Per Diem Nurse Staffing",
+          "item": "https://hearthstoneandco.com/per-diem-nurse-staffing"
+        }
+      ]
+    }
+  ]
+}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
