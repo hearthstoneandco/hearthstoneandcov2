@@ -139,7 +139,7 @@ ${consent.length ? section("Consent") + `<table style="border-collapse:collapse"
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      from: process.env.CAREERS_FROM || route.from,
+      from: (payload.form_name === "careers-application" && process.env.CAREERS_FROM) || route.from,
       to: [route.to],
       reply_to: d.email || undefined,
       subject,
@@ -199,7 +199,7 @@ async function sendConfirmation({ key, route, d, person, roleTitle, val }) {
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: process.env.CAREERS_FROM || mailbox(c.team, c.address), to: [String(d.email).trim()], reply_to: c.address, subject, html, text }),
+    body: JSON.stringify({ from: (c.kind === "careers" && process.env.CAREERS_FROM) || mailbox(c.team, c.address), to: [String(d.email).trim()], reply_to: c.address, subject, html, text }),
   });
   return res.ok ? "ok" : `resend ${res.status}`;
 }
