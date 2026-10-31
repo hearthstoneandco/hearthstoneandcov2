@@ -71,7 +71,7 @@ async function emailSubmission(payload) {
     return q ? q.label : CORE_LABELS[k] || pretty(k);
   };
   const val = (v) => (Array.isArray(v) ? v.join(", ") : String(v));
-  const skip = new Set(["bot-field", "form-name", "role", "reviewer-email"]);
+  const skip = new Set(["bot-field", "form-name", "role", "reviewer-email", "ip", "user_agent", "referrer"]);
   const present = (k) => !skip.has(k) && d[k] !== "" && d[k] != null && !isFile(d[k]);
 
   const files = Object.entries(d).filter(([, v]) => isFile(v) && (v.size == null || v.size > 0));
@@ -119,13 +119,13 @@ async function emailSubmission(payload) {
 <div style="font:600 22px Georgia,serif;margin-top:4px">${esc(who)}</div>
 ${roleTitle ? `<div style="margin-top:2px;opacity:.9">${esc(roleTitle)}</div>` : ""}</div>
 <div style="padding:4px 24px 24px;border:1px solid #e5e5e5;border-top:0">
-${section("Contact &amp; eligibility")}<table style="border-collapse:collapse">${core.map((k) => row(labelFor(k), link(k))).join("")}</table>
+${section(route.label === "application" ? "Contact &amp; eligibility" : "Contact")}<table style="border-collapse:collapse">${core.map((k) => row(labelFor(k), link(k))).join("")}</table>
 ${other.length ? section("Details") + `<table style="border-collapse:collapse">${other.map((k) => row(labelFor(k), `<span style="white-space:pre-wrap">${esc(val(d[k]))}</span>`)).join("")}</table>` : ""}
 ${screening.length ? section("Screening answers") + screening.map(qa).join("") : ""}
 ${notes.length ? section("Additional notes") + notes.map((k) => `<p style="margin:8px 0;white-space:pre-wrap">${esc(val(d[k]))}</p>`).join("") : ""}
 ${fileNotes.length ? section("Documents") + `<ul style="margin:6px 0;padding-left:20px">${fileNotes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
 ${consent.length ? section("Consent") + `<table style="border-collapse:collapse">${consent.map((k) => row(labelFor(k), esc(val(d[k])))).join("")}</table>` : ""}
-<p style="margin-top:24px;color:#6b6b6b;font-size:12px">Reply to this email to respond directly to the applicant. Submitted ${esc(payload.created_at || "")} via hearthstoneandco.com.</p>
+<p style="margin-top:24px;color:#6b6b6b;font-size:12px">Reply to this email to respond directly to the applicant. Submitted ${esc(payload.created_at || "")} via hearthstoneandco.com${d.referrer ? ` (${esc(d.referrer)})` : ""}.</p>
 </div></div>`;
 
   const text = [
