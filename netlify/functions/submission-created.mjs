@@ -16,14 +16,17 @@ import path from "node:path";
 //  - contact -> hello@ ; review-submission (future review form) -> reviews@
 const CAREERS = { team: "Careers & Recruitment Team", address: "careers@hearthstoneandco.com" };
 const CLINICIANS = { team: "Clinician Recruitment Team", address: "clinicians@hearthstoneandco.com" };
+const FACILITIES = { team: "Facility Staffing Team", address: "facilities@hearthstoneandco.com" };
+const BD = { team: "Business Development Team", address: "facilities@hearthstoneandco.com" };
 const mailbox = (name, address) => `${name} <${address}>`;
 const FORM_RECIPIENTS = {
   "careers-application": { to: CAREERS.address, label: "application", from: mailbox("Hearthstone Careers", CAREERS.address), confirm: { kind: "careers", ...CAREERS } },
   "clinician-network": { to: CLINICIANS.address, label: "clinician network signup", from: mailbox("Hearthstone Clinicians", CLINICIANS.address), confirm: { kind: "clinician", ...CLINICIANS } },
-  "staffing-request": { to: "facilities@hearthstoneandco.com", label: "facility staffing request", from: mailbox("Hearthstone Facilities", "facilities@hearthstoneandco.com") },
-  "teaming-inquiry": { to: "facilities@hearthstoneandco.com", label: "teaming inquiry", from: mailbox("Hearthstone Facilities", "facilities@hearthstoneandco.com") },
-  "bd-contact": { to: "facilities@hearthstoneandco.com", label: "business development inquiry", from: mailbox("Hearthstone Facilities", "facilities@hearthstoneandco.com") },
+  "staffing-request": { to: FACILITIES.address, label: "facility staffing request", from: mailbox("Hearthstone Facilities", FACILITIES.address), confirm: { kind: "staffing", ...FACILITIES } },
+  "teaming-inquiry": { to: BD.address, label: "teaming inquiry", from: mailbox("Hearthstone Facilities", BD.address), confirm: { kind: "partner", ...BD } },
+  "bd-contact": { to: BD.address, label: "business development inquiry", from: mailbox("Hearthstone Facilities", BD.address), confirm: { kind: "partner", ...BD } },
   "contact": { to: "hello@hearthstoneandco.com", label: "contact message", from: mailbox("Hearthstone", "hello@hearthstoneandco.com") },
+  "reviews": { to: "reviews@hearthstoneandco.com", label: "review submission", from: mailbox("Hearthstone Reviews", "reviews@hearthstoneandco.com") },
   "review-submission": { to: "reviews@hearthstoneandco.com", label: "review submission", from: mailbox("Hearthstone Reviews", "reviews@hearthstoneandco.com") },
 };
 const esc = (v) => String(v ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -158,30 +161,40 @@ ${consent.length ? section("Consent") + `<table style="border-collapse:collapse"
 async function sendConfirmation({ key, route, d, person, roleTitle, val }) {
   const c = route.confirm;
   const first = String(person || "").trim().split(/\s+/)[0] || "there";
+  const isApp = c.kind === "careers" || c.kind === "clinician";
   const discipline = c.kind === "clinician" ? [d.license_type, d.assignment_type].filter(Boolean).map(val).join(" / ") : "";
   const appliedFor = c.kind === "careers" ? (roleTitle ? `your application for the ${roleTitle} position` : "your application") : "your interest in joining the Hearthstone & Co. clinician network";
-  const detail = c.kind === "careers"
-    ? `Thank you for applying to join the Hearthstone &amp; Co. internal team.`
-    : `Thank you for applying to join the Hearthstone &amp; Co. clinician network${discipline ? ` as a ${esc(discipline)}` : ""}.`;
-  const body = `The ${esc(c.team)} will be reviewing your application and will reach out if you are selected to move forward.`;
-  const subject = c.kind === "careers" ? `We received your application${roleTitle ? `: ${roleTitle}` : ""}` : "We received your clinician application";
+  const detail = {
+    careers: `Thank you for applying to join the Hearthstone &amp; Co. internal team.`,
+    clinician: `Thank you for applying to join the Hearthstone &amp; Co. clinician network${discipline ? ` as ${/^[aeiou]/i.test(discipline) ? "an" : "a"} ${esc(discipline)}` : ""}.`,
+    staffing: `Thank you for submitting your staffing request to Hearthstone &amp; Co.`,
+    partner: `Thank you for reaching out to Hearthstone &amp; Co. about working together.`,
+  }[c.kind];
+  const body = isApp
+    ? `The ${esc(c.team)} will be reviewing your application and will reach out if you are selected to move forward.`
+    : `A member of our ${esc(c.team)} will reach out within 24-48 hours to review your ${c.kind === "staffing" ? "request" : "inquiry"} with you.`;
+  const subject = { careers: `We received your application${roleTitle ? `: ${roleTitle}` : ""}`, clinician: "We received your clinician application", staffing: "We received your staffing request", partner: "We received your inquiry" }[c.kind];
+  const eyebrow = isApp ? "Application received" : c.kind === "staffing" ? "Request received" : "Inquiry received";
+  const headline = isApp ? "Thank you for your application" : c.kind === "staffing" ? "Thank you for your request" : "Thank you for reaching out";
+  const received = isApp ? (c.kind === "careers" ? `We have received ${appliedFor}.` : "We have received your application.") : c.kind === "staffing" ? "We have received your request." : "We have received your inquiry.";
+  const closing = isApp ? "There is nothing more you need to do right now. If you need to add anything, simply reply to this email." : "If you have anything to add in the meantime, simply reply to this email or call (713) 938-3989.";
   const html = `<!doctype html><html><body style="margin:0;padding:0;background:#f4f1ea">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f1ea"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff">
 <tr><td align="center" bgcolor="#1A3D2E" style="background:#1A3D2E;padding:24px;border-bottom:4px solid #C9A84C"><a href="https://hearthstoneandco.com"><img src="https://hearthstoneandco.com/logo.png" width="80" height="80" alt="Hearthstone &amp; Co. Workforce Solutions" style="display:block;border:0;background:#0F3D2A;color:#C9A84C;font:14px Georgia,serif"></a></td></tr>
-<tr><td style="padding:32px 36px 8px;font:12px 'Courier New',monospace;letter-spacing:.12em;text-transform:uppercase;color:#C9A84C">Application received</td></tr>
-<tr><td style="padding:0 36px;font:600 26px Georgia,serif;color:#1A3D2E">Thank you for your application</td></tr>
+<tr><td style="padding:32px 36px 8px;font:12px 'Courier New',monospace;letter-spacing:.12em;text-transform:uppercase;color:#C9A84C">${eyebrow}</td></tr>
+<tr><td style="padding:0 36px;font:600 26px Georgia,serif;color:#1A3D2E">${headline}</td></tr>
 <tr><td style="padding:18px 36px 0;font:16px/1.6 Arial,sans-serif;color:#1a1a1a">
 <p style="margin:0 0 14px">Hi ${esc(first)},</p>
-<p style="margin:0 0 14px">${detail} We have received ${appliedFor}.</p>
+<p style="margin:0 0 14px">${detail} ${received}</p>
 <p style="margin:0 0 14px">${body}</p>
-<p style="margin:0 0 14px">There is nothing more you need to do right now. If you need to add anything, simply reply to this email.</p></td></tr>
+<p style="margin:0 0 14px">${closing}</p></td></tr>
 <tr><td style="padding:8px 36px 32px;font:16px/1.6 Arial,sans-serif;color:#1a1a1a">Sincerely,<br><strong style="color:#1A3D2E">The ${esc(c.team)}</strong><br>Hearthstone &amp; Co. Workforce Solutions</td></tr>
-<tr><td bgcolor="#1A3D2E" align="center" style="background:#1A3D2E;padding:18px 24px;font:12px/1.5 Arial,sans-serif;color:#ffffff">Hearthstone &amp; Co. Workforce Solutions LLC &middot; Katy, TX &middot; (713) 938-3989<br>Hearthstone &amp; Co. is an equal opportunity employer.</td></tr>
+<tr><td bgcolor="#1A3D2E" align="center" style="background:#1A3D2E;padding:18px 24px;font:12px/1.5 Arial,sans-serif;color:#ffffff">Hearthstone &amp; Co. Workforce Solutions LLC &middot; Katy, TX &middot; (713) 938-3989${isApp ? "<br>Hearthstone &amp; Co. is an equal opportunity employer." : ""}</td></tr>
 </table></td></tr></table></body></html>`;
-  const text = [`Hi ${first},`, "", `Thank you for your application. We have received ${appliedFor.replace(/&amp;/g, "&")}.`, "",
-    `The ${c.team} will be reviewing your application and will reach out if you are selected to move forward.`, "",
-    "There is nothing more you need to do right now. If you need to add anything, simply reply to this email.", "",
+  const text = [`Hi ${first},`, "", `${detail.replace(/&amp;/g, "&").replace(/<[^>]+>/g, "")} ${received}`, "",
+    body.replace(/&amp;/g, "&"), "",
+    closing, "",
     "Sincerely,", `The ${c.team}`, "Hearthstone & Co. Workforce Solutions", "(713) 938-3989"].join("\n");
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
