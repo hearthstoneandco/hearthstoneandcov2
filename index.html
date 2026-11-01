@@ -1614,6 +1614,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
             <textarea id="needs" name="staffing_needs" placeholder="Tell us about your open positions, required credentials, or other needs..."></textarea>
           </div>
 
+          <p id="formError" role="alert" style="display:none;margin:0 0 12px;color:#9B1C1C;font-size:14px;line-height:1.5">We could not send your request. Please try again, or call <a href="tel:+17139383989" style="color:inherit;text-decoration:underline">(713) 938-3989</a>.</p>
           <button type="submit" class="btn-form-submit">Request My Free Consultation →</button>
           <p class="form-privacy">🔒 Your information is kept confidential. No spam, ever.</p>
         </form>
@@ -1933,14 +1934,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(data).toString()
     })
-    .then(() => {
+    .then((r) => {
+      if (!r.ok) throw new Error('Form submission failed: ' + r.status);
+      document.getElementById('formError').style.display = 'none';
       document.getElementById('formContent').style.display = 'none';
       document.getElementById('formSuccess').classList.add('show');
     })
     .catch(() => {
-      // Fallback: still show success (Netlify handles the redirect anyway)
-      document.getElementById('formContent').style.display = 'none';
-      document.getElementById('formSuccess').classList.add('show');
+      // Do not show success when the request failed; give a working fallback
+      document.getElementById('formError').style.display = 'block';
     });
   }
 
