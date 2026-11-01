@@ -13,7 +13,8 @@ Positioning: we hire and staff allied healthcare and all types of medical staffi
 - SAM.gov UEI SVAZQG49VUH7; CAGE 1ZPE9; NAICS 561320 / 561311
 - W-2 employment model; weekly clinician pay; benefits after 90 days
 - Background screening via Checkr and FACIS Level 3, Quest drug screening, five-step credentialing, monthly OIG/SAM exclusion checks
-- "Credentialing managed by Hearthstone"; "36-72 hour placement target" (a target, never a guarantee)
+- "Credentialing managed by Hearthstone"; "we respond within 24-48 hours" (founder-approved commitment, Oct 31 2026); "36-72 hour placement target" measured from the initial request (a target, never a guarantee)
+- Black-owned (founder-verified Nov 1, 2026): usable alongside veteran-owned and woman-owned; no certification or badge may be claimed for it unless the founder supplies one
 - Texas Women Veterans Registry (City of Houston) listing; Texas VetHUB certification is "applying"; SBA SDVOSB is in progress and must NOT be claimed
 - One phone: (713) 938-3989. Emails: hello@, careers@, clinicians@, facilities@ hearthstoneandco.com
 
@@ -27,15 +28,15 @@ Shared voice: direct, plain, mission-minded. Short declaratives, then one explan
 
 | Audience | Tone | Lead with | Avoid |
 |---|---|---|---|
-| Facility buyers | Confident, practical, partner not vendor | RN/LVN/CNA, credentialing managed by Hearthstone, placement target | guarantees, response-time promises, pool or bench numbers |
+| Facility buyers | Confident, practical, partner not vendor | RN/LVN/CNA, credentialing managed by Hearthstone, "we respond within 24-48 hours", placement target (from the initial request) | guarantees, "within one business day", "after your request is confirmed", pool or bench numbers |
 | Clinicians | Warm, respectful, specific | W-2, weekly pay, benefits after 90 days, competitive rates | dollar pay figures, guaranteed hours |
 | Government / prime partners | Formal, precise, credential-first | Certificates, UEI, CAGE, NAICS, teaming language | past performance, clients, SDVOSB, HUB-certified |
 
 Primary CTA: Request Staffing (request-staffing.html) plus Calendly. Clinicians: Join Our Network. EEO line (counsel to confirm): "Hearthstone & Co. is an equal opportunity employer."
 
 ## 5. Boilerplate
-- **25 words:** Hearthstone & Co. is a veteran-led, woman-owned healthcare staffing company in Katy, Texas, providing RN, LVN and CNA staffing across Greater Houston.
-- **50 words:** Hearthstone & Co. Workforce Solutions is a veteran-owned and woman-owned healthcare staffing company in Katy, Texas, founded by U.S. Army veteran Renaye Mullings. We staff RNs, LVNs and CNAs for Greater Houston facilities, with credentialing managed by Hearthstone, and also staff allied and other medical roles as available.
+- **25 words:** Hearthstone & Co. is a veteran-led, woman-owned, Black-owned healthcare staffing company in Katy, Texas, providing RN, LVN and CNA staffing across Greater Houston.
+- **50 words:** Hearthstone & Co. Workforce Solutions is a veteran-owned, woman-owned and Black-owned healthcare staffing company in Katy, Texas, founded by U.S. Army veteran Renaye Mullings. We staff RNs, LVNs and CNAs for Greater Houston facilities, with credentialing managed by Hearthstone, and also staff allied and other medical roles as available.
 - **100 words:** see issue #117 section 2 (kept in sync with the Proposals boilerplate library, #105).
 
 ## 6. Color
