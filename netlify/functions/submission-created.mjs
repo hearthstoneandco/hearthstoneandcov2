@@ -52,8 +52,15 @@ function loadRoles() {
 }
 
 const CORE = ["full_name", "name", "first_name", "last_name", "contact_name", "reviewer-name", "facility_name", "company_name", "organization", "title", "email", "phone", "city", "live_in_texas", "work_authorized", "linkedin_url", "resume_link"];
-const CORE_LABELS = { first_name: "First name", contact_name: "Contact name", "reviewer-name": "Reviewer name", company_name: "Company", organization: "Organization", state: "State", facility_type: "Facility type", coverage_type: "Coverage needed", clinician_count: "Number of clinicians needed", shifts: "Shifts needed", roles: "Roles needed", start_date: "Desired start date", duration: "Expected duration", staffing_needs: "Staffing needs", urgency: "Urgency", engagement_type: "Engagement type", region: "Region", vehicle: "Contract vehicles", clinicians: "Clinician types", cage_uei: "CAGE / UEI", reason: "Reason for contacting", message: "Message", type: "Inquiry type", "reviewer-role": "Reviewer role", "reviewer-location": "Reviewer location", rating: "Rating", "review-text": "Review", last_name: "Last name", facility_name: "Facility / organization", title: "Title", full_name: "Full name", name: "Name", email: "Email", phone: "Phone", city: "City", live_in_texas: "Lives in Texas", work_authorized: "Authorized to work in the U.S. (no sponsorship)", linkedin_url: "LinkedIn profile", resume_link: "Resume / LinkedIn / portfolio link" };
+const CORE_LABELS = { first_name: "First name", facility_address: "Facility address", facility_zip: "ZIP code", client_status: "Existing client?", specialty: "Specialty / unit", experience_level: "Experience level needed", required_credentials: "Required credentials", shift_length: "Shift length", shifts_per_week: "Shifts per week", need_type: "Need type", onsite_contact: "On-site contact", onsite_phone: "On-site contact phone", ehr_system: "Charting / EHR system", facility_requirements: "Parking, dress code, screening", billing_contact: "Billing contact", billing_email: "Billing email", po_required: "PO required?", vendor_onboarding: "Vendor onboarding forms required?", budget_guidance: "Budget guidance", preferred_contact: "Preferred contact method", best_time: "Best time to reach", how_heard: "How they heard about us", utm_source: "Campaign source", utm_medium: "Campaign medium", utm_campaign: "Campaign name", contact_name: "Contact name", "reviewer-name": "Reviewer name", company_name: "Company", organization: "Organization", state: "State", facility_type: "Facility type", coverage_type: "Coverage needed", clinician_count: "Number of clinicians needed", shifts: "Shifts needed", roles: "Roles needed", start_date: "Desired start date", duration: "Expected duration", staffing_needs: "Staffing needs", urgency: "Urgency", engagement_type: "Engagement type", region: "Region", vehicle: "Contract vehicles", clinicians: "Clinician types", cage_uei: "CAGE / UEI", reason: "Reason for contacting", message: "Message", type: "Inquiry type", "reviewer-role": "Reviewer role", "reviewer-location": "Reviewer location", rating: "Rating", "review-text": "Review", last_name: "Last name", facility_name: "Facility / organization", title: "Title", full_name: "Full name", name: "Name", email: "Email", phone: "Phone", city: "City", live_in_texas: "Lives in Texas", work_authorized: "Authorized to work in the U.S. (no sponsorship)", linkedin_url: "LinkedIn profile", resume_link: "Resume / LinkedIn / portfolio link" };
 const NOTE_KEYS = ["extra", "notes"];
+// Grouped layout for the full facility staffing request (everything the form collects, in reading order).
+const STAFFING_GROUPS = [
+  ["Request details", ["urgency", "roles", "specialty", "experience_level", "required_credentials", "coverage_type", "clinician_count", "need_type", "shifts", "shift_length", "shifts_per_week", "start_date", "duration"]],
+  ["Facility & on-site", ["facility_type", "state", "facility_address", "facility_zip", "client_status", "onsite_contact", "onsite_phone", "ehr_system", "facility_requirements"]],
+  ["Billing & procurement", ["billing_contact", "billing_email", "po_required", "vendor_onboarding", "budget_guidance"]],
+  ["Contact preferences & source", ["preferred_contact", "best_time", "how_heard", "utm_source", "utm_medium", "utm_campaign"]],
+];
 
 async function emailSubmission(payload) {
   const key = process.env.RESEND_API_KEY;
@@ -78,7 +85,11 @@ async function emailSubmission(payload) {
   const core = CORE.filter(present);
   const screening = Object.keys(d).filter((k) => /^q_/.test(k) && present(k));
   const notes = NOTE_KEYS.filter(present);
-  const other = Object.keys(d).filter((k) => present(k) && !CORE.includes(k) && !NOTE_KEYS.includes(k) && !/^q_/.test(k) && !/^sms/i.test(k));
+  const groups = payload.form_name === "staffing-request-full"
+    ? STAFFING_GROUPS.map(([title, keys]) => [title, keys.filter(present)]).filter(([, keys]) => keys.length)
+    : [];
+  const grouped = new Set(groups.flatMap(([, keys]) => keys));
+  const other = Object.keys(d).filter((k) => present(k) && !grouped.has(k) && !CORE.includes(k) && !NOTE_KEYS.includes(k) && !/^q_/.test(k) && !/^sms/i.test(k));
   const consent = Object.keys(d).filter((k) => present(k) && /^sms/i.test(k));
 
   const person = d.full_name || d.name || d.contact_name || d["reviewer-name"] || [d.first_name, d.last_name].filter(Boolean).join(" ");
@@ -87,7 +98,13 @@ async function emailSubmission(payload) {
   const org = ["staffing-request", "staffing-request-full", "teaming-inquiry", "bd-contact"].includes(payload.form_name) ? (d.facility_name || d.company_name || d.organization || "") : "";
   const who = org || person || d.email || "New applicant";
   const roleTitle = role ? role.title : d.role ? pretty(d.role) : "";
-  const subject = route.label === "application" ? `Application: ${roleTitle || "General"} - ${who}` : `${route.label[0].toUpperCase()}${route.label.slice(1)}: ${who}`;
+  const urgent = /immediate|72 hours/i.test(String(d.urgency || ""));
+  let respondBy = "";
+  if (org && payload.created_at) {
+    const t = new Date(new Date(payload.created_at).getTime() + 48 * 3600 * 1000);
+    if (!isNaN(t)) respondBy = t.toLocaleString("en-US", { timeZone: "America/Chicago", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) + " CT";
+  }
+  const subject = (urgent ? "URGENT: " : "") + (route.label === "application" ? `Application: ${roleTitle || "General"} - ${who}` : `${route.label[0].toUpperCase()}${route.label.slice(1)}: ${who}`);
 
   // Attach uploaded files (Netlify gives a short-lived URL, so fetch now).
   const attachments = [];
@@ -120,9 +137,12 @@ async function emailSubmission(payload) {
 <div style="background:#1A3D2E;color:#fff;padding:20px 24px;border-bottom:4px solid #C9A84C">
 <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C9A84C">${route.label === "application" ? "New application" : org ? `New ${esc(route.label)}` : "New submission"}</div>
 <div style="font:600 22px Georgia,serif;margin-top:4px">${esc(who)}</div>
-${roleTitle ? `<div style="margin-top:2px;opacity:.9">${esc(roleTitle)}</div>` : org && person ? `<div style="margin-top:2px;opacity:.9">Contact: ${esc(person)}</div>` : ""}</div>
+${roleTitle ? `<div style="margin-top:2px;opacity:.9">${esc(roleTitle)}</div>` : org && person ? `<div style="margin-top:2px;opacity:.9">Contact: ${esc(person)}</div>` : ""}
+${respondBy ? `<div style="margin-top:10px;font-size:13px;color:#C9A84C">${urgent ? "URGENT &middot; " : ""}Respond by ${esc(respondBy)} (24-48 hour commitment)</div>` : ""}</div>
 <div style="padding:4px 24px 24px;border:1px solid #e5e5e5;border-top:0">
 ${section(route.label === "application" ? "Contact &amp; eligibility" : "Contact")}<table style="border-collapse:collapse">${core.map((k) => row(labelFor(k), link(k))).join("")}</table>
+${org && d.email ? `<p style="margin:14px 0 0"><a href="mailto:${esc(d.email)}" style="display:inline-block;background:#1A3D2E;color:#fff;text-decoration:none;padding:8px 16px;border-radius:4px;font-size:14px;margin-right:8px">Reply</a>${d.phone ? `<a href="tel:${esc(d.phone)}" style="display:inline-block;background:#C9A84C;color:#1A3D2E;text-decoration:none;padding:8px 16px;border-radius:4px;font-size:14px">Call</a>` : ""}</p>` : ""}
+${groups.map(([title, keys]) => section(esc(title)) + `<table style="border-collapse:collapse">${keys.map((k) => row(labelFor(k), `<span style="white-space:pre-wrap">${esc(val(d[k]))}</span>`)).join("")}</table>`).join("")}
 ${other.length ? section("Details") + `<table style="border-collapse:collapse">${other.map((k) => row(labelFor(k), `<span style="white-space:pre-wrap">${esc(val(d[k]))}</span>`)).join("")}</table>` : ""}
 ${screening.length ? section("Screening answers") + screening.map(qa).join("") : ""}
 ${notes.length ? section("Additional notes") + notes.map((k) => `<p style="margin:8px 0;white-space:pre-wrap">${esc(val(d[k]))}</p>`).join("") : ""}
@@ -134,6 +154,8 @@ ${consent.length ? section("Consent") + `<table style="border-collapse:collapse"
   const text = [
     `${route.label === "application" ? "NEW APPLICATION" : "NEW SUBMISSION"}: ${who}${roleTitle ? ` - ${roleTitle}` : ""}`,
     "", ...core.map((k) => `${labelFor(k)}: ${val(d[k])}`),
+    ...(respondBy ? ["", `${urgent ? "URGENT - " : ""}RESPOND BY: ${respondBy} (24-48 hour commitment)`] : []),
+    ...groups.flatMap(([title, keys]) => ["", title.toUpperCase(), ...keys.map((k) => `${labelFor(k)}: ${val(d[k])}`)]),
     ...other.map((k) => `${labelFor(k)}: ${val(d[k])}`),
     ...(screening.length ? ["", "SCREENING ANSWERS", ...screening.map((k) => `${labelFor(k)}\n${val(d[k])}\n`)] : []),
     ...(notes.length ? ["", "NOTES", ...notes.map((k) => val(d[k]))] : []),
@@ -209,11 +231,34 @@ async function sendConfirmation({ key, route, d, person, roleTitle, val }) {
   return res.ok ? "ok" : `resend ${res.status}`;
 }
 
+// Optional: forward facility staffing requests to a HubSpot form so each lands as a contact. Needs Netlify env vars
+// HUBSPOT_PORTAL_ID and HUBSPOT_STAFFING_FORM_GUID; does nothing if either is unset.
+async function forwardStaffingToHubSpot(payload) {
+  const portal = process.env.HUBSPOT_PORTAL_ID;
+  const form = process.env.HUBSPOT_STAFFING_FORM_GUID;
+  const d = payload.data || {};
+  const email = String(d.email || "").trim();
+  if (!portal || !form || !email || d["bot-field"]) return;
+  const full = String(d.contact_name || [d.first_name, d.last_name].filter(Boolean).join(" ")).trim();
+  const [first, ...rest] = full.split(/\s+/).filter(Boolean);
+  const map = { email, firstname: first, lastname: rest.join(" "), company: d.facility_name, phone: d.phone, jobtitle: d.title, city: d.city, state: d.state };
+  const fields = Object.entries(map).filter(([, v]) => v).map(([name, value]) => ({ name, value: String(value) }));
+  await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${encodeURIComponent(portal)}/${encodeURIComponent(form)}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ fields, context: { pageUri: "https://hearthstoneandco.com/request-staffing", pageName: "Request Staffing" } }),
+  });
+}
+
 export default async (req) => {
   try {
     const { payload } = await req.json();
     if (payload && FORM_RECIPIENTS[payload.form_name]) {
-      return new Response(await emailSubmission(payload), { status: 200 });
+      const result = await emailSubmission(payload);
+      if (payload.form_name === "staffing-request-full" || payload.form_name === "staffing-request") {
+        try { await forwardStaffingToHubSpot(payload); } catch (e) { /* best effort */ }
+      }
+      return new Response(result, { status: 200 });
     }
     if (!payload || payload.form_name !== "newsletter") return new Response("ignored", { status: 200 });
 
