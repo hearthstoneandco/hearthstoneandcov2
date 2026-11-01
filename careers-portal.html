@@ -5,12 +5,12 @@
   <link rel="canonical" href="https://hearthstoneandco.com/careers-portal">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Careers Portal &amp;mdash; Apply | Hearthstone &amp;amp; Co. Workforce Solutions">
-  <meta property="og:description" content="Apply to open roles at Hearthstone &amp; Co. Complete a short, role-specific application for our current opening in business development.">
+  <meta property="og:description" content="Apply to open roles at Hearthstone &amp; Co. Complete a short, role-specific application for our current openings.">
   <meta property="og:url" content="https://hearthstoneandco.com/careers-portal">
   <meta property="og:site_name" content="Hearthstone &amp; Co. Workforce Solutions">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Careers Portal &amp;mdash; Apply | Hearthstone &amp;amp; Co. Workforce Solutions">
-  <meta name="twitter:description" content="Apply to open roles at Hearthstone &amp; Co. Complete a short, role-specific application for our current opening in business development.">
+  <meta name="twitter:description" content="Apply to open roles at Hearthstone &amp; Co. Complete a short, role-specific application for our current openings.">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-24EVR9RWFR"></script>
   <script>
@@ -20,7 +20,7 @@
     gtag('config', 'G-24EVR9RWFR');
   </script>
   <title>Careers Portal &mdash; Apply | Hearthstone &amp; Co.</title>
-  <meta name="description" content="Apply to open roles at Hearthstone &amp; Co. Complete a short, role-specific application for our current opening in business development.">
+  <meta name="description" content="Apply to open roles at Hearthstone &amp; Co. Complete a short, role-specific application for our current openings.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript></noscript>
@@ -725,8 +725,13 @@ function buildForm(id, r) {
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(location.search);
   const role = params.get('role');
-  /* Only the BDR role is open for applications right now. Other roles are kept in ROLES for when hiring resumes. */
-  const OPEN_ROLES = ['bdr-sdr'];
+  /* No roles are open for applications right now (BDR closed Nov 1, 2026). Roles stay in ROLES for when hiring resumes; add an id to OPEN_ROLES to reopen. */
+  const OPEN_ROLES = [];
+  if (!OPEN_ROLES.length) {
+    document.getElementById('portalTitle').textContent = 'No roles are open right now';
+    document.getElementById('portalSub').innerHTML = 'We are not accepting applications at this time. See <a href="/careers" style="color:var(--gold-lt)">all roles</a> or email careers@hearthstoneandco.com.';
+    return;
+  }
   if (role && OPEN_ROLES.includes(role) && ROLES[role]) buildForm(role, ROLES[role]);
   else buildForm(OPEN_ROLES[0], ROLES[OPEN_ROLES[0]]);
 });
