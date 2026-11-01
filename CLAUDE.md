@@ -21,6 +21,8 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   as core and mention allied/other medical staffing as available; never imply nursing-only or allied-first.
   Also verified: W-2 employment model; Katy TX / Greater Houston; founder Renaye Mullings,
   U.S. Army veteran.
+  Also founder-verified (Nov 1, 2026): Hearthstone is a Black-owned business ("Black-owned" is a verified claim agents may use,
+  alongside veteran-owned and woman-owned; do not claim any certification for it unless the founder supplies one).
   Also founder-verified (Oct 21, 2026): "Texas Women Veterans Registry | City of Houston" listing; Texas VetHUB
   Certification (applying; founder Oct 27, 2026: program is now VetHUB) and SBA SDVOSB certification (in progress, NOT yet certified; never claim SDVOSB until issued); "A subsidiary of The Shiylohe Collective".
   Also founder-verified (Oct 24, 2026): benefits after 90 days (PTO, paid holidays, group medical/dental/vision with company
