@@ -82,7 +82,10 @@ async function emailSubmission(payload) {
   const consent = Object.keys(d).filter((k) => present(k) && /^sms/i.test(k));
 
   const person = d.full_name || d.name || d.contact_name || d["reviewer-name"] || [d.first_name, d.last_name].filter(Boolean).join(" ");
-  const who = person || d.email || "New applicant";
+  // Business inquiries lead with the organization; the contact person is shown beneath it. Applications and
+  // clinician signups lead with the person.
+  const org = ["staffing-request", "staffing-request-full", "teaming-inquiry", "bd-contact"].includes(payload.form_name) ? (d.facility_name || d.company_name || d.organization || "") : "";
+  const who = org || person || d.email || "New applicant";
   const roleTitle = role ? role.title : d.role ? pretty(d.role) : "";
   const subject = route.label === "application" ? `Application: ${roleTitle || "General"} - ${who}` : `${route.label[0].toUpperCase()}${route.label.slice(1)}: ${who}`;
 
@@ -115,9 +118,9 @@ async function emailSubmission(payload) {
 
   const html = `<div style="font:15px/1.5 Arial,sans-serif;color:#1a1a1a;max-width:680px;margin:0 auto">
 <div style="background:#1A3D2E;color:#fff;padding:20px 24px;border-bottom:4px solid #C9A84C">
-<div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C9A84C">${route.label === "application" ? "New application" : "New submission"}</div>
+<div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C9A84C">${route.label === "application" ? "New application" : org ? `New ${esc(route.label)}` : "New submission"}</div>
 <div style="font:600 22px Georgia,serif;margin-top:4px">${esc(who)}</div>
-${roleTitle ? `<div style="margin-top:2px;opacity:.9">${esc(roleTitle)}</div>` : ""}</div>
+${roleTitle ? `<div style="margin-top:2px;opacity:.9">${esc(roleTitle)}</div>` : org && person ? `<div style="margin-top:2px;opacity:.9">Contact: ${esc(person)}</div>` : ""}</div>
 <div style="padding:4px 24px 24px;border:1px solid #e5e5e5;border-top:0">
 ${section(route.label === "application" ? "Contact &amp; eligibility" : "Contact")}<table style="border-collapse:collapse">${core.map((k) => row(labelFor(k), link(k))).join("")}</table>
 ${other.length ? section("Details") + `<table style="border-collapse:collapse">${other.map((k) => row(labelFor(k), `<span style="white-space:pre-wrap">${esc(val(d[k]))}</span>`)).join("")}</table>` : ""}
