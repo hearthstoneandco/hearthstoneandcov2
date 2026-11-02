@@ -104,7 +104,11 @@ async function emailSubmission(payload) {
     const t = new Date(new Date(payload.created_at).getTime() + 48 * 3600 * 1000);
     if (!isNaN(t)) respondBy = t.toLocaleString("en-US", { timeZone: "America/Chicago", weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) + " CT";
   }
-  const subject = (urgent ? "URGENT: " : "") + (route.label === "application" ? `Application: ${roleTitle || "General"} - ${who}` : `${route.label[0].toUpperCase()}${route.label.slice(1)}: ${who}`);
+  // A late application (role closed: "open" false or past its "closes" date) is still forwarded, flagged, with no
+  // applicant confirmation, so nobody is told a closed role is reviewing them.
+  const submittedAt = Date.parse(payload.created_at || "") || Date.now();
+  const roleClosed = payload.form_name === "careers-application" && !!role && (!role.open || (role.closes && submittedAt > Date.parse(role.closes)));
+  const subject = (roleClosed ? "[ROLE CLOSED] " : "") + (urgent ? "URGENT: " : "") + (route.label === "application" ? `Application: ${roleTitle || "General"} - ${who}` : `${route.label[0].toUpperCase()}${route.label.slice(1)}: ${who}`);
 
   // Attach uploaded files (Netlify gives a short-lived URL, so fetch now).
   const attachments = [];
@@ -177,7 +181,7 @@ ${consent.length ? section("Consent") + `<table style="border-collapse:collapse"
   });
   const sent = res.ok ? "ok" : `resend ${res.status}`;
   let confirmed = "";
-  if (route.confirm && d.email) {
+  if (route.confirm && d.email && !roleClosed) {
     try { confirmed = " confirm:" + (await sendConfirmation({ key, route, d, person, roleTitle, val })); } catch (e) { confirmed = " confirm:error"; }
   }
   return sent + confirmed;
