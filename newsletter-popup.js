@@ -19,7 +19,7 @@
     '#hs-nl.on{transform:translate(-50%,0);opacity:1;visibility:visible;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s}' +
     '#hs-nl .hs-bar{position:relative;display:flex;align-items:center;gap:16px;background:#1A3D2E;color:#fff;border-radius:14px;padding:12px 44px 12px 14px;box-shadow:0 12px 40px rgba(10,25,18,.35),0 0 0 1px rgba(201,168,76,.45);font-family:"DM Sans",system-ui,sans-serif}' +
     '#hs-nl .hs-bar:before{content:"";position:absolute;left:18px;right:18px;top:0;height:2px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);border-radius:2px}' +
-    '#hs-nl img.hs-hs-lg{width:46px;height:46px;border-radius:10px;flex:none;box-shadow:0 0 0 1px rgba(201,168,76,.5)}' +
+    '#hs-nl img.hs-lg{width:46px;height:46px;border-radius:10px;flex:none;box-shadow:0 0 0 1px rgba(201,168,76,.5)}' +
     '#hs-nl .hs-tx{flex:1 1 auto;min-width:0}' +
     '#hs-nl .hs-k{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#C9A84C;margin:0 0 2px}' +
     '#hs-nl .hs-h{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.22rem;line-height:1.15;font-weight:600;margin:0;color:#fff}' +
@@ -36,7 +36,7 @@
     '#hs-nl .hs-ok{display:flex;align-items:center;gap:12px;width:100%}#hs-nl .hs-ok[hidden]{display:none}' +
     '#hs-nl :focus-visible{outline:2px solid #C9A84C;outline-offset:2px}' +
     '@media(max-width:720px){#hs-nl{bottom:10px;width:calc(100% - 16px)}#hs-nl .hs-bar{flex-wrap:wrap;gap:10px;padding:12px 40px 12px 12px}' +
-    '#hs-nl img.hs-hs-lg{width:38px;height:38px}#hs-nl .hs-h{font-size:1.1rem}#hs-nl .hs-s{display:none}#hs-nl form{width:100%}#hs-nl input[type=email]{flex:1;width:auto;min-width:0}}' +
+    '#hs-nl img.hs-lg{width:38px;height:38px}#hs-nl .hs-h{font-size:1.1rem}#hs-nl .hs-s{display:none}#hs-nl form{width:100%}#hs-nl input[type=email]{flex:1;width:auto;min-width:0}}' +
     '@media(prefers-reduced-motion:reduce){#hs-nl,#hs-nl.on{transition:none}}';
   var style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
 
