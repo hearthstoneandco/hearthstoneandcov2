@@ -4,6 +4,14 @@
 # Order matters — first match wins.
 # =============================================================
 
+# --- Collapse the www entry chain to a single hop ---
+# Netlify's automatic canonicalisation sent http://www through two redirects
+# (http://www -> https://www -> https://apex). These rules jump straight to the
+# canonical apex URL in one hop. The https://apex URL itself already redirects
+# zero times and is unaffected.
+http://www.hearthstoneandco.com/*   https://hearthstoneandco.com/:splat   301!
+https://www.hearthstoneandco.com/*  https://hearthstoneandco.com/:splat   301!
+
 # --- Strip .html extension (Google-indexed URLs are clean) ---
 /index.html                       /                              301!
 /about.html                       /about                         301!

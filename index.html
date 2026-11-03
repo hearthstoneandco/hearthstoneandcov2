@@ -3,13 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-24EVR9RWFR"></script>
+  <!-- Google tag (gtag.js) — library fetch moved off the critical path.
+       gtag.js is ~199KB compressed / ~608KB parsed, the single largest script on the
+       page. The dataLayer queue and the gtag() shim stay inline and synchronous, so
+       anything fired before the library lands (including hs-events.js conversions and
+       the initial page_view) is queued and replayed once it loads.
+       Trigger: first user interaction, or shortly after load — whichever comes first. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-24EVR9RWFR');
+    (function () {
+      var loaded = false;
+      var opts = { passive: true, capture: true };
+      var EVENTS = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        EVENTS.forEach(function (e) { window.removeEventListener(e, loadGtag, opts); });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-24EVR9RWFR';
+        document.head.appendChild(s);
+      }
+      EVENTS.forEach(function (e) { window.addEventListener(e, loadGtag, opts); });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 1200); });
+    })();
   </script>
   <title>Medical Staffing Agency Houston | Veteran-Owned RN, LVN, CNA</title>
   <meta name="description" content="Veteran-owned medical staffing agency in Houston. Credentialed RNs, LVNs & CNAs in SNFs, ALFs, hospitals & clinics in 36–72 hours. No long-term commitment.">
@@ -225,6 +245,19 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload the font files themselves, not just the stylesheet.
+       The stylesheet loads non-blocking (media="print"), so without these the font
+       files are only discovered after it is applied — two round trips late. Text
+       therefore painted in the fallback first and reflowed on swap, which is what
+       drove mobile CLS: Cormorant Garamond averages 0.422em per lowercase glyph
+       against roughly 0.479em for the Times fallback, ~12% narrower, enough to
+       rewrap a large mobile heading by a full line.
+       Both families are variable fonts — one latin file each covers every weight
+       used on the page (~37KB each, already downloaded today, just later). -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin fetchpriority="high"
+        href="https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin fetchpriority="high"
+        href="https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript></noscript>
   <style>
@@ -1809,13 +1842,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <div style="color:var(--mid);font-size:1.02rem;line-height:1.85;">
       <p style="margin-bottom:1.25rem;">Healthcare staffing is not one-size-fits-all, and neither is the way Hearthstone &amp; Co. approaches it. A skilled nursing facility managing a Medicare census surge has very different needs than a behavioral health unit navigating a high-acuity admission, or a hospital covering a sudden gap in its med-surg rotation. That is why our recruiters specialize by care setting — matching the right registered nurse, licensed vocational nurse, or certified nursing assistant to the clinical environment, patient population, and pace of work each assignment demands. The result is fewer mismatches, smoother onboarding, and clinicians who are ready to contribute from their very first shift on your floor.</p>
 
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.3vw,1.85rem);color:var(--em);margin:2rem 0 1rem;">Care Settings We Staff Across Greater Houston</h3>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.3vw,1.85rem);color:var(--em);margin:2rem 0 1rem;">Care Settings Our Clinicians Staff Across Greater Houston</h3>
       <p style="margin-bottom:1.25rem;">Our Houston-area network supports the full continuum of care. We provide <a href="/nursing-home-staffing-houston" style="color:var(--em);font-weight:600;">skilled nursing and long-term care staffing</a> for SNFs and nursing homes, assisted living and memory care coverage for residential communities, and acute coverage through our <a href="/hospital-staffing" style="color:var(--em);font-weight:600;">hospital staffing services</a> for med-surg, telemetry, emergency, and step-down units. We also place compassionate, de-escalation-trained professionals through our <a href="/behavioral-health-staffing" style="color:var(--em);font-weight:600;">behavioral health staffing</a> program, supporting psychiatric units, substance-use treatment centers, and crisis stabilization facilities. From post-acute rehabilitation and hospice to outpatient clinics and dialysis centers, Hearthstone delivers credentialed talent wherever Houston patients need care.</p>
 
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.3vw,1.85rem);color:var(--em);margin:2rem 0 1rem;">Flexible Staffing Models That Fit Your Budget</h3>
       <p style="margin-bottom:1.25rem;">Every facility runs on a different rhythm, so we offer staffing models built around yours. <a href="/per-diem-nurse-staffing" style="color:var(--em);font-weight:600;">Per diem nurse staffing</a> covers single shifts, call-outs, and weekend gaps without long-term commitment. Multi-week contract assignments stabilize a unit through census surges, FMLA leave, or seasonal demand. <a href="/travel-nurse-staffing" style="color:var(--em);font-weight:600;">Travel nurse staffing</a> brings qualified clinicians to harder-to-fill assignments, and direct-hire placement helps you build a permanent team with candidates we have already vetted. Because every clinician is a W-2 employee, you avoid the misclassification risk and administrative overhead that come with 1099 arrangements — and you gain predictable billing, proper insurance coverage, and a single accountable partner for every placement.</p>
 
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.3vw,1.85rem);color:var(--em);margin:2rem 0 1rem;">Coverage for Every Shift and Specialty</h3>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.3vw,1.85rem);color:var(--em);margin:2rem 0 1rem;">Clinician Coverage for Every Shift and Specialty</h3>
       <p style="margin-bottom:1.25rem;">Staffing gaps rarely happen at convenient hours, so we cover the full schedule — day, evening, night (NOC), weekend, holiday, and rotating shifts. Our clinicians bring experience across a wide range of specialties, including long-term care, post-acute and skilled rehabilitation, memory care and dementia support, wound care, IV therapy, telemetry, emergency, and psychiatric care. Need a CNA to cover a single Saturday in Sugar Land, an LVN for a three-month rehab contract in Pearland, or a team of RNs to stabilize a unit through a census surge in The Woodlands? We scale up or down to match real demand, and because our recruiters know each clinician's background and certifications, you receive professionals matched to your acuity level — not whoever happened to be available.</p>
 
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.3vw,1.85rem);color:var(--em);margin:2rem 0 1rem;">Why Houston Facilities Choose a Local, Veteran-Owned Partner</h3>
@@ -1849,7 +1882,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <p style="margin:0 0 0.5rem 0;font-size:0.95rem;font-weight:600">Hearthstone & Co. Workforce Solutions</p>
         <p style="margin:0 0 0.25rem 0;font-size:0.9rem"><a href="tel:+17139383989" style="color:inherit;text-decoration:none">📞 Call Us: (713) 938-3989</a></p>
         <p style="margin:0 0 0.5rem 0;font-size:0.9rem"><script>document.write('<a href="' + 'mai' + 'lto:hello@hearthston' + 'eandco.com" style="color:inherit;text-decoration:none">' + '✉️ hello@hearthston' + 'eandco.com</a>');</script><noscript>hello [at] hearthstoneandco [dot] com</noscript></p>
-        <p style="margin:0 0 0.25rem 0;font-size:0.9rem;color:rgba(255,255,255,.7)">• Katy, TX - Greater Houston</p>
+        <address style="margin:0 0 0.25rem 0;font-size:0.9rem;color:rgba(255,255,255,.7);font-style:normal">
+          29655 Jordan Crossing Blvd<br>Katy, TX 77494
+        </address>
         <p style="margin:0 0 0.25rem 0;font-size:0.9rem;color:rgba(255,255,255,.7)">Serving Greater Houston, TX</p>
         <p style="margin:0 0 1.5rem 0;font-size:0.9rem;color:rgba(255,255,255,.7)">Harris | Fort Bend | Montgomery Counties</p>
         <p style="margin:0;font-size:0.9rem;font-weight:700"><strong>Texas Women Veterans Registry - City of Houston</strong></p>
