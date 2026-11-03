@@ -12,7 +12,7 @@ read_time: 7
 draft: false
 ---
 
-<p class="lead">Staffing gaps in skilled nursing facilities are not a new problem — but their consequences have become more acute in 2026. CMS finalized numeric nurse staffing minimums in 2024 and then repealed them effective February 2, 2026, so facilities now plan coverage against the older sufficient-staffing standard and their own facility assessment. Meanwhile, the projected statewide nursing shortage of 57,000 by 2032 (Texas Center for Nursing Workforce Studies, 2025 Biennial Report) means the structural supply problem is not resolving. These five strategies don't eliminate the challenge, but they meaningfully reduce its operational impact.</p>
+<p class="lead">Staffing gaps in <a href="/nursing-home-staffing-houston" style="color:var(--em);font-weight:600">skilled nursing facilities</a> are not a new problem — but their consequences have become more acute in 2026. CMS finalized numeric nurse staffing minimums in 2024 and then repealed them effective February 2, 2026, so facilities now plan coverage against the older sufficient-staffing standard and their own facility assessment. Meanwhile, the projected statewide nursing shortage of 57,000 by 2032 (Texas Center for Nursing Workforce Studies, 2025 Biennial Report) means the structural supply problem is not resolving. These five strategies don't eliminate the challenge, but they meaningfully reduce its operational impact.</p>
 
 <div class="stat-callout">
   <div><div class="stat-num">Repealed</div></div>
@@ -20,9 +20,9 @@ draft: false
 </div>
 
 <h2>Strategy 1: Build Your Per Diem Bench Proactively — Before You Need It</h2>
-<p>The most expensive time to call a staffing agency is at 5:30 AM when your charge nurse has called in sick and a shift starts in 90 minutes. By that point, you're competing with every other facility in Greater Houston for whatever is available — and last-minute fills can leave you accepting whatever the agency can find on short notice.</p>
+<p>The most expensive time to call a staffing agency is at 5:30 AM when your charge nurse has called in sick and a shift starts in 90 minutes. By that point, you're competing with every other facility in Greater Houston for whatever is available — and <a href="/emergency-healthcare-staffing-houston" style="color:var(--em);font-weight:600">last-minute fills</a> can leave you accepting whatever the agency can find on short notice.</p>
 <p>The operational alternative is to establish agency relationships and build an active clinician pool before your census demands it. This means: executing your Master Service Agreement with one or two agencies before your first opening arises; providing the agency with your typical scheduling patterns, census fluctuation history, and preferred specialties so they can identify which clinicians in their network have compatible availability; and placing predictive orders one to two weeks in advance for anticipated coverage needs rather than waiting for a vacancy to materialize.</p>
-<p>Facilities that engage staffing agencies as strategic workforce partners — rather than emergency responders — tend to have an easier time covering shifts than those that contact agencies only in crisis. Planning ahead gives an agency time to match the right clinicians.</p>
+<p>Facilities that engage <a href="/for-healthcare-facilities" style="color:var(--em);font-weight:600">staffing agencies as strategic workforce partners</a> — rather than emergency responders — tend to have an easier time covering shifts than those that contact agencies only in crisis. Planning ahead gives an agency time to match the right clinicians.</p>
 
 <h2>Strategy 2: Streamline Per Diem Clinician Onboarding</h2>
 <p>One of the most reliable reasons experienced agency nurses decline repeat assignments at a facility is onboarding friction. If your facility requires an experienced, multi-credential RN to sit through three hours of general orientation paperwork before each first-time shift — paperwork that covers material the nurse has completed at 15 similar facilities — you are systematically selecting against experienced per diem talent who have alternatives.</p>
