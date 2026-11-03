@@ -1,66 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hearthstoneandco.com/about</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/accessibility</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/assisted-living-staffing-houston</loc><lastmod>2026-10-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/bd-contact</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/behavioral-health-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/careers-portal</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/careers</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/media-center</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://hearthstoneandco.com/certifications</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/clinician-jobs</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://hearthstoneandco.com/cna-jobs-houston</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/rn-jobs-houston</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hearthstoneandco.com/about</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/accessibility</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/assisted-living-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/bd-contact</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/behavioral-health-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/careers-portal</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/careers</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/media-center</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://hearthstoneandco.com/certifications</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/clinician-jobs</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hearthstoneandco.com/cna-jobs-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/rn-jobs-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://hearthstoneandco.com/cna-staffing-agency-houston</loc><lastmod>2026-10-31</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/compliance-credentialing</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/contact</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/for-healthcare-facilities</loc><lastmod>2026-10-27</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/government-contracting</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/healthcare-staffing-houston</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://hearthstoneandco.com/hospital-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/houston-rn-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/compliance-credentialing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/contact</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/for-healthcare-facilities</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/government-contracting</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/healthcare-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hearthstoneandco.com/hospital-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/houston-rn-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://hearthstoneandco.com</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://hearthstoneandco.com/industries-served</loc><lastmod>2026-10-30</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/join-our-network</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/katy-healthcare-staffing</loc><lastmod>2026-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/sugar-land-healthcare-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hearthstoneandco.com/the-woodlands-healthcare-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hearthstoneandco.com/cypress-healthcare-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hearthstoneandco.com/lvn-jobs-houston</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/industries-served</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/join-our-network</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/katy-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/sugar-land-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/the-woodlands-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/cypress-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/lvn-jobs-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://hearthstoneandco.com/lvn-staffing-agency-houston</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/nursing-home-staffing-houston</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/emergency-healthcare-staffing-houston</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hearthstoneandco.com/allied-health-staffing-houston</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/fulshear-healthcare-staffing</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/richmond-healthcare-staffing</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/missouri-city-healthcare-staffing</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/pearland-healthcare-staffing</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/humble-healthcare-staffing</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/spring-healthcare-staffing</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/baytown-healthcare-staffing</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/per-diem-nurse-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/privacy-policy</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/request-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://hearthstoneandco.com/resources</loc><lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/rn-staffing-agency-houston</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/sms-consent</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/teaming-inquiry</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/terms-of-service</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/travel-nurse-staffing</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/why-hearthstone</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://hearthstoneandco.com/es/empleos-enfermeria-houston</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://hearthstoneandco.com/veteran-owned-healthcare-staffing-houston</loc><lastmod>2026-10-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hearthstoneandco.com/vosb-wosb-subcontracting-guide-healthcare-primes</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/temp-to-perm-nurse-staffing-houston</loc><lastmod>2026-10-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hearthstoneandco.com/home-health-staffing-houston</loc><lastmod>2026-10-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hearthstoneandco.com/outpatient-clinic-staffing-houston</loc><lastmod>2026-10-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hearthstoneandco.com/open-shift-cost-calculator</loc><lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/staffing-agency-vetting-scorecard</loc><lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/clinician-onboarding-checklist</loc><lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/healthcare-staffing-glossary</loc><lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hearthstoneandco.com/why-w2-staffing-for-healthcare-facilities</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/texas-vethub-subcontracting-plan-staffing-vendors</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/nursing-home-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/emergency-healthcare-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/allied-health-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/fulshear-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/richmond-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/missouri-city-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/pearland-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/humble-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/spring-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/baytown-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/conroe-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/pasadena-healthcare-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/per-diem-nurse-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/privacy-policy</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/request-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hearthstoneandco.com/resources</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/rn-staffing-agency-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/sms-consent</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/teaming-inquiry</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/terms-of-service</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/travel-nurse-staffing</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/why-hearthstone</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/es/empleos-enfermeria-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://hearthstoneandco.com/veteran-owned-healthcare-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/vosb-wosb-subcontracting-guide-healthcare-primes</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/temp-to-perm-nurse-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/home-health-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/outpatient-clinic-staffing-houston</loc><lastmod>2026-11-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hearthstoneandco.com/open-shift-cost-calculator</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/staffing-agency-vetting-scorecard</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/clinician-onboarding-checklist</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/healthcare-staffing-glossary</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hearthstoneandco.com/why-w2-staffing-for-healthcare-facilities</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hearthstoneandco.com/texas-vethub-subcontracting-plan-staffing-vendors</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://hearthstoneandco.com/blog</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://hearthstoneandco.com/blog/category/staffing-compliance</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://hearthstoneandco.com/blog/category/workforce</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
@@ -78,6 +81,6 @@
   <url><loc>https://hearthstoneandco.com/blog/verify-texas-nursing-license</loc><lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://hearthstoneandco.com/blog/what-to-ask-staffing-agency-credentialing</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://hearthstoneandco.com/blog/how-to-onboard-a-staffing-vendor-texas-facility</loc><lastmod>2026-11-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hearthstoneandco.com/newsletter</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://hearthstoneandco.com/healthcare-staffing-texas</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://hearthstoneandco.com/newsletter</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://hearthstoneandco.com/healthcare-staffing-texas</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>

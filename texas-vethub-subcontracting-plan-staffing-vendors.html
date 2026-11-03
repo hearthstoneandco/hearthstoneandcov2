@@ -430,6 +430,23 @@ window.addEventListener('load', function () {
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #C9A84C;outline-offset:2px}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
+<style id="local-seo-css">
+html,body{overflow-x:clip}
+.local-hub{padding:3rem 1.25rem;background:#f6f4ee}
+.local-hub>div{max-width:860px;margin:0 auto}
+.local-hub h2{font-family:'Cormorant Garamond',Georgia,serif;color:#1A3D2E;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2;margin:0 0 .5rem}
+.local-hub .divider{width:48px;height:2px;background:#C9A84C;margin:.5rem 0 1rem}
+.local-hub p{color:#3a4a42;line-height:1.75;margin:0 0 .75rem}
+.local-hub a{color:#1A3D2E;font-weight:600}
+.local-list,.local-steps{padding-left:1.25rem;line-height:1.8;margin:.5rem 0 0}
+.local-list li,.local-steps li{margin-bottom:.4rem}
+.footer-areas{border-top:1px solid rgba(255,255,255,.14);margin:0;padding:1.1rem 1.25rem;font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.82);background:transparent;font-family:'DM Sans',system-ui,sans-serif}
+.footer-areas>div{max-width:1200px;margin:0 auto}
+.footer-areas p{margin:0 0 .35rem}
+.footer-areas a{color:#E2C87A;text-decoration:none}
+.footer-areas a:hover,.footer-areas a:focus-visible{text-decoration:underline}
+.footer-areas strong{color:#fff}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -589,7 +606,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <a href="/veteran-owned-healthcare-staffing-houston">Veteran-Owned Staffing</a></li></ul></div>
   <div class="footer-col"><h5 aria-level="2">Clinicians</h5><ul><li><a href="/clinician-jobs">Clinician Jobs</a></li><li><a href="/join-our-network">Join Network</a></li><li><a href="/why-hearthstone">Why Hearthstone</a></li></ul><h5 aria-level="2" style="margin-top:1.5rem">Company</h5><ul><li><a href="/about">About</a></li><li><a href="/careers">Careers</a></li><li><a href="/contact">Contact</a></li><li><a href="/resources">Resources</a></li></ul></div>
   <div class="footer-col footer-cta-col"><div class="footer-cta-card"><h4 aria-level="2">Need Staffing Now?</h4><p>Credentialed clinicians, with a 36–72 hour placement target.</p><a href="/request-staffing" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:.75rem">Request Staffing</a></div><div class="footer-cta-card footer-cta-card--light" style="margin-top:1rem"><h4 aria-level="2">Healthcare Professionals</h4><p>Flexible work, weekly pay, recruiter support.</p><a href="/join-our-network" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:.75rem;font-size:.82rem">Join Our Network</a></div></div>
-</div></div></div><div class="footer-bottom"><div class="container"><span>&copy; 2026 Hearthstone &amp; Co. Workforce Solutions. All rights reserved.</span><div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/accessibility">Accessibility</a><a href="/sms-consent">SMS Consent</a></div></div></div></footer>
+</div></div></div><div class="footer-areas" aria-label="Service areas"><div><p><strong>Hearthstone &amp; Co. Workforce Solutions</strong> &middot; 29655 Jordan Crossing Blvd, Katy, TX 77494 &middot; <a href="tel:+17139383989">(713) 938-3989</a> &middot; Mon&ndash;Fri 8 AM&ndash;6 PM, Sat 9 AM&ndash;5 PM</p><p><strong>Healthcare staffing service areas:</strong> <a href="/healthcare-staffing-houston">Houston healthcare staffing</a> &middot; <a href="/katy-healthcare-staffing">Katy</a> &middot; <a href="/sugar-land-healthcare-staffing">Sugar Land</a> &middot; <a href="/cypress-healthcare-staffing">Cypress</a> &middot; <a href="/the-woodlands-healthcare-staffing">The Woodlands</a> &middot; <a href="/pearland-healthcare-staffing">Pearland</a> &middot; <a href="/conroe-healthcare-staffing">Conroe</a> &middot; <a href="/missouri-city-healthcare-staffing">Missouri City</a> &middot; <a href="/spring-healthcare-staffing">Spring</a> &middot; <a href="/pasadena-healthcare-staffing">Pasadena</a> &middot; <a href="/richmond-healthcare-staffing">Richmond</a> &middot; <a href="/fulshear-healthcare-staffing">Fulshear</a> &middot; <a href="/humble-healthcare-staffing">Humble</a> &middot; <a href="/baytown-healthcare-staffing">Baytown</a> &middot; <a href="/healthcare-staffing-texas">Texas statewide</a>. Serving Harris, Fort Bend and Montgomery counties.</p></div></div>
+  <div class="footer-bottom"><div class="container"><span>&copy; 2026 Hearthstone &amp; Co. Workforce Solutions. All rights reserved.</span><div class="footer-legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/accessibility">Accessibility</a><a href="/sms-consent">SMS Consent</a></div></div></div>
+</footer>
 <script>
 /* Hearthstone & Co. — Main JS */
 
@@ -678,5 +697,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 <script src="/hs-events.js" defer></script>
+<script src="/sticky-cta.js" defer></script>
 </body>
 </html>
