@@ -13,7 +13,7 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
 ## Hard rules (never break)
 - NEVER invent testimonials, reviews, ratings, awards, client names, placement
   stats, fill rates, response times, bench size, past performance, insurance,
-  or certifications. Verified claims only: SBA-Certified VOSB & WOSB; NaVOBA-certified
+  or certifications. Verified claims only: SBA-Certified SDVOSB, VOSB & WOSB; NaVOBA-certified
   Veteran's Business Enterprise (VBE), certificate 202600352V, valid Oct 20, 2026 to Oct 20, 2029; SAM.gov
   UEI SVAZQG49VUH7; CAGE 1ZPE9; NAICS 561320/561311; RN/LVN/CNA staffing;
   POSITIONING (founder, Oct 23, 2026, permanent): Hearthstone hires and staffs allied healthcare and all
@@ -24,7 +24,13 @@ partners, and clinicians. Optimize for conversions and trust, not vanity traffic
   Also founder-verified (Nov 1, 2026): Hearthstone is a Black-owned business ("Black-owned" is a verified claim agents may use,
   alongside veteran-owned and woman-owned; do not claim any certification for it unless the founder supplies one).
   Also founder-verified (Oct 21, 2026): "Texas Women Veterans Registry | City of Houston" listing; Texas VetHUB
-  Certification (applying; founder Oct 27, 2026: program is now VetHUB) and SBA SDVOSB certification (in progress, NOT yet certified; never claim SDVOSB until issued); "A subsidiary of The Shiylohe Collective".
+  Certification (applying; founder Oct 27, 2026: program is now VetHUB); "A subsidiary of The Shiylohe Collective".
+  SDVOSB ISSUED (founder-supplied SBA VetCert record, Nov 16, 2026): Hearthstone is an SBA-certified Service-Disabled
+  Veteran-Owned Small Business. SBA entrance date 11/16/2026, renewal due 07/08/2029. SDVOSB may now be claimed; the earlier
+  "never claim SDVOSB" rule is retired. Do not state a certificate number (SBA issued none on the supplement) and do not
+  invent one. VOSB and WOSB entrance 07/08/2026, both renewing 07/08/2029.
+  SAM.gov (founder-supplied screenshot, Nov 16, 2026): registration ACTIVE, purpose "All Awards", expires Apr 21, 2027.
+  Internal renewal reminder only - do not publish the expiration date in public page copy.
   Also founder-verified (Oct 24, 2026): benefits after 90 days (PTO, paid holidays, group medical/dental/vision with company
   contribution, 401(k)); W-2 clinicians covered by Hearthstone workers' comp ("Zero Employment Risk" wording on
   assisted-living-staffing-houston is verified); background screening via Checkr and FACIS Level 3, Quest drug screening,
