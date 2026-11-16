@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>UX prototype: sticky mobile CTA (not a live page)</title>
+<style>
+:root{--green:#1A3D2E;--gold:#C9A84C;--ink:#1f2a24;--bar-h:56px}
+*{box-sizing:border-box}
+body{margin:0;font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+header,section{padding:24px 20px;max-width:720px;margin:0 auto}
+h1,h2{font-family:"Cormorant Garamond",Georgia,serif;color:var(--green)}
+.note{background:#f4efe0;border-left:4px solid var(--gold);padding:12px 16px;margin:16px 0;font-size:.95rem}
+.spacer{height:900px;background:linear-gradient(#fff,#eef3ef)}
+.sticky-cta{display:none}
+@media(max-width:767px){
+ .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:8px;align-items:center;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #d9e2dc;box-shadow:0 -2px 8px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .2s ease}
+ .sticky-cta.is-visible{transform:none}
+ .sticky-cta a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;font-weight:700;text-decoration:none}
+ .sticky-cta .primary{flex:1;background:var(--green);color:#fff}
+ .sticky-cta .call{width:48px;border:2px solid var(--green);color:var(--green)}
+ .sticky-cta a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+}
+@media(prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
+</style>
+</head>
+<body>
+<header>
+ <h1>Prototype: sticky mobile CTA</h1>
+ <p class="note"><strong>Annotation:</strong> not a live page. Open at 375px wide and scroll. The bar appears after the hero (here, 400px), and hides when <code>#request-form</code> or the footer is on screen. Copy is the existing primary CTA; no new claims.</p>
+</header>
+<section id="hero"><h2>Hero area</h2><p>Scroll down.</p></section>
+<div class="spacer" aria-hidden="true"></div>
+<section id="request-form"><h2>Form or footer area</h2><p>The bar hides here so it never covers fields or footer links.</p></section>
+<div class="spacer" aria-hidden="true"></div>
+<nav class="sticky-cta" id="stickyCta" aria-label="Quick actions">
+ <a class="primary" href="/request-staffing">Request Staffing</a>
+ <a class="call" href="tel:+17139383989" aria-label="Call Hearthstone &amp; Co. at (713) 938-3989">&#9742;</a>
+</nav>
+<script>
+(function(){
+ var bar=document.getElementById('stickyCta'),hide=document.getElementById('request-form');
+ function update(){
+  var pastHero=window.scrollY>400,r=hide.getBoundingClientRect(),overlap=r.top<innerHeight&&r.bottom>0;
+  bar.classList.toggle('is-visible',pastHero&&!overlap);
+ }
+ addEventListener('scroll',update,{passive:true});update();
+})();
+</script>
+</body>
+</html>
