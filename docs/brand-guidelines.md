@@ -10,12 +10,13 @@ Positioning: we hire and staff allied healthcare and all types of medical staffi
 ## 2. Verified facts allowed in brand copy
 - SBA-certified VOSB and WOSB
 - NaVOBA-certified Veteran's Business Enterprise (VBE), certificate 202600352V, valid Oct 20, 2026 to Oct 20, 2029
-- SAM.gov UEI SVAZQG49VUH7; CAGE 1ZPE9; NAICS 561320 / 561311
+- SAM.gov UEI SVAZQG49VUH7; CAGE 1ZPE9; NAICS 561320 / 561311. Registration is active for All Awards; it expires Apr 21, 2027 and must be renewed before then. Never print the expiration date in public copy
 - W-2 employment model; weekly clinician pay; benefits after 90 days
 - Background screening via Checkr and FACIS Level 3, Quest drug screening, five-step credentialing, monthly OIG/SAM exclusion checks
 - "Credentialing managed by Hearthstone"; "we respond within 24-48 hours" (founder-approved commitment, Oct 31 2026); "36-72 hour placement target" measured from the initial request (a target, never a guarantee)
 - Black-owned (founder-verified Nov 1, 2026): usable alongside veteran-owned and woman-owned; no certification or badge may be claimed for it unless the founder supplies one
-- Texas Women Veterans Registry (City of Houston) listing; Texas VetHUB certification is "applying"; SBA SDVOSB is in progress and must NOT be claimed
+- Texas Women Veterans Registry (City of Houston) listing; Texas VetHUB certification is "applying"
+- SBA SDVOSB: CERTIFIED Nov 16, 2026 (renewal due Jul 8, 2029). Claim it freely. VOSB and WOSB certified Jul 8, 2026, both renewing Jul 8, 2029. No certificate number was issued for SDVOSB - never invent one
 - One phone: (713) 938-3989. Emails: hello@, careers@, clinicians@, facilities@ hearthstoneandco.com
 
 Never use: "pre-credentialed", "active bench", "rapid response", "same-day", "guarantee", invented stats, testimonials, client names, awards, or insurance claims. Clinician roles: never show dollar pay or bill rates ("competitive rates"). Internal roles show the pay rate or "FOUNDER VERIFICATION REQUIRED".
@@ -30,7 +31,7 @@ Shared voice: direct, plain, mission-minded. Short declaratives, then one explan
 |---|---|---|---|
 | Facility buyers | Confident, practical, partner not vendor | RN/LVN/CNA, credentialing managed by Hearthstone, "we respond within 24-48 hours", placement target (from the initial request) | guarantees, "within one business day", "after your request is confirmed", pool or bench numbers |
 | Clinicians | Warm, respectful, specific | W-2, weekly pay, benefits after 90 days, competitive rates | dollar pay figures, guaranteed hours |
-| Government / prime partners | Formal, precise, credential-first | Certificates, UEI, CAGE, NAICS, teaming language | past performance, clients, SDVOSB, HUB-certified |
+| Government / prime partners | Formal, precise, credential-first | SDVOSB first (it outranks VOSB under VAAR 819.7005(b)), then VOSB/WOSB, certificates, UEI, CAGE, NAICS, teaming language | past performance, clients, HUB-certified, bench or capacity numbers |
 
 Primary CTA: Request Staffing (request-staffing.html) plus Calendly. Clinicians: Join Our Network. EEO line (counsel to confirm): "Hearthstone & Co. is an equal opportunity employer."
 
